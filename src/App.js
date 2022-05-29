@@ -23,8 +23,10 @@ function App() {
     setRegList([...regList, newReg])
   }
 
-  const regDel = () => {
-    console.log('hi')
+  const regDel = (e) => {
+    const region = Number(e.target.parentElement.id);
+    const restRegions = [...regList].filter((el) => el.id !== region);
+    setRegList(restRegions);
   }
 
   return (

@@ -1,6 +1,6 @@
 const RegItem = ( {el, regDel} ) => {
   return (
-    <div className='regContainer'>
+    <div className='regContainer' id={el.id}>
       <div className='regInfo'>
         <h3>{el.regName}</h3>
         <hr/>

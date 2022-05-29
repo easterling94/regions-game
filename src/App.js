@@ -29,9 +29,9 @@ function App() {
 
   return (
     <>
-    <RegForm regList={regList} changeRegList={changeRegList}/>
-    <RegList regList={regList} regDel={regDel}/>
-  </>
+      <RegForm regList={regList} changeRegList={changeRegList}/>
+      <RegList regList={regList} regDel={regDel}/>
+    </>
   );
 }
 

@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import RegForm from './components/RegForm/RegForm';
+import RegList from './components/Regions/RegList';
+import { useState } from 'react';
+
 
 function App() {
+  const [regList, setRegList] = useState([
+    {
+      id: 1,
+      regName: 'Республика Адыгея',
+      currRegCode: ['01', '101'],
+      futRegCode: []
+    },
+    {
+      id: 2,
+      regName: 'Республика Башкортостан',
+      currRegCode: ['02', '102', '702'],
+      futRegCode: []
+    },
+  ]);
+
+  const changeRegList = (newReg) => {
+    setRegList([...regList, newReg])
+  }
+
+  const regDel = (e) => {
+    const region = Number(e.target.parentElement.id);
+    const restRegions = [...regList].filter((el) => el.id !== region);
+    setRegList(restRegions);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <RegForm regList={regList} changeRegList={changeRegList}/>
+      <RegList regList={regList} regDel={regDel}/>
+    </>
   );
 }
 

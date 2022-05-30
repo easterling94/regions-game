@@ -1,0 +1,14 @@
+1. 30.05.22 added delete from mocking json server feature
+
+{
+  "id": 1,
+  "regName": "Республика Адыгея",
+  "currRegCode": ["01", "101"],
+  "futRegCode": []
+},
+{
+  "id": 2,
+  "regName": "Республика Башкортостан",
+  "currRegCode": ["02", "102", "702"],
+  "futRegCode": []
+}

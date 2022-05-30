@@ -1,32 +1,38 @@
 import RegForm from './components/RegForm/RegForm';
 import RegList from './components/Regions/RegList';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 function App() {
-  const [regList, setRegList] = useState([
-    {
-      id: 1,
-      regName: 'Республика Адыгея',
-      currRegCode: ['01', '101'],
-      futRegCode: []
-    },
-    {
-      id: 2,
-      regName: 'Республика Башкортостан',
-      currRegCode: ['02', '102', '702'],
-      futRegCode: []
-    },
-  ]);
+  const [regList, setRegList] = useState([]);
+
+  const url = "http://localhost:5001/regions"
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const dataFetched = await getData();
+      setRegList(dataFetched);
+    };
+    fetchData();
+    
+  }, []);
+  const getData = async () => {
+    let response = await fetch(url);
+    let data = await response.json();
+    return data;
+  };
 
   const changeRegList = (newReg) => {
     setRegList([...regList, newReg])
   }
 
-  const regDel = (e) => {
-    const region = Number(e.target.parentElement.id);
+  const regDel = async (e) => {
+    const region = Number(e.target.parentElement.id)
+    await fetch(`${url}/${region}`, {
+      method: 'DELETE'
+    })
     const restRegions = [...regList].filter((el) => el.id !== region);
-    setRegList(restRegions);
+    setRegList(restRegions); // extra work, should be rebuiled like updating component
   }
 
   return (

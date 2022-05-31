@@ -29,12 +29,14 @@ const RegForm = ({regList, changeRegList}) => {
     const regListLength = regList.length + 1;
     const currRegList = btnColor.currRegCode.replace(/[,!?.\\();:]/g, ' ').split(' ').filter((el) => (el !== ' ' && el !== ''));
     const futRegList = btnColor.futRegCode ? btnColor.futRegCode.replace(/[,!?.\\();:]/g, ' ').split(' ').filter((el) => (el !== ' ' && el !== '')) : [];
+    
     const newReg = {
       id: regListLength, 
       regName: btnColor.regName, 
       currRegCode: currRegList, 
       futRegCode: futRegList
-    }
+    };
+    
     changeRegList(newReg);
   }
 

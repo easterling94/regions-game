@@ -22,7 +22,15 @@ function App() {
     return data;
   };
 
-  const changeRegList = (newReg) => {
+  const changeRegList = async (newReg) => {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(newReg)
+    })
+    const data = res.json()
     setRegList([...regList, newReg])
   }
 

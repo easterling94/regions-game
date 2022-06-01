@@ -45,20 +45,19 @@
   justify-content: space-between;
 }
 .btn {
-  height: 43px;
-  font-weight: bold;
+  height: 40px;
+  
   cursor: pointer;
 }
 .btnDelete {
-  border: 1px solid red;
+  border: 1px solid #de5840;
   border-radius: 50%;
-  background-color: red;
+  background-color: #de5840;
   color: white;
 }
 .btnEdite {
   border: 1px solid #5e5e79;
   border-radius: 50%;
   background-color: #5e5e79;
-  ;
   color: white;
 }

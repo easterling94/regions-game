@@ -1,0 +1,27 @@
+.wrapper {
+  margin: 20px auto;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-weight: bold;
+}
+.toggle {
+  margin: 5px auto;
+  width: 70px;
+  height: 30px;
+  border: 3px solid #52c6bc;
+  border-radius: 20px;
+  background-color: #62e7dc;
+  position: relative;
+  cursor: pointer;
+}
+.circle {
+  position: absolute;
+  top: 0px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: left 0.5s;
+}

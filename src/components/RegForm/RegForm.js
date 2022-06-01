@@ -36,7 +36,7 @@ const RegForm = ({regList, changeRegList}) => {
       currRegCode: currRegList, 
       futRegCode: futRegList
     };
-    
+
     changeRegList(newReg);
   }
 
@@ -63,7 +63,7 @@ const RegForm = ({regList, changeRegList}) => {
         </div>
         <input type='submit' value='Save' className='btn btn-save' style={btnColor.regName && btnColor.currRegCode ? {backgroundColor: colors.filled} : {backgroundColor: colors.notFilled}}/>
       </form>
-      </div>
+    </div>
   )
 }
 

@@ -1,24 +1,29 @@
+import regListStyles from './regList.module.css';
+
 const RegItem = ( {el, regDel} ) => {
   return (
-    <div className='regContainer' id={el.id}>
-      <div className='regInfo'>
+    <div className={regListStyles.regContainer} id={el.id}>
+      <div className={regListStyles.regInfo}>
         <h3>{el.regName}</h3>
         <hr/>
         <div>Current codes:
-          <div className='codes'>
-            {el.currRegCode.map((el) => <div key={el} className='codeItem'>{el}</div>)}
+          <div className={regListStyles.codes}>
+            {el.currRegCode.map((el) => <div key={el} className={regListStyles.codeItem}>{el}</div>)}
           </div>
         </div>
         <hr/>
         <div>Future codes:
-          <div className='codes'>
-            {el.futRegCode.map((el) => <div key={el} className='codeItem'>{el}</div>)}
+          <div className={regListStyles.codes}>
+            {el.futRegCode.length? el.futRegCode.map((el) => <div key={el} className={regListStyles.codeItem}>{el}</div>) : '-'}
           </div>
         </div>
       </div>
-      <button className='regDelete' onClick={(e) => regDel(e)}>
-        X
-      </button>
+      <div className={regListStyles.btnGroup}>
+        <button className={`${regListStyles.btn} ${regListStyles.btnDelete}`} onClick={(e) => regDel(e)}>
+          X
+        </button>
+        <button className={`${regListStyles.btn} ${regListStyles.btnEdite}`}>V</button>
+      </div>
     </div>
   )
 }

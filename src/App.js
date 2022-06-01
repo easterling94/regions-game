@@ -30,7 +30,6 @@ function App() {
       },
       body: JSON.stringify(newReg)
     })
-    const data = res.json()
     setRegList([...regList, newReg])
   }
 
@@ -40,7 +39,7 @@ function App() {
       method: 'DELETE'
     })
     const restRegions = [...regList].filter((el) => el.id !== region);
-    setRegList(restRegions); // extra work, should be rebuiled like updating component
+    setRegList(restRegions); 
   }
 
   return (

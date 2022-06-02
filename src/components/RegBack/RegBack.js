@@ -6,7 +6,7 @@ function RegBack() {
   
   const [regList, setRegList] = useState([]);
 
-  const url = "http://localhost:5001/regions"
+  const url = "http://localhost:5001/regions";
 
   useEffect(() => {
     const fetchData = async () => {

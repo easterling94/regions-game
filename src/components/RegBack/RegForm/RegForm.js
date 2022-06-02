@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import Header from './Header';
 import './regForm.css';
 
 const RegForm = ({regList, changeRegList}) => {
-  const [btnColor, changeColor] = useState(
+  const [regState, setRegState] = useState(
     {
       regName: false,
       currRegCode: false,
@@ -11,28 +10,28 @@ const RegForm = ({regList, changeRegList}) => {
     },
   );
 
-  const changeColorF = (e) => {
+  const setRegStateF = (e) => {
     const target = e.target.id;
     if (e.target.value === '') {
-      changeColor({...btnColor, [target]: false});
+      setRegState({...regState, [target]: false});
     } else {
-      changeColor({...btnColor, [target]: e.target.value});
+      setRegState({...regState, [target]: e.target.value});
     }
   }
 
   const addItem = (event) => {
     event.preventDefault();
-    if(!btnColor.regName || !btnColor.currRegCode) {
+    if(!regState.regName || !regState.currRegCode) {
       alert('Please fill in at least first two fields');
       return;
     }
     const regListLength = regList.length + 1;
-    const currRegList = btnColor.currRegCode.replace(/[,!?.\\();:]/g, ' ').split(' ').filter((el) => (el !== ' ' && el !== ''));
-    const futRegList = btnColor.futRegCode ? btnColor.futRegCode.replace(/[,!?.\\();:]/g, ' ').split(' ').filter((el) => (el !== ' ' && el !== '')) : [];
+    const currRegList = regState.currRegCode.replace(/[,!?.\\();:]/g, ' ').split(' ').filter((el) => (el !== ' ' && el !== ''));
+    const futRegList = regState.futRegCode ? regState.futRegCode.replace(/[,!?.\\();:]/g, ' ').split(' ').filter((el) => (el !== ' ' && el !== '')) : [];
     
     const newReg = {
       id: regListLength, 
-      regName: btnColor.regName, 
+      regName: regState.regName, 
       currRegCode: currRegList, 
       futRegCode: futRegList
     };
@@ -47,21 +46,21 @@ const RegForm = ({regList, changeRegList}) => {
 
   return (
     <div className='regNew'>
-      <Header />
+      <h1>Region Change Form</h1>
       <form onSubmit={addItem}>
         <div className='regInput'>
           <label>Insert Region Name</label>
-          <input id='regName' type='text' placeholder='Region name' onChange={(e) => changeColorF(e)}/>
+          <input id='regName' type='text' placeholder='Region name' onChange={(e) => setRegStateF(e)}/>
         </div>
         <div className='regInput'>
           <label>Insert Region Code(s)</label>
-          <input id='currRegCode' type='text' placeholder='Current codes divided by ","' onChange={(e) => changeColorF(e)}/>
+          <input id='currRegCode' type='text' placeholder='Current codes divided by ","' onChange={(e) => setRegStateF(e)}/>
         </div>
         <div className='regInput'>
           <label>Insert Future Code(s) if known</label>
-          <input id='futRegCode' type='text' placeholder='Future codes divided by ","' onChange={(e) => changeColorF(e)}/>
+          <input id='futRegCode' type='text' placeholder='Future codes divided by ","' onChange={(e) => setRegStateF(e)}/>
         </div>
-        <input type='submit' value='Save' className='btn btn-save' style={btnColor.regName && btnColor.currRegCode ? {backgroundColor: colors.filled} : {backgroundColor: colors.notFilled}}/>
+        <input type='submit' value='Save' className='btn btn-save' style={regState.regName && regState.currRegCode ? {backgroundColor: colors.filled} : {backgroundColor: colors.notFilled}}/>
       </form>
     </div>
   )

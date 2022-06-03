@@ -1,25 +1,14 @@
 import { useState } from 'react'
 import './regForm.css';
 
-const RegForm = ({regList, changeRegList}) => {
-  const [regState, setRegState] = useState(
-    {
-      regName: false,
-      currRegCode: false,
-      futRegCode: false,
-    },
-  );
+const RegForm = ({regList, changeRegList, setRegStateF, regState}) => {
 
-  const setRegStateF = (e) => {
-    const target = e.target.id;
-    if (e.target.value === '') {
-      setRegState({...regState, [target]: false});
-    } else {
-      setRegState({...regState, [target]: e.target.value});
-    }
-  }
+  const colors = {
+    filled: '#00B1E1',
+    notFilled: '#99B1E1'
+  };
 
-  const addItem = (event) => {
+  const changeRegItem = (event) => {
     event.preventDefault();
     if(!regState.regName || !regState.currRegCode) {
       alert('Please fill in at least first two fields');
@@ -39,15 +28,10 @@ const RegForm = ({regList, changeRegList}) => {
     changeRegList(newReg);
   }
 
-  const colors = {
-    filled: '#00B1E1',
-    notFilled: '#99B1E1'
-  }
-
   return (
     <div className='regNew'>
       <h1>Region Change Form</h1>
-      <form onSubmit={addItem}>
+      <form onSubmit={changeRegItem}>
         <div className='regInput'>
           <label>Insert Region Name</label>
           <input id='regName' type='text' placeholder='Region name' onChange={(e) => setRegStateF(e)}/>

@@ -1,7 +1,7 @@
 import regListStyles from './regList.module.css';
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 
-const RegItem = ( {el, regDel} ) => {
+const RegItem = ( {el, regDel, regEdit} ) => {
   return (
     <div className={regListStyles.regContainer} id={el.id}>
       <div className={regListStyles.regInfo}>
@@ -23,7 +23,7 @@ const RegItem = ( {el, regDel} ) => {
         <button className={`${regListStyles.btn} ${regListStyles.btnDelete}`} onClick={(e) => regDel(e)}>
           <AiFillDelete/>
         </button>
-        <button className={`${regListStyles.btn} ${regListStyles.btnEdite}`}><AiFillEdit/></button>
+        <button className={`${regListStyles.btn} ${regListStyles.btnEdite}`} onClick={(e) => regEdit(e)}><AiFillEdit/></button>
       </div>
     </div>
   )

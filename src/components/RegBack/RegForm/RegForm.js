@@ -1,50 +1,22 @@
-import { useState } from 'react'
-import './regForm.css';
+import RegFormInput from './RegFormInput';
+import styles from './regForm.module.css';
 
-const RegForm = ({regList, changeRegList, setRegStateF, regState}) => {
+const RegForm = ({setRegStateF, regState, regModeState, formSubmit}) => {
 
+  const btnBackground = (regState.regName && regState.currRegCode) ? 'filled' : 'notFilled';
   const colors = {
     filled: '#00B1E1',
     notFilled: '#99B1E1'
   };
 
-  const changeRegItem = (event) => {
-    event.preventDefault();
-    if(!regState.regName || !regState.currRegCode) {
-      alert('Please fill in at least first two fields');
-      return;
-    }
-    const regListLength = regList.length + 1;
-    const currRegList = regState.currRegCode.replace(/[,!?.\\();:]/g, ' ').split(' ').filter((el) => (el !== ' ' && el !== ''));
-    const futRegList = regState.futRegCode ? regState.futRegCode.replace(/[,!?.\\();:]/g, ' ').split(' ').filter((el) => (el !== ' ' && el !== '')) : [];
-    
-    const newReg = {
-      id: regListLength, 
-      regName: regState.regName, 
-      currRegCode: currRegList, 
-      futRegCode: futRegList
-    };
-
-    changeRegList(newReg);
-  }
-
   return (
-    <div className='regNew'>
+    <div className={styles.regNew}>
       <h1>Region Change Form</h1>
-      <form onSubmit={changeRegItem}>
-        <div className='regInput'>
-          <label>Insert Region Name</label>
-          <input id='regName' type='text' placeholder='Region name' onChange={(e) => setRegStateF(e)}/>
-        </div>
-        <div className='regInput'>
-          <label>Insert Region Code(s)</label>
-          <input id='currRegCode' type='text' placeholder='Current codes divided by ","' onChange={(e) => setRegStateF(e)}/>
-        </div>
-        <div className='regInput'>
-          <label>Insert Future Code(s) if known</label>
-          <input id='futRegCode' type='text' placeholder='Future codes divided by ","' onChange={(e) => setRegStateF(e)}/>
-        </div>
-        <input type='submit' value='Save' className='btn btn-save' style={regState.regName && regState.currRegCode ? {backgroundColor: colors.filled} : {backgroundColor: colors.notFilled}}/>
+      <form onSubmit={formSubmit}>
+        <RegFormInput value={regState.regName} lbl='Insert Region Name' id='regName' plhldr='Region name' setRegStateF={setRegStateF}/>
+        <RegFormInput value={regState.currRegCode} lbl='Insert Region Code(s)' id='currRegCode' plhldr='Current codes divided by ","' setRegStateF={setRegStateF}/>
+        <RegFormInput value={regState.futRegCode} lbl='Insert Future Code(s) if known' id='futRegCode' plhldr='Future codes divided by ","' setRegStateF={setRegStateF}/>
+        <input type='submit' value='Save' className={styles.btn} style={{backgroundColor: colors[btnBackground]}}/>
       </form>
     </div>
   )

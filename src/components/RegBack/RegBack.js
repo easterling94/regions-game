@@ -5,9 +5,7 @@ import { useState, useEffect } from 'react';
 function RegBack() {
   
   const [regList, setRegList] = useState([]);
-  const [regModeState, setRegModeState] = useState({
-    write: true
-  })
+
   const [regState, setRegState] = useState(
     {
       id: '',
@@ -60,6 +58,8 @@ function RegBack() {
         break;
       case 'path':
         el = Number(e.target.parentElement.parentElement.parentElement.parentElement.id);
+        break;
+      default:
         break;
     }
     return el;
@@ -146,7 +146,7 @@ function RegBack() {
 
   return (
     <>
-      <RegForm regList={regList} regAdd={regAdd} setRegStateF={setRegStateF} regState={regState} regModeState={regModeState} formSubmit={formSubmit}/>
+      <RegForm regList={regList} regAdd={regAdd} setRegStateF={setRegStateF} regState={regState} formSubmit={formSubmit}/>
       <RegList regList={regList} regDel={regDel} regEdit={regEdit}/>
     </>
   );

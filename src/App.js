@@ -1,7 +1,7 @@
 import Mode from './components/Mode/Mode'
 import RegBack from './components/RegBack/RegBack';
 import RegGame from './components/RegGame/RegGame'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 
 function App() {

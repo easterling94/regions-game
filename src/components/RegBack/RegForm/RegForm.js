@@ -1,7 +1,7 @@
 import RegFormInput from './RegFormInput';
 import styles from './regForm.module.css';
 
-const RegForm = ({setRegStateF, regState, regModeState, formSubmit}) => {
+const RegForm = ({setRegStateF, regState, formSubmit}) => {
 
   const btnBackground = (regState.regName && regState.currRegCode) ? 'filled' : 'notFilled';
   const colors = {

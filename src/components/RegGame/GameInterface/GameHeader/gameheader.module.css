@@ -1,0 +1,22 @@
+.header {
+  padding: 10px;
+  background-color: #2076d8;
+  color: #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+}
+.stats {
+  display: flex;
+}
+.element {
+  font-weight: bold;
+}
+.timer {
+  margin: 0px;
+}
+.stat:nth-of-type(2n + 2) {
+  margin: 0px 10px;
+}
+.title {
+  margin: 0px;
+}

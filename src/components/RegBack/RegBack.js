@@ -118,7 +118,7 @@ function RegBack() {
         futRegCode: futRegList
       };
       fetch(`${url}/${regState.id}`, {
-        method: 'PATCH',
+        method: 'PUT', 
         body: JSON.stringify(newReg),
         headers: {
           'Content-type': 'application/json'

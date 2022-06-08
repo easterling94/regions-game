@@ -1,0 +1,20 @@
+.wrapper {
+  width: 900px;
+  margin: 0px auto;
+  font-size: 1.5em;
+}
+
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    width: initial;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    font-size: 1em;
+  }
+}

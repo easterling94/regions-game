@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 
 function App() {
-  const [state, setState] = useState(true);
+  const [state, setState] = useState(false);
   const changeMode = () => {
     setState(!state);
   }

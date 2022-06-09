@@ -7,7 +7,7 @@ const GameInterface = ( {regions, mode} ) => {
   return (
     <div className={styles.wrapper}>
       <GameHeader mode={mode}/>
-      <GameBoard regions={regions}/>
+      <GameBoard mode={mode} regions={regions}/>
       <GameFooter mode={mode}/>
     </div>
   )

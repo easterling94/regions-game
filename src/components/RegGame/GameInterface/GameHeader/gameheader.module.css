@@ -10,6 +10,8 @@
 }
 .element {
   font-weight: bold;
+  color: white;
+  transition: color 0.5s;
 }
 .timer {
   margin: 0px;

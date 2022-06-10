@@ -3,10 +3,10 @@ import styles from './timer.module.css'
 
 const TimerBackward = ({mode}) => {
   const [timer, setTimer] = useState('');
-  const limit = mode === 'Exam' ? '00:00' : '00:10';
+  const limit = mode === 'Exam' ? '00:00' : '10:00';
 
   useEffect(() => {
-    setTimer(mode === 'Exam' ? '00:10' : '00:00');
+    setTimer(mode === 'Exam' ? '03:00' : '00:00');
   },[])
 
   useEffect(() => {

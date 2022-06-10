@@ -1,7 +1,7 @@
 import styles from './gameboard.module.css';
 import { useState, useEffect } from 'react';
 
-const GameBoard = ({ regions, mode }) => {
+const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, lives, hints }) => {
   let regionsDataInitial = [...regions];
   let chosenRegion = '';
 
@@ -33,32 +33,37 @@ const GameBoard = ({ regions, mode }) => {
         }
     };
 
-    // 2. extracting codes from current and random not current region;
+    // 2. extracting codes from current current region;
     let realRegionCodes = [...chosenRegion.currRegCode];
 
-    // 3. random number of true (between 1 and 4) and false (between 0 and 3) answers
+    // 3. random number of true answers (between 1 and 4)
     let randomTrue = Math.ceil(Math.random() * (realRegionCodes.length <= 4 ? realRegionCodes.length : 4));
-    let randomFalse = 4 - randomTrue;
-    console.log(randomTrue);
 
     // 4. converting random true/false answers number into real array of answers
+    let regionsCodesOnly = [];
+    [...regions].forEach((el) => regionsCodesOnly.push(el.currRegCode));
+    regionsCodesOnly = regionsCodesOnly.reduce((a,b) => a.concat(b));
+    
     let trueArray = [];
     for(let i = 0; i < randomTrue; i++) {
       let random = Math.floor(Math.random() * realRegionCodes.length)
       trueArray.push(realRegionCodes[random]);
       realRegionCodes.splice(random, 1);
     };
-    console.log(trueArray)
 
     let falseArray = [];
-    if(randomFalse) {
-      for(let i = 0; i < randomFalse; i++) {
-        let random = Math.floor(Math.random() * 100)
-        falseArray.push(random);
-      };
+
+    if(trueArray.length < 4) {
+      const difference = 4 - trueArray.length;
+      while (falseArray.length !== difference) {
+        let random = Math.floor(Math.random() * regionsCodesOnly.length);
+        if(!trueArray.includes(regionsCodesOnly[random])) {
+          falseArray.push(regionsCodesOnly[random]);
+        }
+      }
     }
+
     let answers = [...trueArray, ...falseArray];
-    console.log(answers);
 
     // 5. setting this array to answer state
     let finallArray = [];
@@ -66,8 +71,7 @@ const GameBoard = ({ regions, mode }) => {
       finallArray.push([newOrder[i], answers[i]])
     }
     let finallArraySorted = finallArray.sort((a,b) => a[0] - b[0]);
-    console.log(finallArraySorted);
-    let finallArraySortedMaped = finallArraySorted.map((el) => el[1])
+    let finallArraySortedMaped = finallArraySorted.map((el) => el[1]);
     setAnswerList(finallArraySortedMaped);
   }
 
@@ -86,16 +90,48 @@ const GameBoard = ({ regions, mode }) => {
 
   const nextQuestion = () => {
     if(!stateOne && !stateTwo && !stateThree && !stateFour) return alert('Please chose at least one option');
+    let randomRegion = getRandomRegion();
+    chosenRegion = regionsData[randomRegion];
     setStateOne(false);
     setStateTwo(false);
     setStateThree(false);
     setStateFour(false);
+    answerCheck();
     if(regionsData.length === 0) return alert('Thats all folks!') // Ending component required
-    let randomRegion = getRandomRegion();
-    chosenRegion = regionsData[randomRegion];
     setQuestion(chosenRegion.regName);
     setRegionsData(regionsData.filter((el) => el.id !== chosenRegion.id));
     setAnswers();
+  }
+
+  const answerCheck = () => {
+    let answerChosenList = [];
+    let correctAnswers = 0;
+    let wrongAnswers = 0;
+    if(stateOne) answerChosenList.push(answerList[0]);
+    if(stateTwo) answerChosenList.push(answerList[1]);
+    if(stateThree) answerChosenList.push(answerList[2]);
+    if(stateFour) answerChosenList.push(answerList[3]);
+    console.log(answerChosenList);
+    let currentRegionCodeList = regions.filter((el) => el.regName === question)[0].currRegCode;
+    console.log(currentRegionCodeList);
+    for(let i = 0; i < answerChosenList.length; i++) {
+      if(!currentRegionCodeList.includes(answerChosenList[i])) {
+        wrongAnswers ++;
+      } else {
+        correctAnswers ++;
+      }
+    }
+    switch (mode) {
+      case 'Exam':
+        setCorrect(correct + correctAnswers);
+        setLives(lives - wrongAnswers);
+        break;
+      case 'Training':
+        setCorrect(correct + correctAnswers);
+        break;
+      default:
+        break;
+    }
   }
 
   useEffect(() => {

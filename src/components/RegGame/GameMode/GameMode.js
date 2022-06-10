@@ -23,8 +23,8 @@ const GameMode = ({ setModeF }) => {
         <div id='Exam' className={styles.mode} onClick={(e) => setModeF(e)}>
           <h4>Exam</h4>
           <ul>
-            <li>3 lives</li>
-            <li>3 hints</li>
+            <li>10 lives</li>
+            <li>10 hints</li>
             <li>Time limeted by 3 minutes</li>
           </ul>
         </div>

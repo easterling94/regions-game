@@ -1,19 +1,7 @@
 import styles from './gameheader.module.css';
-import { useState, useEffect } from 'react';
 import Timer from './Timer/Timer';
 
-const GameHeader = ({mode}) => {
-  const infinitySign = '\u221e';
-  const [correct, setCorrect] = useState('');
-  const [lives, setLives] = useState('')
-  const [hints, setHints] = useState('');
-
-  useEffect(() => {
-    setCorrect(0)
-    setLives(mode === 'Exam' ? 3 : infinitySign);
-    setHints(mode === 'Exam' ? 3 : infinitySign);
-  },[])
-
+const GameHeader = ({mode, correct, lives, hints}) => {
   return (
     <>
       <header className={styles.header}>

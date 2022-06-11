@@ -1,7 +1,8 @@
+import GameFooter from './GameFooter/GameFooter.js'
 import styles from './gameboard.module.css';
 import { useState, useEffect } from 'react';
 
-const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, lives, hints, hardStop }) => {
+const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, lives, hints, hardStop, resetMode }) => {
   let regionsDataInitial = [...regions];
   let chosenRegion = '';
 
@@ -176,6 +177,7 @@ const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, liv
         <div id='four' className={styles.box} onClick={(e) => {setState(e)}} style={stateFour ? {backgroundColor: color.answerChosen} : {backgroundColor: color.noEffect}}>{answerList[3]}</div>
         <div className={`${styles.box} ${styles.next}`} style={stateNext ? {backgroundColor: color.nextAwailable} : {backgroundColor: color.noEffect}} onClick={nextQuestion}>Submit</div>
       </div>
+      <GameFooter mode={mode} setCorrect={setCorrect} setLives={setLives} setHints={setHints} resetMode={resetMode}/>
     </div>
   )
 }

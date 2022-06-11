@@ -1,6 +1,7 @@
+import { AiOutlineUndo } from 'react-icons/ai'
 import styles from './finalstats.module.css';
 
-const FinalStats = ({correct, lives, hints, timer, examStartingTime, mode}) => {
+const FinalStats = ({correct, lives, hints, timer, examStartingTime, mode, resetMode}) => {
   const examTime = (timer, examStartingTime) => {
     let timePlayed = timer.split(':').map((el) => Number(el));
     let timeLimit = examStartingTime.split(':').map((el) => Number(el));
@@ -16,14 +17,14 @@ const FinalStats = ({correct, lives, hints, timer, examStartingTime, mode}) => {
   return (
     <div className={styles.wrapper}>
       <h2>Congratulations!</h2> 
-      <h3>{mode === 'Exam' ? 'That is the end of exam.' : 'You have tried all the regions!'}</h3>
+      <h3>{mode === 'Exam' ? 'That is the end of the exam.' : 'You have tried all the regions!'}</h3>
       <h3>Your game's statistics are:</h3>
       <p>Total right answers: {correct}</p>
-      <p>Total lives left: {lives}</p>
-      <p>Hints used: {hints}</p>
+      <p>Total lives left: {lives} out of 10</p>
+      <p>Hints used: {hints} out of 10</p>
       <p>Time played: {mode === 'Exam' ? examTime(timer, examStartingTime) : timer}</p>
       <h2>Ready for another round?</h2>
-      <h3>Hit Reset button below</h3>
+      <h3>Hit Reset button: <button onClick={resetMode}><AiOutlineUndo/></button></h3>
     </div>
   )
 }

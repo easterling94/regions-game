@@ -1,6 +1,5 @@
 import GameHeader from './GameHeader/GameHeader.js'
 import GameBoard from './GameBoard/GameBoard.js'
-import GameFooter from './GameFooter/GameFooter.js'
 import FinalStats from './FinalStats/FinalStats.js'
 import { useState, useEffect } from 'react';
 import styles from './gameinterface.module.css'
@@ -65,10 +64,9 @@ const GameInterface = ( {regions, mode, resetMode} ) => {
     <div className={styles.wrapper}>
       <GameHeader mode={mode} correct={correct} lives={lives} hints={hints} timer={timer}/>
       {lives <= 0 || timerOver !== 0 ? 
-        <FinalStats correct={correct} lives={lives} hints={hints} timer={timer} examStartingTime={examStartingTime} mode={mode}/> : 
-        <GameBoard mode={mode} regions={regions} setCorrect={setCorrect} setLives={setLives} setHints={setHints} correct={correct} lives={lives} hints={hints} hardStop={hardStop}/> 
+        <FinalStats correct={correct} lives={lives} hints={hints} timer={timer} examStartingTime={examStartingTime} mode={mode} resetMode={resetMode} /> : 
+        <GameBoard mode={mode} regions={regions} setCorrect={setCorrect} setLives={setLives} setHints={setHints} correct={correct} lives={lives} hints={hints} hardStop={hardStop} resetMode={resetMode}/> 
       }
-      <GameFooter mode={mode} setCorrect={setCorrect} setLives={setLives} setHints={setHints} resetMode={resetMode}/>
     </div>
   )
 }

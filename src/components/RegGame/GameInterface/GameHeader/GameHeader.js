@@ -1,7 +1,6 @@
 import styles from './gameheader.module.css';
-import Timer from './Timer/Timer';
 
-const GameHeader = ({mode, correct, lives, hints}) => {
+const GameHeader = ({mode, correct, lives, hints, timer}) => {
   return (
     <>
       <header className={styles.header}>
@@ -15,7 +14,7 @@ const GameHeader = ({mode, correct, lives, hints}) => {
         </div>
         <div>
           <h4 className={`${styles.element} ${styles.timer}`}>Timer:</h4>
-          <Timer mode={mode}/>
+          <div className={`${styles.element} ${styles.timer}`}>{timer}</div>
         </div>
       </header>
     </>

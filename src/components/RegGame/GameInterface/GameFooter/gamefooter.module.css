@@ -11,3 +11,7 @@
   background-color: white;
   cursor: pointer;
 }
+.info p {
+  margin: 0px;
+  text-align: center;
+}

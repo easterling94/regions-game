@@ -1,20 +1,23 @@
 import { AiOutlineQuestionCircle, AiOutlineUndo } from 'react-icons/ai'
 import styles from './gamefooter.module.css';
 
-const GameFooter = ({mode}) => {
+const GameFooter = ({mode, resetMode}) => {
   return (
     <section className={styles.footer}>
-      <div>Game mode: {mode}</div>
-      <div>
-        Hint:
+      <div className={styles.info}>
+        <p>Game mode:</p>
+        <p>{mode}</p>
+      </div>
+      <div className={styles.info}>
+        <p>Hint:</p>
         <button className={`${styles.btn} ${styles.hint}`}>
           <AiOutlineQuestionCircle size={20} />
         </button>
       </div>
-      <div>
-        Reset:
+      <div className={styles.info}>
+        <p>Reset:</p>
         <button className={`${styles.btn} ${styles.reset}`}>
-          <AiOutlineUndo size={20} />
+          <AiOutlineUndo size={20} onClick={resetMode}/>
         </button>
       </div>
     </section>

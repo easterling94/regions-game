@@ -23,10 +23,14 @@ const RegGame = () => {
     .then(res => res.json())
     return regions;
   }
+
+  const resetMode = () => {
+    setMode('')
+  }
   
   return (
     <div className={styles.body}>
-      {mode === '' ? <GameMode setModeF={setModeF}/> : <GameInterface mode={mode} regions={regions}/>}
+      {mode === '' ? <GameMode setModeF={setModeF}/> : <GameInterface mode={mode} regions={regions} resetMode={resetMode}/>}
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import styles from './gameboard.module.css';
 import { useState, useEffect } from 'react';
 
-const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, lives, hints }) => {
+const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, lives, hints, hardStop }) => {
   let regionsDataInitial = [...regions];
   let chosenRegion = '';
 
@@ -97,7 +97,10 @@ const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, liv
     setStateThree(false);
     setStateFour(false);
     answerCheck();
-    if(regionsData.length === 0) return alert('Thats all folks!') // Ending component required
+    if(regionsData.length === 0) {
+      hardStop();
+      return;
+    }
     setQuestion(chosenRegion.regName);
     setRegionsData(regionsData.filter((el) => el.id !== chosenRegion.id));
     setAnswers();
@@ -111,9 +114,8 @@ const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, liv
     if(stateTwo) answerChosenList.push(answerList[1]);
     if(stateThree) answerChosenList.push(answerList[2]);
     if(stateFour) answerChosenList.push(answerList[3]);
-    console.log(answerChosenList);
+
     let currentRegionCodeList = regions.filter((el) => el.regName === question)[0].currRegCode;
-    console.log(currentRegionCodeList);
     for(let i = 0; i < answerChosenList.length; i++) {
       if(!currentRegionCodeList.includes(answerChosenList[i])) {
         wrongAnswers ++;
@@ -124,7 +126,7 @@ const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, liv
     switch (mode) {
       case 'Exam':
         setCorrect(correct + correctAnswers);
-        setLives(lives - wrongAnswers);
+        setLives(lives - wrongAnswers < 0 ? 0 : lives - wrongAnswers);
         break;
       case 'Training':
         setCorrect(correct + correctAnswers);
@@ -167,7 +169,7 @@ const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, liv
   return (
     <div className={styles.wrapper}>
       <div className={styles.board}>
-        <div className={`${styles.box} ${styles.question}`}>{question}</div>
+        <div className={`${styles.box} ${styles.question}`}>Выберете все подходящие номера для:<br/>{question}</div>
         <div id='one' className={styles.box} onClick={(e) => {setState(e)}} style={stateOne ? {backgroundColor: color.answerChosen} : {backgroundColor: color.noEffect}}>{answerList[0]}</div>
         <div id='two' className={styles.box} onClick={(e) => {setState(e)}} style={stateTwo ? {backgroundColor: color.answerChosen} : {backgroundColor: color.noEffect}}>{answerList[1]}</div>
         <div id='three' className={styles.box} onClick={(e) => {setState(e)}} style={stateThree ? {backgroundColor: color.answerChosen} : {backgroundColor: color.noEffect}}>{answerList[2]}</div>

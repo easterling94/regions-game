@@ -1,9 +1,15 @@
 import { AiOutlineQuestionCircle, AiOutlineUndo } from 'react-icons/ai'
 import styles from './gamefooter.module.css';
 
-const GameFooter = ({mode, resetMode}) => {
+const GameFooter = ({mode, setHints, hints, resetMode, currentRegion, showHintModal}) => {
   const showHint = () => {
-    console.log('test')
+    if(hints === 0) return;
+    if (mode === 'Training') {
+      showHintModal(currentRegion);
+      return;
+    }
+    showHintModal(currentRegion);
+    setHints(hints - 1)
   }
   return (
     <section className={styles.footer}>

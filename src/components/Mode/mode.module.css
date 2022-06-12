@@ -1,10 +1,11 @@
 .wrapper {
-  margin: 20px auto;
+  margin: 0px auto;
   width: 400px;
   display: flex;
   justify-content: space-between;
   text-align: center;
   font-weight: bold;
+  background-color: grey;
 }
 .toggle {
   margin: 5px auto;

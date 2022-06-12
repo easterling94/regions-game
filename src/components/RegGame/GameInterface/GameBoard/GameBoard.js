@@ -2,10 +2,10 @@ import GameFooter from './GameFooter/GameFooter.js'
 import styles from './gameboard.module.css';
 import { useState, useEffect } from 'react';
 
-const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, lives, hints, hardStop, resetMode }) => {
+const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, lives, hints, hardStop, resetMode, showHintModal }) => {
   let regionsDataInitial = [...regions];
-  let chosenRegion = '';
 
+  const [currentRegion, setCurrentRegion] = useState('')
   const [regionsData, setRegionsData] = useState(regionsDataInitial);
   const [question, setQuestion] = useState('');
   const [answerList, setAnswerList] = useState(['','','','']);
@@ -20,7 +20,7 @@ const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, liv
     return randomRegion;
   }
 
-  function setAnswers() {
+  function setAnswers(chosenRegion) {
     let order = [1,2,3,4];
     let newOrder = [];
 
@@ -79,20 +79,21 @@ const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, liv
   useEffect(() => {
     // initializing first question
     let randomRegion = getRandomRegion();
-    chosenRegion = regionsDataInitial[randomRegion];
+    let chosenRegion = regionsDataInitial[randomRegion];
     setQuestion(chosenRegion.regName);
+    setCurrentRegion(chosenRegion);
     regionsDataInitial.splice(randomRegion,1);
 
     //initializing state with regions AFTER first question, initializing answers
     setRegionsData([...regionsDataInitial]);
-    setAnswers();
+    setAnswers(chosenRegion);
     regionsDataInitial = '';
   },[]);
 
   const nextQuestion = () => {
     if(!stateOne && !stateTwo && !stateThree && !stateFour) return alert('Please chose at least one option');
     let randomRegion = getRandomRegion();
-    chosenRegion = regionsData[randomRegion];
+    let chosenRegion = regionsData[randomRegion];
     setStateOne(false);
     setStateTwo(false);
     setStateThree(false);
@@ -103,8 +104,9 @@ const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, liv
       return;
     }
     setQuestion(chosenRegion.regName);
+    setCurrentRegion(chosenRegion);
     setRegionsData(regionsData.filter((el) => el.id !== chosenRegion.id));
-    setAnswers();
+    setAnswers(chosenRegion);
   }
 
   const answerCheck = () => {
@@ -177,7 +179,7 @@ const GameBoard = ({ regions, mode, setCorrect, setLives, setHints, correct, liv
         <div id='four' className={styles.box} onClick={(e) => {setState(e)}} style={stateFour ? {backgroundColor: color.answerChosen} : {backgroundColor: color.noEffect}}>{answerList[3]}</div>
         <div className={`${styles.box} ${styles.next}`} style={stateNext ? {backgroundColor: color.nextAwailable} : {backgroundColor: color.noEffect}} onClick={nextQuestion}>Submit</div>
       </div>
-      <GameFooter mode={mode} setCorrect={setCorrect} setLives={setLives} setHints={setHints} resetMode={resetMode}/>
+      <GameFooter mode={mode} setHints={setHints} hints={hints} resetMode={resetMode} currentRegion={currentRegion} showHintModal={showHintModal}/>
     </div>
   )
 }

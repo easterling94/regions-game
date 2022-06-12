@@ -1,6 +1,10 @@
+# Region game test version for game interface
+
+Region game interface is in development
+
 # Region game test version for region form
 
-Reg form functionality is currently under development.
+Region registration form is done
 
 # Mocking JSON-server
 

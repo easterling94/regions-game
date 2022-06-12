@@ -3,6 +3,7 @@ import GameBoard from './GameBoard/GameBoard.js'
 import FinalStats from './FinalStats/FinalStats.js'
 import { useState, useEffect } from 'react';
 import styles from './gameinterface.module.css'
+import HintModal from './HintModal/HintModal.js';
 
 const GameInterface = ( {regions, mode, resetMode} ) => {
   const infinitySign = '\u221e';
@@ -11,7 +12,10 @@ const GameInterface = ( {regions, mode, resetMode} ) => {
   const [hints, setHints] = useState('');
   const [timer, setTimer] = useState('');
   const [timerOver, setTimerOver] = useState(0);
-  const limit = mode === 'Exam' ? '00:00' : '99:99';
+  const [modalToShow, setModalToShow] = useState(false);
+  const [currentRegion, setCurrentRegion] = useState('');
+
+  const limit = mode === 'Exam' ? '00:00' : '10:00';
   const examStartingTime = '03:00';
 
   useEffect(() => {
@@ -60,13 +64,23 @@ const GameInterface = ( {regions, mode, resetMode} ) => {
     setTimerOver(timerOver + 1);
   }
 
+  const showHintModal = (currentRegion) => {
+    setCurrentRegion(currentRegion);
+    setModalToShow(!modalToShow); 
+  }
+
+  const closeHintModal = () => {
+    setModalToShow(!modalToShow); 
+  }
+
   return (
     <div className={styles.wrapper}>
       <GameHeader mode={mode} correct={correct} lives={lives} hints={hints} timer={timer}/>
       {lives <= 0 || timerOver !== 0 ? 
         <FinalStats correct={correct} lives={lives} hints={hints} timer={timer} examStartingTime={examStartingTime} mode={mode} resetMode={resetMode} /> : 
-        <GameBoard mode={mode} regions={regions} setCorrect={setCorrect} setLives={setLives} setHints={setHints} correct={correct} lives={lives} hints={hints} hardStop={hardStop} resetMode={resetMode}/> 
+        <GameBoard mode={mode} regions={regions} setCorrect={setCorrect} setLives={setLives} setHints={setHints} correct={correct} lives={lives} hints={hints} hardStop={hardStop} resetMode={resetMode} showHintModal={showHintModal}/> 
       }
+      {modalToShow ? <HintModal currentRegion={currentRegion} closeHintModal={closeHintModal}/>  : ''}
     </div>
   )
 }

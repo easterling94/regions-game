@@ -18,10 +18,10 @@ const FinalStats = ({correct, lives, hints, timer, examStartingTime, mode, reset
     <div className={styles.wrapper}>
       <h2>Congratulations!</h2> 
       <h3>{mode === 'Exam' ? 'That is the end of the exam.' : 'You have tried all the regions!'}</h3>
-      <h3>Your game's statistics are:</h3>
+      <h4>Your game's statistics are:</h4>
       <p>Total right answers: {correct}</p>
       <p>Total lives left: {lives} out of 10</p>
-      <p>Hints used: {hints} out of 10</p>
+      <p>Hints used: {mode === 'Exam' ? 10 - hints : hints} out of 10</p>
       <p>Time played: {mode === 'Exam' ? examTime(timer, examStartingTime) : timer}</p>
       <h2>Ready for another round?</h2>
       <h3>Hit Reset button: <button onClick={resetMode}><AiOutlineUndo/></button></h3>

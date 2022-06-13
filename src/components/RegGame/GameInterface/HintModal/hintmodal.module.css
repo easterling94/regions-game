@@ -1,4 +1,8 @@
-h4, p {
+.regName {
+  text-align: center;
+  margin: 0px auto;
+}
+.curRegs {
   text-align: center;
 }
 .wrapper {
@@ -26,15 +30,19 @@ h4, p {
   margin: 20px auto;
 }
 .code {
+  width: 45px;
   border: 1px solid black;
-  padding: 10px;
-  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  /* margin-right: 10px; */
 }
 .btnWrapper {
-  width: 100px;
+  width: 90px;
   margin: 0px auto;
 }
 .btn {
+  width: 100%;
   padding: 10px;
   cursor: pointer;
   border: 1px solid rgb(52, 148, 148);

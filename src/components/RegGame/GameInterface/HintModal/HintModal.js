@@ -4,8 +4,8 @@ const HintModal = ({currentRegion, closeHintModal}) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.modal}>
-        <h4>{currentRegion.regName}</h4>
-        <p>Current region codes are:</p>
+        <h4 className={styles.regName}>{currentRegion.regName}</h4>
+        <p className={styles.curRegs}>Current region codes are:</p>
         <div className={styles.codes}>
             {currentRegion.currRegCode.map((el, i) => <div key={i} className={styles.code}>{el}</div>)}
         </div>

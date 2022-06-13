@@ -9,7 +9,7 @@ const GameHeader = ({mode, correct, lives, hints, timer}) => {
           <div className={styles.stats}>
             <div className={`${styles.element} ${styles.stat}`}>Correct: {correct}</div>
             <div className={`${styles.element} ${styles.stat}`}>Lives: {lives}</div>
-            <div className={`${styles.element} ${styles.stat}`}>Hits: {hints}</div>
+            <div className={`${styles.element} ${styles.stat}`}>Hints: {hints}</div>
           </div>
         </div>
         <div>

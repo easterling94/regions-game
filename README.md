@@ -1,6 +1,6 @@
 # Reg-game general
 
-The aim of the project is to build app which may help to remember any repetitive and similar information. Pairs of Russian region names and corresponding codes were used as an example. This add consists of two parts: registration form and game interface. 
+The aim of the project is to build app which may help to remember any repetitive and similar information. Pairs of Russian region names and corresponding codes were used as an example. This add consists of two parts: registration form and game interface.
 
 If admin needs to update regions through interface (not inside of a json file) then admin may use registration mode. For any other users - gaming mode is awailable.
 
@@ -22,4 +22,11 @@ JSON-server should be started to perform add/delete functionality in registratio
 The data for pairing regions name and codes was collected from open resource - 'https://www.zr.ru/content/articles/923507-vse-tsifrovye-kody-na-regional/'
 
 # Web version with only game interface funciton
+
 reg-game.ru
+
+# Application scripts
+
+1. npm install - installs all dependencies
+2. npm run server - starts json server
+3. npm run start - launches application

@@ -1,3 +1,4 @@
+import { DATA_IF_SERVER_FAILS } from '../../db_static';
 import RegForm from './RegForm/RegForm';
 import RegList from './Regions/RegList';
 import { useState, useEffect } from 'react';
@@ -36,15 +37,17 @@ function RegBack() {
   }, []);
 
   const getData = async (el) => {
+    let response;
     if (el === undefined) {
-      let response = await fetch(url);
-      let data = await response.json();
-      return data;
+      await fetch(url)
+      .then(res => response = res.json())
+      .catch(() => response = DATA_IF_SERVER_FAILS)
     } else {
-      let response = await fetch(`${url}/${el}`);
-      let data = await response.json();
-      return data;
+      await fetch(`${url}/${el}`)
+      .then(res => response = res.json())
+      .catch(() => response = DATA_IF_SERVER_FAILS)
     }
+    return response;
   };
 
   const chosenElement = (e) => {

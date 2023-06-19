@@ -1,10 +1,10 @@
-{
-  "regions": [
+export const DATA_IF_SERVER_FAILS = {
+  regions: [
     {
       "id": 4,
       "regName": "Республика Алтай",
       "currRegCode": [
-        "4"
+        "04"
       ],
       "futRegCode": []
     },

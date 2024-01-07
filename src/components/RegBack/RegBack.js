@@ -2,8 +2,9 @@ import { DATA_IF_SERVER_FAILS } from '../../db_static';
 import RegForm from './RegForm/RegForm';
 import RegList from './Regions/RegList';
 import { useState, useEffect } from 'react';
+import { IS_PRODUCTION, IS_DEV, IS_PROD } from '../../production';
 
-function RegBack() {
+export function RegBack() {
   
   const [regList, setRegList] = useState([]);
 
@@ -28,11 +29,16 @@ function RegBack() {
   }
 
   useEffect(() => {
-    const fetchData = async () => {
-      const dataFetched = await getData();
-      setRegList(dataFetched);
-    };
-    fetchData();
+    if (IS_PRODUCTION === IS_PROD) {
+      const fetchData = async () => {
+        const dataFetched = await getData();
+        setRegList(dataFetched);
+      };
+      fetchData();
+    }
+    if (IS_PRODUCTION === IS_DEV) {
+      setRegList(DATA_IF_SERVER_FAILS.regions);
+    }
     
   }, []);
 

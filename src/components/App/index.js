@@ -1,14 +1,13 @@
-import RegGame from '../RegGame/RegGame';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function App() {
-  const [state, setState] = useState(false);
-  const changeMode = () => {
-    setState(!state);
-  }
+
   return (
-    <RegGame />
+    <div>
+      <Link to='game'>Игра</Link>
+      <Link to='back'>Серверная</Link>
+    </div>
   );
 }
 

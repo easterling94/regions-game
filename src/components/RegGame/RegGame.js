@@ -1,22 +1,27 @@
 import { useState, useEffect } from 'react';
-import GameMode from './GameMode/GameMode';
 import GameInterface from './GameInterface/GameInterface';
 import styles from './reggame.module.css'
 import { DATA_IF_SERVER_FAILS } from '../../db_static';
+import { IS_PRODUCTION, IS_DEV, IS_PROD } from '../../production';
 
 const RegGame = () => {
   const [mode, setMode] = useState('');
-  const [regions, setRegions] = useState([]);
+  const [regions, setRegions] = useState(null);
 
   const setModeF = (e) => {
     setMode(e.currentTarget.id)
   }
   useEffect(() => {
-    const fetchData = async () => {
-      const dataFetched = await getData();
-      setRegions(dataFetched);
-    };
-    fetchData();
+    if(IS_PRODUCTION === IS_PROD) {
+      const fetchData = async () => {
+        const dataFetched = await getData();
+        setRegions(dataFetched);
+      };
+      fetchData();
+    } else if (IS_PRODUCTION === IS_DEV){
+      setRegions(DATA_IF_SERVER_FAILS.regions);
+    }
+    
   },[]);
 
   const getData = async () => {
@@ -33,7 +38,7 @@ const RegGame = () => {
   
   return (
     <div className={styles.body}>
-      {mode === '' ? <GameMode setModeF={setModeF}/> : <GameInterface mode={mode} regions={regions} resetMode={resetMode}/>}
+      <GameInterface mode='Exam' regions={regions} resetMode={resetMode}/>      
     </div>
   )
 }

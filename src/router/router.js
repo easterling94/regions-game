@@ -1,19 +1,17 @@
 import { createBrowserRouter } from 'react-router-dom';
-import RegGame from '../components/RegGame/RegGame';
-import App from '../components/App';
-import RegBack from '../components/RegBack/RegBack';
+import { BackPage, GamePage, HomePage } from '../pages/index';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <HomePage />,
   },
   {
     path: '/game',
-    element: <RegGame />,
+    element: <GamePage />,
   },
   {
     path: '/back',
-    element: <RegBack />
+    element: <BackPage />
   }
 ])

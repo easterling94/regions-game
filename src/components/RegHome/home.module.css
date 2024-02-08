@@ -1,0 +1,20 @@
+.home {
+  width: 40%;
+  min-width: 200px;
+  height: 100vh;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: blue;
+  font-size: 1.8em;
+  text-shadow: rgb(112, 89, 245) 0px 0 10px;
+}
+
+.link:hover {
+  text-shadow: rgb(38, 0, 255) 0px 0 10px;
+}

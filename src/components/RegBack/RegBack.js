@@ -1,8 +1,8 @@
-import { DATA_IF_SERVER_FAILS } from '../../db_static';
+import { DATA_IF_SERVER_FAILS } from '../../utils/db_static';
 import RegForm from './RegForm/RegForm';
 import RegList from './Regions/RegList';
 import { useState, useEffect } from 'react';
-import { IS_PRODUCTION, IS_DEV, IS_PROD } from '../../production';
+import { IS_PRODUCTION, IS_DEV, IS_PROD } from '../../utils/production';
 
 export function RegBack() {
   

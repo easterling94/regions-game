@@ -5,72 +5,63 @@ export const DATA_IF_SERVER_FAILS = {
       "regName": "Республика Алтай",
       "currRegCode": [
         "04"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 5,
       "regName": "Республика Дагестан",
       "currRegCode": [
         "05"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 6,
       "regName": "Республика Ингушетия",
       "currRegCode": [
         "06"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 7,
       "regName": "Кабардино-Балкарская Республика",
       "currRegCode": [
         "07"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 8,
       "regName": "Республика Калмыкия",
       "currRegCode": [
         "08"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 9,
       "regName": "Карачаево-Черкесская Республика",
       "currRegCode": [
         "09"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 10,
       "regName": "Республика Карелия",
       "currRegCode": [
         "10"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 11,
       "regName": "Республика Коми",
       "currRegCode": [
         "11"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 12,
       "regName": "Республика Марий Эл",
       "currRegCode": [
         "12"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 13,
@@ -78,24 +69,21 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "13",
         "113"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 14,
       "regName": "Республика Саха (Якутия)",
       "currRegCode": [
         "14"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 15,
       "regName": "Республика Северная Осетия — Алания",
       "currRegCode": [
         "15"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 16,
@@ -104,9 +92,6 @@ export const DATA_IF_SERVER_FAILS = {
         "16",
         "116",
         "716"
-      ],
-      "futRegCode": [
-        "616"
       ]
     },
     {
@@ -114,24 +99,21 @@ export const DATA_IF_SERVER_FAILS = {
       "regName": "Республика Тыва",
       "currRegCode": [
         "17"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 18,
       "regName": "Удмуртская Республика",
       "currRegCode": [
         "18"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 19,
       "regName": "Республика Хакасия",
       "currRegCode": [
         "19"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 20,
@@ -139,17 +121,13 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "21",
         "121"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 21,
       "regName": "Алтайский край",
       "currRegCode": [
         "22"
-      ],
-      "futRegCode": [
-        "222"
       ]
     },
     {
@@ -160,8 +138,7 @@ export const DATA_IF_SERVER_FAILS = {
         "93",
         "123",
         "193"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 23,
@@ -169,8 +146,7 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "24",
         "124"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 24,
@@ -178,8 +154,7 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "25",
         "125"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 25,
@@ -187,41 +162,34 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "26",
         "126"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 26,
       "regName": "Хабаровский край",
       "currRegCode": [
         "27"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 27,
       "regName": "Амурская область",
       "currRegCode": [
         "28"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 28,
       "regName": "Архангельская область",
       "currRegCode": [
         "29"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 29,
       "regName": "Астраханская область",
       "currRegCode": [
         "30"
-      ],
-      "futRegCode": [
-        "330"
       ]
     },
     {
@@ -229,25 +197,20 @@ export const DATA_IF_SERVER_FAILS = {
       "regName": "Белгородская область",
       "currRegCode": [
         "31"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 31,
       "regName": "Брянская область",
       "currRegCode": [
         "32"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 32,
       "regName": "Владимирская область",
       "currRegCode": [
         "33"
-      ],
-      "futRegCode": [
-        "333"
       ]
     },
     {
@@ -256,16 +219,14 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "34",
         "134"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 34,
       "regName": "Вологодская область",
       "currRegCode": [
         "35"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 35,
@@ -273,16 +234,14 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "36",
         "136"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 36,
       "regName": "Ивановская область",
       "currRegCode": [
         "37"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 37,
@@ -290,32 +249,28 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "38",
         "138"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 38,
       "regName": "Калининградская область",
       "currRegCode": [
         "39"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 39,
       "regName": "Калужская область",
       "currRegCode": [
         "40"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 40,
       "regName": "Камчатский край",
       "currRegCode": [
         "41"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 41,
@@ -323,25 +278,20 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "42",
         "142"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 42,
       "regName": "Кировская область",
       "currRegCode": [
         "43"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 43,
       "regName": "Костромская область",
       "currRegCode": [
         "44"
-      ],
-      "futRegCode": [
-        "444"
       ]
     },
     {
@@ -349,16 +299,14 @@ export const DATA_IF_SERVER_FAILS = {
       "regName": "Курганская область",
       "currRegCode": [
         "45"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 45,
       "regName": "Курская область",
       "currRegCode": [
         "46"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 46,
@@ -366,24 +314,21 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "47",
         "147"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 47,
       "regName": "Липецкая область",
       "currRegCode": [
         "48"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 48,
       "regName": "Магаданская область",
       "currRegCode": [
         "49"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 49,
@@ -395,16 +340,14 @@ export const DATA_IF_SERVER_FAILS = {
         "190",
         "750",
         "790"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 50,
       "regName": "Мурманская область",
       "currRegCode": [
         "51"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 51,
@@ -412,16 +355,14 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "52",
         "152"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 52,
       "regName": "Новгородская область",
       "currRegCode": [
         "53"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 53,
@@ -429,16 +370,14 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "54",
         "154"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 54,
       "regName": "Омская область",
       "currRegCode": [
         "55"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 55,
@@ -446,24 +385,21 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "56",
         "156"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 56,
       "regName": "Орловская область",
       "currRegCode": [
         "57"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 57,
       "regName": "Пензенская область",
       "currRegCode": [
         "58"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 58,
@@ -471,17 +407,13 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "59",
         "159"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 59,
       "regName": "Псковская область",
       "currRegCode": [
         "60"
-      ],
-      "futRegCode": [
-        "660"
       ]
     },
     {
@@ -491,9 +423,6 @@ export const DATA_IF_SERVER_FAILS = {
         "61",
         "161",
         "761"
-      ],
-      "futRegCode": [
-        "661"
       ]
     },
     {
@@ -501,9 +430,6 @@ export const DATA_IF_SERVER_FAILS = {
       "regName": "Рязанская область",
       "currRegCode": [
         "62"
-      ],
-      "futRegCode": [
-        "662"
       ]
     },
     {
@@ -513,9 +439,6 @@ export const DATA_IF_SERVER_FAILS = {
         "63",
         "163",
         "763"
-      ],
-      "futRegCode": [
-        "663"
       ]
     },
     {
@@ -524,9 +447,6 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "64",
         "164"
-      ],
-      "futRegCode": [
-        "664"
       ]
     },
     {
@@ -534,9 +454,6 @@ export const DATA_IF_SERVER_FAILS = {
       "regName": "Сахалинская область",
       "currRegCode": [
         "65"
-      ],
-      "futRegCode": [
-        "665"
       ]
     },
     {
@@ -546,9 +463,6 @@ export const DATA_IF_SERVER_FAILS = {
         "196",
         "66",
         "96"
-      ],
-      "futRegCode": [
-        "666"
       ]
     },
     {
@@ -556,9 +470,6 @@ export const DATA_IF_SERVER_FAILS = {
       "regName": "Смоленская область",
       "currRegCode": [
         "67"
-      ],
-      "futRegCode": [
-        "667"
       ]
     },
     {
@@ -566,9 +477,6 @@ export const DATA_IF_SERVER_FAILS = {
       "regName": "Тамбовская область",
       "currRegCode": [
         "68"
-      ],
-      "futRegCode": [
-        "668"
       ]
     },
     {
@@ -576,9 +484,6 @@ export const DATA_IF_SERVER_FAILS = {
       "regName": "Тверская область",
       "currRegCode": [
         "69"
-      ],
-      "futRegCode": [
-        "669"
       ]
     },
     {
@@ -586,24 +491,21 @@ export const DATA_IF_SERVER_FAILS = {
       "regName": "Томская область",
       "currRegCode": [
         "70"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 70,
       "regName": "Тульская область",
       "currRegCode": [
         "71"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 71,
       "regName": "Тюменская область",
       "currRegCode": [
         "72"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 72,
@@ -611,8 +513,7 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "73",
         "173"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 73,
@@ -621,24 +522,21 @@ export const DATA_IF_SERVER_FAILS = {
         "74",
         "174",
         "774"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 74,
       "regName": "Забайкальский край",
       "currRegCode": [
         "75"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 75,
       "regName": "Ярославская область",
       "currRegCode": [
         "76"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 76,
@@ -653,9 +551,6 @@ export const DATA_IF_SERVER_FAILS = {
         "777",
         "797",
         "799"
-      ],
-      "futRegCode": [
-        "497"
       ]
     },
     {
@@ -666,9 +561,6 @@ export const DATA_IF_SERVER_FAILS = {
         "98",
         "178",
         "198"
-      ],
-      "futRegCode": [
-        "278"
       ]
     },
     {
@@ -676,24 +568,21 @@ export const DATA_IF_SERVER_FAILS = {
       "regName": "Еврейская автономная область",
       "currRegCode": [
         "79"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 79,
       "regName": "Республика Крым",
       "currRegCode": [
         "82"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 80,
       "regName": "Ненецкий автономный округ",
       "currRegCode": [
         "83"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 81,
@@ -701,41 +590,34 @@ export const DATA_IF_SERVER_FAILS = {
       "currRegCode": [
         "86",
         "186"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 82,
       "regName": "Чукотский автономный округ",
       "currRegCode": [
         "87"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 83,
       "regName": "Ямало-Ненецкий автономный округ",
       "currRegCode": [
         "89"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 84,
       "regName": "г. Севастополь",
       "currRegCode": [
         "92"
-      ],
-      "futRegCode": []
+      ]
     },
     {
       "id": 85,
       "regName": "Чеченская Республика",
       "currRegCode": [
         "95"
-      ],
-      "futRegCode": [
-        "995"
       ]
     }
   ]

@@ -13,11 +13,7 @@ const RegItem = ( {el, regDel, regEdit} ) => {
           </div>
         </div>
         <hr/>
-        <div>Future codes:
-          <div className={regListStyles.codes}>
-            {el.futRegCode.length? el.futRegCode.map((el) => <div key={el} className={regListStyles.codeItem}>{el}</div>) : '-'}
-          </div>
-        </div>
+        
       </div>
       <div className={regListStyles.btnGroup}>
         <button className={`${regListStyles.btn} ${regListStyles.btnDelete}`} onClick={(e) => regDel(e)}>

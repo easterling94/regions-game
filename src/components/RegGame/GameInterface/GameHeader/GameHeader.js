@@ -5,7 +5,7 @@ const GameHeader = ({mode, correct, lives, hints, timer}) => {
     <>
       <header className={styles.header}>
         <div>
-          <h4 className={`${styles.element} ${styles.title}`}>Stats:</h4>
+          <p className={`${styles.element} ${styles.title}`}>Stats:</p>
           <div className={styles.stats}>
             <div className={`${styles.element} ${styles.stat}`}>Correct: {correct}</div>
             <div className={`${styles.element} ${styles.stat}`}>Lives: {lives}</div>
@@ -13,7 +13,7 @@ const GameHeader = ({mode, correct, lives, hints, timer}) => {
           </div>
         </div>
         <div>
-          <h4 className={`${styles.element} ${styles.timer}`}>Timer:</h4>
+          <p className={`${styles.element} ${styles.timer}`}>Timer:</p>
           <div className={`${styles.element} ${styles.timer}`}>{timer}</div>
         </div>
       </header>

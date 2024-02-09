@@ -15,7 +15,6 @@ const RegForm = ({setRegStateF, regState, formSubmit}) => {
       <form onSubmit={formSubmit}>
         <RegFormInput value={regState.regName} lbl='Insert Region Name' id='regName' plhldr='Region name' setRegStateF={setRegStateF}/>
         <RegFormInput value={regState.currRegCode} lbl='Insert Region Code(s)' id='currRegCode' plhldr='Current codes divided by ","' setRegStateF={setRegStateF}/>
-        <RegFormInput value={regState.futRegCode} lbl='Insert Future Code(s) if known' id='futRegCode' plhldr='Future codes divided by ","' setRegStateF={setRegStateF}/>
         <input type='submit' value='Save' className={styles.btn} style={{backgroundColor: colors[btnBackground]}}/>
       </form>
     </div>

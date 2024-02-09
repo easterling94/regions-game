@@ -1,4 +1,4 @@
-import GameFooter from './GameFooter/GameFooter.js'
+import { GameFooter } from '../GameFooter/GameFooter';
 import styles from './gameboard.module.css';
 import { useState, useEffect } from 'react';
 

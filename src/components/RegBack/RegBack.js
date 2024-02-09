@@ -13,7 +13,6 @@ export function RegBack() {
       id: '',
       regName: '',
       currRegCode: '',
-      futRegCode: ''
     },
   );
 
@@ -102,8 +101,7 @@ export function RegBack() {
     const newReg = {
       id: fetchData.id,
       regName: fetchData.regName,
-      currRegCode: fetchData.currRegCode,
-      futRegCode: fetchData.futRegCode
+      currRegCode: fetchData.currRegCode
     };
     setRegState(newReg);
   };
@@ -116,7 +114,6 @@ export function RegBack() {
     }
 
     const currRegList = regState.currRegCode.toString().replace(/[,!?.\\();:]/g, ' ').split(' ').filter((el) => (el !== ' ' && el !== ''));
-    const futRegList = regState.futRegCode ? regState.futRegCode.toString().replace(/[,!?.\\();:]/g, ' ').split(' ').filter((el) => (el !== ' ' && el !== '')) : [];
 
     if(regState.id) {
       let currList = [...regList];
@@ -124,7 +121,6 @@ export function RegBack() {
         id: regState.id, 
         regName: regState.regName, 
         currRegCode: currRegList, 
-        futRegCode: futRegList
       };
       fetch(`${url}/${regState.id}`, {
         method: 'PUT', 
@@ -141,7 +137,6 @@ export function RegBack() {
         id: regListLength, 
         regName: regState.regName, 
         currRegCode: currRegList, 
-        futRegCode: futRegList
       };
       regAdd(newReg);
     };
@@ -149,7 +144,6 @@ export function RegBack() {
       id: '',
       regName: '',
       currRegCode: '',
-      futRegCode: ''
     })
   }
 

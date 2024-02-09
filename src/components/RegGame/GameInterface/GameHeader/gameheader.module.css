@@ -9,7 +9,6 @@
   display: flex;
 }
 .element {
-  font-weight: bold;
   color: white;
   transition: color 0.5s;
 }

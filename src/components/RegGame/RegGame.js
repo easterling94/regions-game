@@ -5,12 +5,8 @@ import { DATA_IF_SERVER_FAILS } from '../../utils/db_static';
 import { IS_PRODUCTION, IS_DEV, IS_PROD } from '../../utils/production';
 
 const RegGame = () => {
-  const [mode, setMode] = useState('');
   const [regions, setRegions] = useState(null);
 
-  const setModeF = (e) => {
-    setMode(e.currentTarget.id)
-  }
   useEffect(() => {
     if(IS_PRODUCTION === IS_PROD) {
       const fetchData = async () => {
@@ -31,14 +27,10 @@ const RegGame = () => {
     .catch(() => regions = DATA_IF_SERVER_FAILS.regions)
     return regions;
   }
-
-  const resetMode = () => {
-    setMode('')
-  }
   
   return (
     <div className={styles.body}>
-      <GameInterface mode='Exam' regions={regions} resetMode={resetMode}/>      
+      <GameInterface mode='Exam' regions={regions} />      
     </div>
   )
 }

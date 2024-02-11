@@ -1,5 +1,5 @@
-import RegGame from '../components/RegGame/RegGame'
+import RegGame from '../components/RegGame/RegGame';
 
-export const GamePage = () => {
-  return <RegGame />
+export function GamePage() {
+  return <RegGame />;
 }

@@ -4,8 +4,8 @@ import { HomePage } from './home';
 import { StatsPage } from './stats';
 
 export {
-  BackPage, 
+  BackPage,
   GamePage,
   HomePage,
   StatsPage,
-}
+};

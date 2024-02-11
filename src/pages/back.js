@@ -1,5 +1,5 @@
 import RegBack from '../components/RegBack/RegBack';
 
-export const BackPage = () => {
-  return <RegBack />
+export function BackPage() {
+  return <RegBack />;
 }

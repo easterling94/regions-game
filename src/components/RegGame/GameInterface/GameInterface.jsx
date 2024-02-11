@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import GameHeader from './GameHeader/GameHeader.js';
-import GameBoard from './GameBoard/GameBoard.js';
-import FinalStats from './FinalStats/FinalStats.js';
+import GameHeader from './GameHeader/GameHeader.jsx';
+import GameBoard from './GameBoard/GameBoard.jsx';
+import FinalStats from './FinalStats/FinalStats.jsx';
 import styles from './gameinterface.module.css';
-import HintModal from './HintModal/HintModal.js';
+import HintModal from './HintModal/HintModal.jsx';
 
 function GameInterface({ regions, mode, resetMode }) {
   const infinitySign = '\u221e';

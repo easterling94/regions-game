@@ -93,7 +93,7 @@ function GameBoard({
   }, []);
 
   const nextQuestion = () => {
-    if (!stateOne && !stateTwo && !stateThree && !stateFour) return alert('Please chose at least one option');
+    if (!stateOne && !stateTwo && !stateThree && !stateFour) return;
     const randomRegion = getRandomRegion();
     const chosenRegion = regionsData[randomRegion];
     setStateOne(false);

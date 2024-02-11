@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { DATA_IF_SERVER_FAILS } from '../../utils/db_static';
+import DATA_IF_SERVER_FAILS from '../../utils/db_static';
 import RegForm from './RegForm/RegForm';
 import RegList from './Regions/RegList';
 import { IS_PRODUCTION, IS_DEV, IS_PROD } from '../../utils/production';
@@ -26,19 +26,6 @@ export function RegBack() {
     }
   };
 
-  useEffect(() => {
-    if (IS_PRODUCTION === IS_PROD) {
-      const fetchData = async () => {
-        const dataFetched = await getData();
-        setRegList(dataFetched);
-      };
-      fetchData();
-    }
-    if (IS_PRODUCTION === IS_DEV) {
-      setRegList(DATA_IF_SERVER_FAILS.regions);
-    }
-  }, []);
-
   const getData = async (el) => {
     let response;
     if (el === undefined) {
@@ -52,6 +39,19 @@ export function RegBack() {
     }
     return response;
   };
+
+  useEffect(() => {
+    if (IS_PRODUCTION === IS_PROD) {
+      const fetchData = async () => {
+        const dataFetched = await getData();
+        setRegList(dataFetched);
+      };
+      fetchData();
+    }
+    if (IS_PRODUCTION === IS_DEV) {
+      setRegList(DATA_IF_SERVER_FAILS.regions);
+    }
+  }, []);
 
   const chosenElement = (e) => {
     let el;
@@ -106,7 +106,6 @@ export function RegBack() {
   const formSubmit = (e) => {
     e.preventDefault();
     if (!regState.regName || !regState.currRegCode) {
-      alert('Please fill in at least first two fields');
       return;
     }
 

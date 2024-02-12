@@ -23,6 +23,13 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        include: [
+          path.resolve(__dirname, 'src'),
+        ],
+      },
     ],
   },
   plugins: [
@@ -31,7 +38,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.js', '.jsx'],
   },
   output: {
     path: path.resolve(__dirname, './public'),

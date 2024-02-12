@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es2016", 
+    "module": "ESNext",
+    "outDir": "public", 
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "moduleResolution":"Node"
+  }
+}

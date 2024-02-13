@@ -25,6 +25,7 @@
     "import/no-named-as-default": 0,
     "no-useless-return": 0,
     "import/no-unresolved": 0,
-    "no-console": 0
+    "no-console": 0,
+    "comma-dangle": 0
   }
 }

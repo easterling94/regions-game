@@ -7,7 +7,7 @@ import { store } from './services/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={router}>
-    <Provider store={store} />
-  </RouterProvider>,
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 );

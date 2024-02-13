@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { Tregion } from '../../utils/sharedTypes';
+import { TRegion } from '../../utils/sharedTypes';
 
 
 interface initialState {
   status: 'idle' | 'loading' | 'success' | 'error',
-  data: Array<Tregion> | null
+  data: Array<TRegion> | null
 }
 
 const initialState: initialState = {
@@ -20,7 +20,7 @@ export const regionsSlice = createSlice({
     getRegionsLoading: (state) => {
       state.status = 'loading'
     },
-    getRegionsSuccess: (state, action: PayloadAction<Array<Tregion>>) => {
+    getRegionsSuccess: (state, action: PayloadAction<Array<TRegion>>) => {
       state.status = 'success',
       state.data = action.payload
     },

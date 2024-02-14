@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import GameInterface from './GameInterface/GameInterface';
 import styles from './reggame.module.css';
-import DATA_IF_SERVER_FAILS from '../../utils/db_static';
+import { DATA_IF_SERVER_FAILS } from '../../utils/db_static';
 import { IS_PRODUCTION, IS_DEV, IS_PROD } from '../../utils/project_consts';
 
 function RegGame() {

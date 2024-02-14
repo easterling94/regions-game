@@ -1,4 +1,4 @@
-const DATA_IF_SERVER_FAILS = {
+export const DATA_IF_SERVER_FAILS = {
   regions: [
     {
       id: 4,
@@ -622,5 +622,3 @@ const DATA_IF_SERVER_FAILS = {
     },
   ],
 };
-
-export default DATA_IF_SERVER_FAILS;

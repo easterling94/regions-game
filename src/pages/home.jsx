@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 import { RegHome } from '../components/RegHome';
-import { getDataThunk } from '../services/thunks/getDataThunk';
+import { environmentThunk } from '../services/thunks/environmentThunk';
+import { regionsThunk } from '../services/thunks/regionsThunk';
 import { useAppDispatch } from '../services/store';
 
 export function HomePage() {
   const dispatch = useAppDispatch();
   useEffect(() => {
-    dispatch(getDataThunk());
+    dispatch(environmentThunk());
+    dispatch(regionsThunk());
   }, []);
   return <RegHome />;
 }

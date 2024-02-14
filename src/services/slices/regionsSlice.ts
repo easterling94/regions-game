@@ -5,12 +5,12 @@ import { TRegion } from '../../utils/sharedTypes';
 
 interface initialState {
   status: 'idle' | 'loading' | 'success' | 'error',
-  data: Array<TRegion> | null
+  data: Array<TRegion> | null,
 }
 
 const initialState: initialState = {
   status: 'idle',
-  data: null
+  data: null,
 }
 
 export const regionsSlice = createSlice({

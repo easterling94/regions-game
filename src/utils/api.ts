@@ -1,17 +1,22 @@
-import { URL } from './project_consts';
+import { DEV_URL, PROD_URL } from './project_consts';
 
 class API {
-  url: string;
-  constructor(url: string) {
-    this.url = url;
-  }
-  getRegions() {
-    return fetch('https://jsonplaceholder.typicode.com/todos/1')
+  async testIfBackendAvailable() {
+    try {
+      return await fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(response => response.ok)
+    }
+    catch {
+
+    }
+  };
+  async getRegions() {
+    return await fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then(response => response.json())
       .then(json => console.log(json))
   }
 }
 
-const api = new API(URL);
+const api = new API();
 
 export default api;

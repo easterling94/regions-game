@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { ENVIRONMENT, TEnvironment } from '../../utils/project_consts';
+import { TEnvironment } from '../../utils/project_consts';
 
 interface initialState {
   environment: 'idle' | TEnvironment;

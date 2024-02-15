@@ -1,5 +1,6 @@
-export const DEV_URL = 'http://localhost:3000/regions';
-export const PROD_URL = '';
+export const TEST_URL = 'https://jsonplaceholder.typicode.com/todos/1';
+export const DEV_URL = 'http://localhost:5000';
+export const PROD_URL = 'https://github.com/reduxjs/redux-toolkit/issues/429';
 
 export enum ENVIRONMENT {
   IS_DEV_MOCK = 'IS_DEV_MOCK', // локально с недоступным бэком

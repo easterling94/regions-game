@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --mode=development",
     "build": "webpack",
-    "lint": "eslint ."
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "repository": {
     "type": "git",

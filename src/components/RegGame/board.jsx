@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { GameFooter } from '../GameFooter/GameFooter';
-import styles from './gameboard.module.css';
+import { GameFooter } from './footer';
+import styles from './board.module.css';
 
 function GameBoard({
   regions, mode, setCorrect, setLives, setHints, correct, lives, hints, hardStop, resetMode, showHintModal,

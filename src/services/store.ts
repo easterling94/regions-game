@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import regionsReducer from './slices/regionsSlice';
-import environmentReducer from './slices/environmentSlice';
+import generalReducer from './slices/generalSlice';
 import { useDispatch, useSelector, TypedUseSelectorHook  } from 'react-redux';
 
 export const store = configureStore({
   reducer: {
-    environment: environmentReducer,
+    general: generalReducer,
     regions: regionsReducer,
   },
 })

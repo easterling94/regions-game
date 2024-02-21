@@ -1,7 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { AppDispatch } from '../store';
-import { TEnvironment, ENVIRONMENT, IS_LOCALHOST } from '../../utils/project_consts';
-import { setEnvironment } from '../slices/environmentSlice';
+import { IS_LOCALHOST } from '../../utils/project_consts';
+import { TEnvironment, ENVIRONMENT } from '../../utils/sharedTypes';
+import { setEnvironment } from '../slices/generalSlice';
 import api from '../../utils/api';
 import { DATA_IF_SERVER_FAILS } from '../../utils/db_static';
 

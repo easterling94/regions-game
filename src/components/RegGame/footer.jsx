@@ -1,6 +1,6 @@
 import { AiOutlineQuestionCircle, AiOutlineUndo } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
-import styles from './gamefooter.module.css';
+import styles from './footer.module.css';
 
 export function GameFooter({
   setHints, hints, currentRegion, showHintModal,

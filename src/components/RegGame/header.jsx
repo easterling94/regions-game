@@ -1,4 +1,4 @@
-import styles from './gameheader.module.css';
+import styles from './header.module.css';
 
 function GameHeader({
   mode, correct, lives, hints, timer,

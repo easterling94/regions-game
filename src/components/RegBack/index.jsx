@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { DATA_IF_SERVER_FAILS } from '../../utils/db_static';
-import RegForm from './RegForm/RegForm';
-import RegList from './Regions/RegList';
+import RegForm from './RegForm';
+import RegList from './RegList';
 import { IS_PRODUCTION, IS_DEV, IS_PROD } from '../../utils/project_consts';
 
-export function RegBack() {
+function RegBack() {
   const [regList, setRegList] = useState([]);
 
   const [regState, setRegState] = useState(

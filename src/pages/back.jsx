@@ -1,4 +1,4 @@
-import RegBack from '../components/RegBack/RegBack';
+import RegBack from '../components/RegBack/index';
 
 export function BackPage() {
   return <RegBack />;

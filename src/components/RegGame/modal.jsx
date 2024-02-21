@@ -1,4 +1,4 @@
-import styles from './hintmodal.module.css';
+import styles from './modal.module.css';
 
 function HintModal({ currentRegion, closeHintModal }) {
   return (

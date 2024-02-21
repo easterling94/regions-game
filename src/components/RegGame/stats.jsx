@@ -1,5 +1,5 @@
 import { AiOutlineUndo } from 'react-icons/ai';
-import styles from './finalstats.module.css';
+import styles from './stats.module.css';
 
 function FinalStats({
   correct, lives, hints, timer, examStartingTime, mode, resetMode,

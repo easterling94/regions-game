@@ -4,8 +4,10 @@ import GameBoard from './board.jsx';
 import FinalStats from './stats.jsx';
 import styles from './gameinterface.module.css';
 import HintModal from './modal.jsx';
+import { useAppSelector, useAppDispatch } from '../../services/store';
+import { TIMER_END, TIMER_START } from '../../utils/project_consts';
 
-function GameInterface({ regions, mode, resetMode }) {
+function GameInterface({ mode, resetMode }) {
   const infinitySign = '\u221e';
   const [correct, setCorrect] = useState('');
   const [lives, setLives] = useState('');
@@ -78,7 +80,7 @@ function GameInterface({ regions, mode, resetMode }) {
       <GameHeader mode={mode} correct={correct} lives={lives} hints={hints} timer={timer} />
       {lives <= 0 || timerOver !== 0
         ? <FinalStats correct={correct} lives={lives} hints={hints} timer={timer} examStartingTime={examStartingTime} mode={mode} resetMode={resetMode} />
-        : <GameBoard mode={mode} regions={regions} setCorrect={setCorrect} setLives={setLives} setHints={setHints} correct={correct} lives={lives} hints={hints} hardStop={hardStop} resetMode={resetMode} showHintModal={showHintModal} />}
+        : <GameBoard mode={mode} setCorrect={setCorrect} setLives={setLives} setHints={setHints} correct={correct} lives={lives} hints={hints} hardStop={hardStop} showHintModal={showHintModal} />}
       {modalToShow ? <HintModal currentRegion={currentRegion} closeHintModal={closeHintModal} /> : ''}
     </div>
   );

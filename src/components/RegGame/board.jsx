@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { GameFooter } from './footer';
+import { useAppSelector, useAppDispatch } from '../../services/store';
 import styles from './board.module.css';
 
 function GameBoard({
-  regions, mode, setCorrect, setLives, setHints, correct, lives, hints, hardStop, resetMode, showHintModal,
+  mode, setCorrect, setLives, setHints, correct, lives, hints, hardStop, showHintModal,
 }) {
+  const { regions } = useAppSelector((store) => store.regions);
   let regionsDataInitial = [...regions];
 
   const [currentRegion, setCurrentRegion] = useState('');
@@ -185,7 +187,7 @@ function GameBoard({
         <div id="four" className={styles.box} onClick={(e) => { setState(e); }} style={stateFour ? { backgroundColor: color.answerChosen } : { backgroundColor: color.noEffect }}>{answerList[3]}</div>
         <div className={`${styles.box} ${styles.next}`} style={stateNext ? { backgroundColor: color.nextAwailable } : { backgroundColor: color.noEffect }} onClick={nextQuestion}>Submit</div>
       </div>
-      <GameFooter mode={mode} setHints={setHints} hints={hints} resetMode={resetMode} currentRegion={currentRegion} showHintModal={showHintModal} />
+      <GameFooter setHints={setHints} hints={hints} currentRegion={currentRegion} showHintModal={showHintModal} />
     </div>
   );
 }

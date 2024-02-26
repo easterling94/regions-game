@@ -7,15 +7,8 @@ export function RegHome() {
   const { regions } = useAppSelector((store) => store.regions);
   return (
     <div className={styles.home}>
-      {
-        regions ? (
-          <>
-            <Link className={styles.link} to="game">Игра</Link>
-            <Link className={styles.link} to="back">Регионы</Link>
-          </>
-        )
-          : <Loader />
-      }
+      <Link className={styles.link} to="game">Игра</Link>
+      <Link className={styles.link} to="back">Регионы</Link>
     </div>
   );
 }

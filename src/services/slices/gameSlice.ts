@@ -12,21 +12,21 @@ const initialState: initialState = {
   correctCount: 0,
   livesCount: 10,
   hintsCount: 10,
-  timerLeft: '00:00',
+  timerLeft: '03:00',
 }
 
 export const gameSlice = createSlice({
   name: 'gameSlice',
   initialState,
   reducers: {
+    setCorrect: (state, action: PayloadAction<number>) => {
+      state.correctCount + action.payload;
+    },
+    setLives: (state, action: PayloadAction<number>) => {
+      state.livesCount - action.payload
+    },
     setHint: (state) => {
-      state.hintsCount--
-    },
-    setLives: (state) => {
-      state.livesCount--
-    },
-    setCorrect: (state) => {
-      state.correctCount--
+      state.hintsCount--;
     },
     setTimer: (state, action: PayloadAction<string>) => {
       state.timerLeft = action.payload;
@@ -34,5 +34,5 @@ export const gameSlice = createSlice({
   }
 });
 
-export const { setHint } = gameSlice.actions;
+export const { setHint, setLives, setCorrect, setTimer } = gameSlice.actions;
 export default gameSlice.reducer;

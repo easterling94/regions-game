@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchRegionsData } from '../thunks/regionsThunk';
+import { fetchRegionsData } from '../thunks/regionsThunks';
 import { TRegion } from '../../utils/sharedTypes';
 
 interface initialState {

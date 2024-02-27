@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import {
   BackPage, GamePage, HomePage, StatsPage,
 } from '../pages/index';
-import { Loader } from '../components/RegHome/loader';
+import { Loader } from '../components/Loader/loader';
 
 export const router = createBrowserRouter([
   {

@@ -5,11 +5,17 @@
   --transitionDelaySpeedDot3: 0.1s;
   --speedType: cubic-bezier(0, 0, 0.58, 1.0);
   --top: 7%;
+  --loaderHeight: 140px;
+}
+
+.loader {
+  margin-top: calc(50vh - var(--loaderHeight) / 2);
 }
 
 .requesting {
   text-align: center;
   color: var(--color);
+  margin: 0;
 }
 
 .wrapper {

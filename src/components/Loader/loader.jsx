@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { LoaderAnimation } from './loader-animation';
-import styles from './loader-animation.module.css';
 import { useAppSelector, useAppDispatch } from '../../services/store';
-import { initialThunk } from '../../services/thunks/regionsThunk';
+import { initialThunk } from '../../services/thunks/regionsThunks';
+import styles from './loader-animation.module.css';
 
 export function Loader({ children }) {
   const dispatch = useAppDispatch();
@@ -13,9 +13,11 @@ export function Loader({ children }) {
 
   if (regions) return children;
   return (
-    <h1 className={styles.requesting}>
-      Загружаем данные с сервера
-      <LoaderAnimation />
-    </h1>
+    <div className={styles.loader}>
+      <h1 className={styles.requesting}>
+        Загружаем данные с сервера
+        <LoaderAnimation />
+      </h1>
+    </div>
   );
 }

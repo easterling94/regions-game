@@ -1,15 +1,19 @@
 import { AiOutlineQuestionCircle, AiOutlineUndo } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '../../services/store';
+import { setHint } from '../../services/slices/gameSlice';
 import styles from './footer.module.css';
 
 export function GameFooter({
   setHints, hints, currentRegion, showHintModal,
 }) {
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const showHint = () => {
     if (hints === 0) return;
     showHintModal(currentRegion);
     setHints(hints - 1);
+    dispatch(setHint());
   };
   const resetGame = () => {
     navigate('/');

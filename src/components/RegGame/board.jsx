@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { GameFooter } from './footer';
 import { useAppSelector, useAppDispatch } from '../../services/store';
-import { returnRandomRegion } from '../../utils/randomRegions';
+import { prepareBoard } from '../../utils/prepareBoard';
 import styles from './board.module.css';
 
 function GameBoard({
@@ -9,6 +9,7 @@ function GameBoard({
 }) {
   const { regions } = useAppSelector((store) => store.regions);
   let regionsDataInitial = [...regions];
+  const [newRegions, setNewRegions] = useState(null);
 
   const [currentRegion, setCurrentRegion] = useState('');
   const [regionsData, setRegionsData] = useState(regionsDataInitial);
@@ -21,7 +22,7 @@ function GameBoard({
   const [stateNext, setStateNext] = useState(false);
 
   useEffect(() => {
-    returnRandomRegion(regions);
+    prepareBoard(regions, regions);
   }, []);
 
   function getRandomRegion() {
@@ -100,7 +101,7 @@ function GameBoard({
   }, []);
 
   const nextQuestion = () => {
-    returnRandomRegion(regions);
+    prepareBoard(regions, newRegions);
     if (!stateOne && !stateTwo && !stateThree && !stateFour) return;
     const randomRegion = getRandomRegion();
     const chosenRegion = regionsData[randomRegion];

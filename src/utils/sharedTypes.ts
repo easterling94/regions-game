@@ -14,3 +14,11 @@ export enum ENVIRONMENT {
 export type TEnvironment = keyof typeof ENVIRONMENT;
 
 export type TMode = 'home' | 'game' | 'results' | 'backend';
+
+export type TBoard = {
+  ans1: string;
+  ans2: string;
+  ans3: string;
+  ans4: string;
+  next: boolean;
+};

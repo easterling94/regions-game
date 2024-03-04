@@ -8,13 +8,14 @@ interface initialState {
   hintsCount: number;
   timerLeft: string;
   board: TBoard;
+  isModalShown: boolean,
 }
 
 const initialState: initialState = {
   correctCount: 0,
   livesCount: 10,
   hintsCount: 10,
-  timerLeft: '03:00',
+  timerLeft: '00:10',
   board: {
     ans1: '',
     ans2: '',
@@ -22,6 +23,7 @@ const initialState: initialState = {
     ans4: '',
     next: false,
   },
+  isModalShown: false,
 }
 
 export const gameSlice = createSlice({
@@ -45,11 +47,14 @@ export const gameSlice = createSlice({
     setBoard: (state, action: PayloadAction<TBoard>) => {
       state.board = action.payload;
     },
-    reset:(state) => {
-      state.board = initialState.board;
-    }
+    reset: (state) => {
+
+    },
+    setModal: (state) => {
+      state.isModalShown = !state.isModalShown;
+    },
   }
 });
 
-export const { setHint, setLives, setCorrect, setTimer, setBoard, reset } = gameSlice.actions;
+export const { setHint, setLives, setCorrect, setTimer, setBoard, reset, setModal } = gameSlice.actions;
 export default gameSlice.reducer;

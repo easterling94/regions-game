@@ -11,5 +11,4 @@ export const IS_PROD = 'IS_PROD';
 
 export const IS_PRODUCTION = window.location.hostname === 'localhost' ? IS_DEV : IS_PROD;
 
-export const TIMER_START = '03:00';
 export const TIMER_END = '00:00';

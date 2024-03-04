@@ -21,21 +21,22 @@ function GameBoard() {
   const [randomRegion, setRandomRegion] = useState({});
   const [restRegions, setRestRegions] = useState(null);
 
-  useEffect(() => {
-    const result = prepareBoard(regions, regions);
+  function usePrepareBoard(regionsInitial, regionsTrimmed) {
+    const result = prepareBoard(regionsInitial, regionsTrimmed);
     setCodesToAnswer(result.codesToAnswer);
     setRandomRegion(result.randomRegion);
     setRestRegions(result.restRegions);
+  }
+
+  useEffect(() => {
+    usePrepareBoard(regions, regions);
   }, []);
 
-  const nextQuestion = () => {
+  const getNextQuestion = () => {
     if (!next) return;
     const answerArray = [ans1, ans2, ans3, ans4];
     const answerCheck = checkAnswers(randomRegion, answerArray, codesToAnswer);
-    const result = prepareBoard(regions, restRegions);
-    setCodesToAnswer(result.codesToAnswer);
-    setRandomRegion(result.randomRegion);
-    setRestRegions(result.restRegions);
+    usePrepareBoard(regions, restRegions);
     if (answerCheck) {
       dispatch(setCorrect());
       return;
@@ -56,7 +57,7 @@ function GameBoard() {
         <Answer id="2" value={codesToAnswer[1]} />
         <Answer id="3" value={codesToAnswer[2]} />
         <Answer id="4" value={codesToAnswer[3]} />
-        <div className={`${next ? styles.nextEnable : styles.nextDisable}`} onClick={nextQuestion}>Submit</div>
+        <div className={`${next ? styles.nextEnable : styles.nextDisable}`} onClick={getNextQuestion}>Submit</div>
       </div>
       <GameFooter />
     </div>

@@ -1,7 +1,10 @@
+import { ReactDOM } from 'react';
 import styles from './modal.module.css';
 
+const modalId = document.getElementById('modal');
+
 function HintModal({ currentRegion, closeHintModal }) {
-  return (
+  ReactDOM.createPortal(
     <div className={styles.wrapper}>
       <div className={styles.modal}>
         <h4 className={styles.regName}>{currentRegion.regName}</h4>
@@ -13,7 +16,8 @@ function HintModal({ currentRegion, closeHintModal }) {
           <button onClick={closeHintModal} className={styles.btn}>Close hint</button>
         </div>
       </div>
-    </div>
+    </div>,
+    modalId
   );
 }
 

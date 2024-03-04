@@ -1,50 +1,33 @@
 import { AiOutlineUndo } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
+import { useAppSelector, useAppDispatch } from '../../services/store';
+import { reset } from '../../services/slices/gameSlice';
 import styles from './stats.module.css';
 
-function FinalStats({
-  correct, lives, hints, timer, examStartingTime, mode, resetMode,
-}) {
-  const examTime = (timer, examStartingTime) => {
-    const timePlayed = timer.split(':').map((el) => Number(el));
-    const timeLimit = examStartingTime.split(':').map((el) => Number(el));
-    const timeDifference = (timeLimit[0] * 60 + timeLimit[1]) - (timePlayed[0] * 60 + timePlayed[1]);
-
-    const timeMinutes = Math.floor(timeDifference / 60) < 10 ? `0${Math.floor(timeDifference / 60)}` : Math.floor(timeDifference / 60) < 10;
-
-    const timeSeconds = (timeDifference - timeMinutes * 60) < 10 ? `0${timeDifference - timeMinutes * 60}` : timeDifference - timeMinutes * 60;
-    const timeFormated = `${timeMinutes}:${timeSeconds}`;
-
-    return timeFormated;
+function FinalStats() {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+  const goBackToMain = () => {
+    dispatch(reset());
+    navigate('/');
   };
+  const { correctCount, livesCount, hintsCount } = useAppSelector((store) => store.game);
   return (
     <div className={styles.wrapper}>
-      <h2>Congratulations!</h2>
-      <h3>{mode === 'Exam' ? 'That is the end of the exam.' : 'You have tried all the regions!'}</h3>
-      <h4>Your game's statistics are:</h4>
+      <h2>Игра закончилась!</h2>
+      <h4>Статистика по игре:</h4>
       <p>
-        Total right answers:
-        {correct}
+        {`Всего верно угаданных регионов: ${correctCount}`}
       </p>
       <p>
-        Total lives left:
-        {lives}
-        {' '}
-        out of 10
+        {`Осталось жизней: ${livesCount} из 10`}
       </p>
       <p>
-        Hints used:
-        {mode === 'Exam' ? 10 - hints : hints}
-        {' '}
-        out of 10
+        {`Подсказок использовано: ${hintsCount} из 10`}
       </p>
-      <p>
-        Time played:
-        {mode === 'Exam' ? examTime(timer, examStartingTime) : timer}
-      </p>
-      <h2>Ready for another round?</h2>
       <h3>
-        Hit Reset button:
-        <button onClick={resetMode}><AiOutlineUndo /></button>
+        Вернуться в главное меню:
+        <button onClick={goBackToMain}><AiOutlineUndo /></button>
       </h3>
     </div>
   );

@@ -2,6 +2,7 @@ import { AiOutlineUndo } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '../../services/store';
 import { reset } from '../../services/slices/gameSlice';
+import { HINT_COUNTER } from '../../utils/project_consts';
 import styles from './stats.module.css';
 
 function FinalStats() {
@@ -23,10 +24,10 @@ function FinalStats() {
         {`Осталось жизней: ${livesCount} из 10`}
       </p>
       <p>
-        {`Подсказок использовано: ${hintsCount} из 10`}
+        {`Подсказок использовано: ${HINT_COUNTER - hintsCount} из 10`}
       </p>
       <h3>
-        Вернуться в главное меню:
+        {'Вернуться в главное меню: '}
         <button onClick={goBackToMain}><AiOutlineUndo /></button>
       </h3>
     </div>

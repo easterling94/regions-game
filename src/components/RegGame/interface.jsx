@@ -10,7 +10,9 @@ import { TIMER_END } from '../../utils/project_consts';
 
 function Interface() {
   const dispatch = useAppDispatch();
-  const { livesCount, isModalShown, timerLeft } = useAppSelector((store) => store.game);
+  const {
+    livesCount, isModalShown, timerLeft, currentRegion
+  } = useAppSelector((store) => store.game);
 
   useEffect(() => {
     if (timerLeft === TIMER_END) return;
@@ -34,9 +36,7 @@ function Interface() {
         ? <FinalStats />
         : <GameBoard />}
       {
-        isModalShown
-          ? <HintModal />
-          : null
+        isModalShown && <HintModal currentRegion={currentRegion} />
       }
     </div>
   );

@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { TBoard } from '../../utils/sharedTypes';
+import { TBoard, TRegion } from '../../utils/sharedTypes';
+import { LIVE_COUNTER, CORRECT_COUNTER, TIMER_START, HINT_COUNTER } from '../../utils/project_consts';
 
 interface initialState {
   correctCount: number;
@@ -8,14 +9,15 @@ interface initialState {
   hintsCount: number;
   timerLeft: string;
   board: TBoard;
-  isModalShown: boolean,
+  isModalShown: boolean;
+  currentRegion: null | TRegion;
 }
 
 const initialState: initialState = {
-  correctCount: 0,
-  livesCount: 10,
-  hintsCount: 10,
-  timerLeft: '00:10',
+  correctCount: CORRECT_COUNTER,
+  livesCount: LIVE_COUNTER,
+  hintsCount: HINT_COUNTER,
+  timerLeft: TIMER_START,
   board: {
     ans1: '',
     ans2: '',
@@ -24,6 +26,7 @@ const initialState: initialState = {
     next: false,
   },
   isModalShown: false,
+  currentRegion: null,
 }
 
 export const gameSlice = createSlice({
@@ -47,14 +50,17 @@ export const gameSlice = createSlice({
     setBoard: (state, action: PayloadAction<TBoard>) => {
       state.board = action.payload;
     },
-    reset: (state) => {
-
+    reset: () => {
+      return initialState;
     },
     setModal: (state) => {
       state.isModalShown = !state.isModalShown;
     },
+    setCurrentRegion: (state, action: PayloadAction<TRegion>) => {
+      state.currentRegion = action.payload;
+    },
   }
 });
 
-export const { setHint, setLives, setCorrect, setTimer, setBoard, reset, setModal } = gameSlice.actions;
+export const { setHint, setLives, setCorrect, setTimer, setBoard, reset, setModal, setCurrentRegion } = gameSlice.actions;
 export default gameSlice.reducer;

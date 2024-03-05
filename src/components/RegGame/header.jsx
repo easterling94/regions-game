@@ -8,21 +8,21 @@ function GameHeader() {
   return (
     <header className={styles.header}>
       <div>
-        <p className={`${styles.element} ${styles.title}`}>Stats:</p>
+        <p className={`${styles.element} ${styles.title}`}>Статистика:</p>
         <div className={styles.stats}>
           <div className={`${styles.element} ${styles.stat}`}>
-            {`Correct: ${correctCount}`}
+            {`Угадано: ${correctCount}`}
           </div>
           <div className={`${styles.element} ${styles.stat}`}>
-            {`Lives: ${livesCount}`}
+            {`Жизни: ${livesCount}`}
           </div>
           <div className={`${styles.element} ${styles.stat}`}>
-            {`Hints: ${hintsCount}`}
+            {`Подсказки: ${hintsCount}`}
           </div>
         </div>
       </div>
       <div>
-        <p className={`${styles.element} ${styles.timer}`}>Timer:</p>
+        <p className={`${styles.element} ${styles.timer}`}>Время:</p>
         <div className={`${styles.element} ${styles.timer}`}>{timerLeft}</div>
       </div>
     </header>

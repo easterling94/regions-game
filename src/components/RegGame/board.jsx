@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { GameFooter } from './footer';
 import { useAppSelector, useAppDispatch } from '../../services/store';
-import { setCorrect, setLives } from '../../services/slices/gameSlice';
+import { setCorrect, setCurrentRegion, setLives } from '../../services/slices/gameSlice';
 import { prepareBoard, checkAnswers } from '../../utils/gameLogic';
 import { Answer } from './answer';
 import styles from './board.module.scss';
@@ -26,6 +26,7 @@ function GameBoard() {
     setCodesToAnswer(result.codesToAnswer);
     setRandomRegion(result.randomRegion);
     setRestRegions(result.restRegions);
+    dispatch(setCurrentRegion(result.randomRegion));
   }
 
   useEffect(() => {
@@ -57,7 +58,7 @@ function GameBoard() {
         <Answer id="2" value={codesToAnswer[1]} />
         <Answer id="3" value={codesToAnswer[2]} />
         <Answer id="4" value={codesToAnswer[3]} />
-        <div className={`${next ? styles.nextEnable : styles.nextDisable}`} onClick={getNextQuestion}>Submit</div>
+        <div className={`${next ? styles.nextEnable : styles.nextDisable}`} onClick={getNextQuestion}>Подтвердить</div>
       </div>
       <GameFooter />
     </div>

@@ -1,32 +1,25 @@
-# Reg-game general
+# Reg-game общее
 
-The aim of the project is to build app which may help to remember any repetitive and similar information. Pairs of Russian region names and corresponding codes were used as an example. This add consists of two parts: registration form and game interface.
+Попытка создания fullstack приложения. Два режима - непосредственно игра и внесение изменений в базу регионов. Игра работает как при подключении к сервру, так и с с моковыми данными при ошибке соединения. Внесение изменений в регионы доступно только при подключении к серверу.
 
-If admin needs to update regions through interface (not inside of a json file) then admin may use registration mode. For any other users - gaming mode is awailable.
+# Используемые технилогии
 
-# Game interface - updates in development
+1. Кастомный React;
+2. TypeScript в сервисных файлах;
+3. RTK;
+4. SASS;
+5. Линтер на базе Airbnb.
 
-1. Language change via React i18next;
-2. CSS transition apply when state of header correct / lives / hints changes.
+# Источник данных
 
-# Registration mode - updates in development
+Данные были использованы из открытых источников - 'https://www.zr.ru/content/articles/923507-vse-tsifrovye-kody-na-regional/'
 
-1. Autofocus after pressing edit button;
+# Ссылка на gh-pages
 
-# Mocking JSON-server
+В разработке
 
-JSON-server should be started to perform add/delete functionality in registration mode. In a web version data is hardcoded.
+# Запуск приложения
 
-# Open source name/code pair
-
-The data for pairing regions name and codes was collected from open resource - 'https://www.zr.ru/content/articles/923507-vse-tsifrovye-kody-na-regional/'
-
-# Web version with only game interface funciton
-
-reg-game.ru
-
-# Application scripts
-
-1. npm install - installs all dependencies
-2. npm run server - starts json server
-3. npm run start - launches application
+1. git clone
+2. npm install
+3. npm run start

@@ -45,7 +45,7 @@ export const gameSlice = createSlice({
       state.hintsCount--;
     },
     setTimer: (state, action: PayloadAction<string>) => {
-      state.timerLeft = action.payload;
+      state.currentRegion === null ? state.timerLeft = TIMER_START : state.timerLeft = action.payload;
     },
     setBoard: (state, action: PayloadAction<TBoard>) => {
       state.board = action.payload;

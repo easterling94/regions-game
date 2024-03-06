@@ -38,3 +38,16 @@ export const checkAnswers = (randomRegion: TRegion, answerArray: Array<string>, 
   const result: boolean = correctArray === chosenAnswers;
   return result;
 }
+
+export const prepareTimer = (timerLeft: string): string => {
+  const zero = '0';
+  let currentTime:any = timerLeft.split(':').map((el) => Number(el));
+  let nextTime;
+  if (currentTime[1] === 0) {
+    nextTime = [currentTime[0] - 1, currentTime[1] = 59];
+  } else {
+    nextTime = [currentTime[0], currentTime[1] - 1];
+  }
+  currentTime = nextTime.map((el) => (el < 10 ? `${zero}${el.toString()}` : el.toString()));
+  return currentTime
+}

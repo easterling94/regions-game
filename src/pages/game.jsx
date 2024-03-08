@@ -1,5 +1,5 @@
-import RegGame from '../components/RegGame';
+import GameInterface from '../components/RegGame/interface';
 
 export function GamePage() {
-  return <RegGame />;
+  return <GameInterface />;
 }

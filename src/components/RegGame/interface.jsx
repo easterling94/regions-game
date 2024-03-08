@@ -9,7 +9,7 @@ import { setTimer } from '../../services/slices/gameSlice';
 import { prepareTimer } from '../../utils/gameLogic';
 import { TIMER_END } from '../../utils/project_consts';
 
-function Interface() {
+function GameInterface() {
   const dispatch = useAppDispatch();
   const {
     livesCount, isModalShown, timerLeft, currentRegion
@@ -36,4 +36,4 @@ function Interface() {
   );
 }
 
-export default Interface;
+export default GameInterface;

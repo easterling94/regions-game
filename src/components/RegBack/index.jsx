@@ -17,15 +17,6 @@ function RegBack() {
 
   const url = 'http://localhost:5001/regions';
 
-  const setRegStateF = (e) => {
-    const target = e.target.id;
-    if (e.target.value === '') {
-      setRegState({ ...regState, [target]: '' });
-    } else {
-      setRegState({ ...regState, [target]: e.target.value });
-    }
-  };
-
   const getData = async (el) => {
     let response;
     if (el === undefined) {
@@ -53,24 +44,6 @@ function RegBack() {
     }
   }, []);
 
-  const chosenElement = (e) => {
-    let el;
-    switch (e.target.nodeName) {
-      case 'BUTTON':
-        el = Number(e.target.parentElement.parentElement.id);
-        break;
-      case 'svg':
-        el = Number(e.target.parentElement.parentElement.parentElement.id);
-        break;
-      case 'path':
-        el = Number(e.target.parentElement.parentElement.parentElement.parentElement.id);
-        break;
-      default:
-        break;
-    }
-    return el;
-  };
-
   const regAdd = async (newReg) => {
     await fetch(url, {
       method: 'POST',
@@ -83,24 +56,11 @@ function RegBack() {
   };
 
   const regDel = async (e) => {
-    const item = chosenElement(e);
-    await fetch(`${url}/${item}`, {
-      method: 'DELETE',
-    });
-    const restRegions = [...regList].filter((el) => el.id !== item);
-    setRegList(restRegions);
+
   };
 
   const regEdit = async (e) => {
-    const item = chosenElement(e);
-    const fetchData = await getData(item);
 
-    const newReg = {
-      id: fetchData.id,
-      regName: fetchData.regName,
-      currRegCode: fetchData.currRegCode,
-    };
-    setRegState(newReg);
   };
 
   const formSubmit = (e) => {
@@ -145,8 +105,8 @@ function RegBack() {
 
   return (
     <>
-      <RegForm regList={regList} regAdd={regAdd} setRegStateF={setRegStateF} regState={regState} formSubmit={formSubmit} />
-      <RegList regList={regList} regDel={regDel} regEdit={regEdit} />
+      <RegForm />
+      <RegList />
     </>
   );
 }

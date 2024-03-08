@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from '../../services/store';
 import { changeAnswerThunk, changeNextThunk } from '../../services/thunks/gameThunks';
 import styles from './board.module.scss';
 
-export function Answer({ id, value, isChosen }) {
+export function Answer({ id, value }) {
   const dispatch = useAppDispatch();
   const { board } = useAppSelector((store) => store.game);
   const manageBoard = () => {

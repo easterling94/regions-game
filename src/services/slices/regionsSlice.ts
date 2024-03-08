@@ -1,14 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchRegionsData } from '../thunks/regionsThunks';
-import { TRegion } from '../../utils/sharedTypes';
+import { TRegion, LOAD_STATUSES } from '../../utils/sharedTypes';
 
 interface initialState {
-  status: 'idle' | 'loading' | 'success' | 'error',
+  status: LOAD_STATUSES,
   regions: Array<TRegion> | null,
 }
 
 const initialState: initialState = {
-  status: 'idle',
+  status: LOAD_STATUSES.IDLE,
   regions: null,
 }
 
@@ -19,14 +19,14 @@ export const regionsSlice = createSlice({
   extraReducers: (builder) => {
     builder
     .addCase(fetchRegionsData.pending, (state) => {
-      state.status = 'loading'
+      state.status = LOAD_STATUSES.LOADING
     })
     .addCase(fetchRegionsData.fulfilled, (state, action) => {
-      state.status = 'success';
+      state.status = LOAD_STATUSES.SUCCESS;
       state.regions = action.payload;
     })
     .addCase(fetchRegionsData.rejected, (state) => {
-      state.status = 'error';
+      state.status = LOAD_STATUSES.ERROR;
     })
   },
 });

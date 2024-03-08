@@ -2,6 +2,13 @@ export type TRegion = {
   id: number,
   regName: string,
   currRegCode: Array<string>
+};
+
+export enum LOAD_STATUSES {
+  IDLE = 'IDLE',
+  LOADING = 'LOADING',
+  SUCCESS = 'SUCCESS',
+  ERROR = 'ERROR',
 }
 
 export enum ENVIRONMENT {
@@ -9,7 +16,7 @@ export enum ENVIRONMENT {
   IS_DEV = 'IS_DEV', // локально с бэком
   IS_PROD_MOCK = 'IS_PROD_MOCK', // развернуто с недоступным бэком
   IS_PROD = 'IS_PROD' // развернуто с бэком
-}
+};
 
 export type TEnvironment = keyof typeof ENVIRONMENT;
 

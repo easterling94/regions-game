@@ -258,169 +258,169 @@
       }) : e[t] = n, e;
     } function v(e, t) { const n = Object.keys(e); if (Object.getOwnPropertySymbols) { let r = Object.getOwnPropertySymbols(e); t && (r = r.filter(((t) => Object.getOwnPropertyDescriptor(e, t).enumerable))), n.push.apply(n, r); } return n; } function y(e) { for (let t = 1; t < arguments.length; t++) { var n = arguments[t] != null ? arguments[t] : {}; t % 2 ? v(Object(n), !0).forEach(((t) => { g(e, t, n[t]); })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : v(Object(n)).forEach(((t) => { Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t)); })); } return e; } const b = {
       regions: [{
-        id: 4, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0410\u043b\u0442\u0430\u0439', currRegCode: ['04'], futRegCode: [],
+        id: 4, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0410\u043b\u0442\u0430\u0439', regCodes: ['04'], futRegCode: [],
       }, {
-        id: 5, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0414\u0430\u0433\u0435\u0441\u0442\u0430\u043d', currRegCode: ['05'], futRegCode: [],
+        id: 5, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0414\u0430\u0433\u0435\u0441\u0442\u0430\u043d', regCodes: ['05'], futRegCode: [],
       }, {
-        id: 6, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0418\u043d\u0433\u0443\u0448\u0435\u0442\u0438\u044f', currRegCode: ['06'], futRegCode: [],
+        id: 6, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0418\u043d\u0433\u0443\u0448\u0435\u0442\u0438\u044f', regCodes: ['06'], futRegCode: [],
       }, {
-        id: 7, regName: '\u041a\u0430\u0431\u0430\u0440\u0434\u0438\u043d\u043e-\u0411\u0430\u043b\u043a\u0430\u0440\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430', currRegCode: ['07'], futRegCode: [],
+        id: 7, regName: '\u041a\u0430\u0431\u0430\u0440\u0434\u0438\u043d\u043e-\u0411\u0430\u043b\u043a\u0430\u0440\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430', regCodes: ['07'], futRegCode: [],
       }, {
-        id: 8, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u0430\u043b\u043c\u044b\u043a\u0438\u044f', currRegCode: ['08'], futRegCode: [],
+        id: 8, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u0430\u043b\u043c\u044b\u043a\u0438\u044f', regCodes: ['08'], futRegCode: [],
       }, {
-        id: 9, regName: '\u041a\u0430\u0440\u0430\u0447\u0430\u0435\u0432\u043e-\u0427\u0435\u0440\u043a\u0435\u0441\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430', currRegCode: ['09'], futRegCode: [],
+        id: 9, regName: '\u041a\u0430\u0440\u0430\u0447\u0430\u0435\u0432\u043e-\u0427\u0435\u0440\u043a\u0435\u0441\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430', regCodes: ['09'], futRegCode: [],
       }, {
-        id: 10, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u0430\u0440\u0435\u043b\u0438\u044f', currRegCode: ['10'], futRegCode: [],
+        id: 10, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u0430\u0440\u0435\u043b\u0438\u044f', regCodes: ['10'], futRegCode: [],
       }, {
-        id: 11, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u043e\u043c\u0438', currRegCode: ['11'], futRegCode: [],
+        id: 11, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u043e\u043c\u0438', regCodes: ['11'], futRegCode: [],
       }, {
-        id: 12, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041c\u0430\u0440\u0438\u0439 \u042d\u043b', currRegCode: ['12'], futRegCode: [],
+        id: 12, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041c\u0430\u0440\u0438\u0439 \u042d\u043b', regCodes: ['12'], futRegCode: [],
       }, {
-        id: 13, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041c\u043e\u0440\u0434\u043e\u0432\u0438\u044f', currRegCode: ['13', '113'], futRegCode: [],
+        id: 13, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041c\u043e\u0440\u0434\u043e\u0432\u0438\u044f', regCodes: ['13', '113'], futRegCode: [],
       }, {
-        id: 14, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0421\u0430\u0445\u0430 (\u042f\u043a\u0443\u0442\u0438\u044f)', currRegCode: ['14'], futRegCode: [],
+        id: 14, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0421\u0430\u0445\u0430 (\u042f\u043a\u0443\u0442\u0438\u044f)', regCodes: ['14'], futRegCode: [],
       }, {
-        id: 15, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0421\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u041e\u0441\u0435\u0442\u0438\u044f\xa0\u2014 \u0410\u043b\u0430\u043d\u0438\u044f', currRegCode: ['15'], futRegCode: [],
+        id: 15, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0421\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u041e\u0441\u0435\u0442\u0438\u044f\xa0\u2014 \u0410\u043b\u0430\u043d\u0438\u044f', regCodes: ['15'], futRegCode: [],
       }, {
-        id: 16, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0422\u0430\u0442\u0430\u0440\u0441\u0442\u0430\u043d (\u0422\u0430\u0442\u0430\u0440\u0441\u0442\u0430\u043d)', currRegCode: ['16', '116', '716'], futRegCode: ['616'],
+        id: 16, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0422\u0430\u0442\u0430\u0440\u0441\u0442\u0430\u043d (\u0422\u0430\u0442\u0430\u0440\u0441\u0442\u0430\u043d)', regCodes: ['16', '116', '716'], futRegCode: ['616'],
       }, {
-        id: 17, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0422\u044b\u0432\u0430', currRegCode: ['17'], futRegCode: [],
+        id: 17, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0422\u044b\u0432\u0430', regCodes: ['17'], futRegCode: [],
       }, {
-        id: 18, regName: '\u0423\u0434\u043c\u0443\u0440\u0442\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430', currRegCode: ['18'], futRegCode: [],
+        id: 18, regName: '\u0423\u0434\u043c\u0443\u0440\u0442\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430', regCodes: ['18'], futRegCode: [],
       }, {
-        id: 19, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0425\u0430\u043a\u0430\u0441\u0438\u044f', currRegCode: ['19'], futRegCode: [],
+        id: 19, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0425\u0430\u043a\u0430\u0441\u0438\u044f', regCodes: ['19'], futRegCode: [],
       }, {
-        id: 20, regName: '\u0427\u0443\u0432\u0430\u0448\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430\xa0- \u0427\u0443\u0432\u0430\u0448\u0438\u044f', currRegCode: ['21', '121'], futRegCode: [],
+        id: 20, regName: '\u0427\u0443\u0432\u0430\u0448\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430\xa0- \u0427\u0443\u0432\u0430\u0448\u0438\u044f', regCodes: ['21', '121'], futRegCode: [],
       }, {
-        id: 21, regName: '\u0410\u043b\u0442\u0430\u0439\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', currRegCode: ['22'], futRegCode: ['222'],
+        id: 21, regName: '\u0410\u043b\u0442\u0430\u0439\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', regCodes: ['22'], futRegCode: ['222'],
       }, {
-        id: 22, regName: '\u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', currRegCode: ['23', '93', '123', '193'], futRegCode: [],
+        id: 22, regName: '\u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', regCodes: ['23', '93', '123', '193'], futRegCode: [],
       }, {
-        id: 23, regName: '\u041a\u0440\u0430\u0441\u043d\u043e\u044f\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', currRegCode: ['24', '124'], futRegCode: [],
+        id: 23, regName: '\u041a\u0440\u0430\u0441\u043d\u043e\u044f\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', regCodes: ['24', '124'], futRegCode: [],
       }, {
-        id: 24, regName: '\u041f\u0440\u0438\u043c\u043e\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', currRegCode: ['25', '125'], futRegCode: [],
+        id: 24, regName: '\u041f\u0440\u0438\u043c\u043e\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', regCodes: ['25', '125'], futRegCode: [],
       }, {
-        id: 25, regName: '\u0421\u0442\u0430\u0432\u0440\u043e\u043f\u043e\u043b\u044c\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', currRegCode: ['26', '126'], futRegCode: [],
+        id: 25, regName: '\u0421\u0442\u0430\u0432\u0440\u043e\u043f\u043e\u043b\u044c\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', regCodes: ['26', '126'], futRegCode: [],
       }, {
-        id: 26, regName: '\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', currRegCode: ['27'], futRegCode: [],
+        id: 26, regName: '\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', regCodes: ['27'], futRegCode: [],
       }, {
-        id: 27, regName: '\u0410\u043c\u0443\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['28'], futRegCode: [],
+        id: 27, regName: '\u0410\u043c\u0443\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['28'], futRegCode: [],
       }, {
-        id: 28, regName: '\u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['29'], futRegCode: [],
+        id: 28, regName: '\u0410\u0440\u0445\u0430\u043d\u0433\u0435\u043b\u044c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['29'], futRegCode: [],
       }, {
-        id: 29, regName: '\u0410\u0441\u0442\u0440\u0430\u0445\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['30'], futRegCode: ['330'],
+        id: 29, regName: '\u0410\u0441\u0442\u0440\u0430\u0445\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['30'], futRegCode: ['330'],
       }, {
-        id: 30, regName: '\u0411\u0435\u043b\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['31'], futRegCode: [],
+        id: 30, regName: '\u0411\u0435\u043b\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['31'], futRegCode: [],
       }, {
-        id: 31, regName: '\u0411\u0440\u044f\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['32'], futRegCode: [],
+        id: 31, regName: '\u0411\u0440\u044f\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['32'], futRegCode: [],
       }, {
-        id: 32, regName: '\u0412\u043b\u0430\u0434\u0438\u043c\u0438\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['33'], futRegCode: ['333'],
+        id: 32, regName: '\u0412\u043b\u0430\u0434\u0438\u043c\u0438\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['33'], futRegCode: ['333'],
       }, {
-        id: 33, regName: '\u0412\u043e\u043b\u0433\u043e\u0433\u0440\u0430\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['34', '134'], futRegCode: [],
+        id: 33, regName: '\u0412\u043e\u043b\u0433\u043e\u0433\u0440\u0430\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['34', '134'], futRegCode: [],
       }, {
-        id: 34, regName: '\u0412\u043e\u043b\u043e\u0433\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['35'], futRegCode: [],
+        id: 34, regName: '\u0412\u043e\u043b\u043e\u0433\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['35'], futRegCode: [],
       }, {
-        id: 35, regName: '\u0412\u043e\u0440\u043e\u043d\u0435\u0436\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['36', '136'], futRegCode: [],
+        id: 35, regName: '\u0412\u043e\u0440\u043e\u043d\u0435\u0436\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['36', '136'], futRegCode: [],
       }, {
-        id: 36, regName: '\u0418\u0432\u0430\u043d\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['37'], futRegCode: [],
+        id: 36, regName: '\u0418\u0432\u0430\u043d\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['37'], futRegCode: [],
       }, {
-        id: 37, regName: '\u0418\u0440\u043a\u0443\u0442\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['38', '138'], futRegCode: [],
+        id: 37, regName: '\u0418\u0440\u043a\u0443\u0442\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['38', '138'], futRegCode: [],
       }, {
-        id: 38, regName: '\u041a\u0430\u043b\u0438\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['39'], futRegCode: [],
+        id: 38, regName: '\u041a\u0430\u043b\u0438\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['39'], futRegCode: [],
       }, {
-        id: 39, regName: '\u041a\u0430\u043b\u0443\u0436\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['40'], futRegCode: [],
+        id: 39, regName: '\u041a\u0430\u043b\u0443\u0436\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['40'], futRegCode: [],
       }, {
-        id: 40, regName: '\u041a\u0430\u043c\u0447\u0430\u0442\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', currRegCode: ['41'], futRegCode: [],
+        id: 40, regName: '\u041a\u0430\u043c\u0447\u0430\u0442\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', regCodes: ['41'], futRegCode: [],
       }, {
-        id: 41, regName: '\u041a\u0435\u043c\u0435\u0440\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['42', '142'], futRegCode: [],
+        id: 41, regName: '\u041a\u0435\u043c\u0435\u0440\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['42', '142'], futRegCode: [],
       }, {
-        id: 42, regName: '\u041a\u0438\u0440\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['43'], futRegCode: [],
+        id: 42, regName: '\u041a\u0438\u0440\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['43'], futRegCode: [],
       }, {
-        id: 43, regName: '\u041a\u043e\u0441\u0442\u0440\u043e\u043c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['44'], futRegCode: ['444'],
+        id: 43, regName: '\u041a\u043e\u0441\u0442\u0440\u043e\u043c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['44'], futRegCode: ['444'],
       }, {
-        id: 44, regName: '\u041a\u0443\u0440\u0433\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['45'], futRegCode: [],
+        id: 44, regName: '\u041a\u0443\u0440\u0433\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['45'], futRegCode: [],
       }, {
-        id: 45, regName: '\u041a\u0443\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['46'], futRegCode: [],
+        id: 45, regName: '\u041a\u0443\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['46'], futRegCode: [],
       }, {
-        id: 46, regName: '\u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['47', '147'], futRegCode: [],
+        id: 46, regName: '\u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['47', '147'], futRegCode: [],
       }, {
-        id: 47, regName: '\u041b\u0438\u043f\u0435\u0446\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['48'], futRegCode: [],
+        id: 47, regName: '\u041b\u0438\u043f\u0435\u0446\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['48'], futRegCode: [],
       }, {
-        id: 48, regName: '\u041c\u0430\u0433\u0430\u0434\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['49'], futRegCode: [],
+        id: 48, regName: '\u041c\u0430\u0433\u0430\u0434\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['49'], futRegCode: [],
       }, {
-        id: 49, regName: '\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['50', '90', '150', '190', '750', '790'], futRegCode: [],
+        id: 49, regName: '\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['50', '90', '150', '190', '750', '790'], futRegCode: [],
       }, {
-        id: 50, regName: '\u041c\u0443\u0440\u043c\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['51'], futRegCode: [],
+        id: 50, regName: '\u041c\u0443\u0440\u043c\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['51'], futRegCode: [],
       }, {
-        id: 51, regName: '\u041d\u0438\u0436\u0435\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['52', '152'], futRegCode: [],
+        id: 51, regName: '\u041d\u0438\u0436\u0435\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['52', '152'], futRegCode: [],
       }, {
-        id: 52, regName: '\u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['53'], futRegCode: [],
+        id: 52, regName: '\u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['53'], futRegCode: [],
       }, {
-        id: 53, regName: '\u041d\u043e\u0432\u043e\u0441\u0438\u0431\u0438\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['54', '154'], futRegCode: [],
+        id: 53, regName: '\u041d\u043e\u0432\u043e\u0441\u0438\u0431\u0438\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['54', '154'], futRegCode: [],
       }, {
-        id: 54, regName: '\u041e\u043c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['55'], futRegCode: [],
+        id: 54, regName: '\u041e\u043c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['55'], futRegCode: [],
       }, {
-        id: 55, regName: '\u041e\u0440\u0435\u043d\u0431\u0443\u0440\u0433\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['56', '156'], futRegCode: [],
+        id: 55, regName: '\u041e\u0440\u0435\u043d\u0431\u0443\u0440\u0433\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['56', '156'], futRegCode: [],
       }, {
-        id: 56, regName: '\u041e\u0440\u043b\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['57'], futRegCode: [],
+        id: 56, regName: '\u041e\u0440\u043b\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['57'], futRegCode: [],
       }, {
-        id: 57, regName: '\u041f\u0435\u043d\u0437\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['58'], futRegCode: [],
+        id: 57, regName: '\u041f\u0435\u043d\u0437\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['58'], futRegCode: [],
       }, {
-        id: 58, regName: '\u041f\u0435\u0440\u043c\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', currRegCode: ['59', '159'], futRegCode: [],
+        id: 58, regName: '\u041f\u0435\u0440\u043c\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', regCodes: ['59', '159'], futRegCode: [],
       }, {
-        id: 59, regName: '\u041f\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['60'], futRegCode: ['660'],
+        id: 59, regName: '\u041f\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['60'], futRegCode: ['660'],
       }, {
-        id: 60, regName: '\u0420\u043e\u0441\u0442\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['61', '161', '761'], futRegCode: ['661'],
+        id: 60, regName: '\u0420\u043e\u0441\u0442\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['61', '161', '761'], futRegCode: ['661'],
       }, {
-        id: 61, regName: '\u0420\u044f\u0437\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['62'], futRegCode: ['662'],
+        id: 61, regName: '\u0420\u044f\u0437\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['62'], futRegCode: ['662'],
       }, {
-        id: 62, regName: '\u0421\u0430\u043c\u0430\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['63', '163', '763'], futRegCode: ['663'],
+        id: 62, regName: '\u0421\u0430\u043c\u0430\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['63', '163', '763'], futRegCode: ['663'],
       }, {
-        id: 63, regName: '\u0421\u0430\u0440\u0430\u0442\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['64', '164'], futRegCode: ['664'],
+        id: 63, regName: '\u0421\u0430\u0440\u0430\u0442\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['64', '164'], futRegCode: ['664'],
       }, {
-        id: 64, regName: '\u0421\u0430\u0445\u0430\u043b\u0438\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['65'], futRegCode: ['665'],
+        id: 64, regName: '\u0421\u0430\u0445\u0430\u043b\u0438\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['65'], futRegCode: ['665'],
       }, {
-        id: 65, regName: '\u0421\u0432\u0435\u0440\u0434\u043b\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['196', '66', '96'], futRegCode: ['666'],
+        id: 65, regName: '\u0421\u0432\u0435\u0440\u0434\u043b\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['196', '66', '96'], futRegCode: ['666'],
       }, {
-        id: 66, regName: '\u0421\u043c\u043e\u043b\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['67'], futRegCode: ['667'],
+        id: 66, regName: '\u0421\u043c\u043e\u043b\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['67'], futRegCode: ['667'],
       }, {
-        id: 67, regName: '\u0422\u0430\u043c\u0431\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['68'], futRegCode: ['668'],
+        id: 67, regName: '\u0422\u0430\u043c\u0431\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['68'], futRegCode: ['668'],
       }, {
-        id: 68, regName: '\u0422\u0432\u0435\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['69'], futRegCode: ['669'],
+        id: 68, regName: '\u0422\u0432\u0435\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['69'], futRegCode: ['669'],
       }, {
-        id: 69, regName: '\u0422\u043e\u043c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['70'], futRegCode: [],
+        id: 69, regName: '\u0422\u043e\u043c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['70'], futRegCode: [],
       }, {
-        id: 70, regName: '\u0422\u0443\u043b\u044c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['71'], futRegCode: [],
+        id: 70, regName: '\u0422\u0443\u043b\u044c\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['71'], futRegCode: [],
       }, {
-        id: 71, regName: '\u0422\u044e\u043c\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['72'], futRegCode: [],
+        id: 71, regName: '\u0422\u044e\u043c\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['72'], futRegCode: [],
       }, {
-        id: 72, regName: '\u0423\u043b\u044c\u044f\u043d\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['73', '173'], futRegCode: [],
+        id: 72, regName: '\u0423\u043b\u044c\u044f\u043d\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['73', '173'], futRegCode: [],
       }, {
-        id: 73, regName: '\u0427\u0435\u043b\u044f\u0431\u0438\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['74', '174', '774'], futRegCode: [],
+        id: 73, regName: '\u0427\u0435\u043b\u044f\u0431\u0438\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['74', '174', '774'], futRegCode: [],
       }, {
-        id: 74, regName: '\u0417\u0430\u0431\u0430\u0439\u043a\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', currRegCode: ['75'], futRegCode: [],
+        id: 74, regName: '\u0417\u0430\u0431\u0430\u0439\u043a\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439', regCodes: ['75'], futRegCode: [],
       }, {
-        id: 75, regName: '\u042f\u0440\u043e\u0441\u043b\u0430\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['76'], futRegCode: [],
+        id: 75, regName: '\u042f\u0440\u043e\u0441\u043b\u0430\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['76'], futRegCode: [],
       }, {
-        id: 76, regName: '\u0433. \u041c\u043e\u0441\u043a\u0432\u0430', currRegCode: ['77', '97', '99', '177', '197', '199', '777', '797', '799'], futRegCode: ['497'],
+        id: 76, regName: '\u0433. \u041c\u043e\u0441\u043a\u0432\u0430', regCodes: ['77', '97', '99', '177', '197', '199', '777', '797', '799'], futRegCode: ['497'],
       }, {
-        id: 77, regName: '\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433', currRegCode: ['78', '98', '178', '198'], futRegCode: ['278'],
+        id: 77, regName: '\u0433. \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433', regCodes: ['78', '98', '178', '198'], futRegCode: ['278'],
       }, {
-        id: 78, regName: '\u0415\u0432\u0440\u0435\u0439\u0441\u043a\u0430\u044f \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', currRegCode: ['79'], futRegCode: [],
+        id: 78, regName: '\u0415\u0432\u0440\u0435\u0439\u0441\u043a\u0430\u044f \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c', regCodes: ['79'], futRegCode: [],
       }, {
-        id: 79, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u0440\u044b\u043c', currRegCode: ['82'], futRegCode: [],
+        id: 79, regName: '\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u0440\u044b\u043c', regCodes: ['82'], futRegCode: [],
       }, {
-        id: 80, regName: '\u041d\u0435\u043d\u0435\u0446\u043a\u0438\u0439 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433', currRegCode: ['83'], futRegCode: [],
+        id: 80, regName: '\u041d\u0435\u043d\u0435\u0446\u043a\u0438\u0439 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433', regCodes: ['83'], futRegCode: [],
       }, {
-        id: 81, regName: '\u0425\u0430\u043d\u0442\u044b-\u041c\u0430\u043d\u0441\u0438\u0439\u0441\u043a\u0438\u0439 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433\xa0- \u042e\u0433\u0440\u0430', currRegCode: ['86', '186'], futRegCode: [],
+        id: 81, regName: '\u0425\u0430\u043d\u0442\u044b-\u041c\u0430\u043d\u0441\u0438\u0439\u0441\u043a\u0438\u0439 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433\xa0- \u042e\u0433\u0440\u0430', regCodes: ['86', '186'], futRegCode: [],
       }, {
-        id: 82, regName: '\u0427\u0443\u043a\u043e\u0442\u0441\u043a\u0438\u0439 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433', currRegCode: ['87'], futRegCode: [],
+        id: 82, regName: '\u0427\u0443\u043a\u043e\u0442\u0441\u043a\u0438\u0439 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433', regCodes: ['87'], futRegCode: [],
       }, {
-        id: 83, regName: '\u042f\u043c\u0430\u043b\u043e-\u041d\u0435\u043d\u0435\u0446\u043a\u0438\u0439 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433', currRegCode: ['89'], futRegCode: [],
+        id: 83, regName: '\u042f\u043c\u0430\u043b\u043e-\u041d\u0435\u043d\u0435\u0446\u043a\u0438\u0439 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433', regCodes: ['89'], futRegCode: [],
       }, {
-        id: 84, regName: '\u0433. \u0421\u0435\u0432\u0430\u0441\u0442\u043e\u043f\u043e\u043b\u044c', currRegCode: ['92'], futRegCode: [],
+        id: 84, regName: '\u0433. \u0421\u0435\u0432\u0430\u0441\u0442\u043e\u043f\u043e\u043b\u044c', regCodes: ['92'], futRegCode: [],
       }, {
-        id: 85, regName: '\u0427\u0435\u0447\u0435\u043d\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430', currRegCode: ['95'], futRegCode: ['995'],
+        id: 85, regName: '\u0427\u0435\u0447\u0435\u043d\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430', regCodes: ['95'], futRegCode: ['995'],
       }],
     }; const w = 'regForm_regNew__jP1Ag'; const k = 'regForm_regInput__O82gL'; const S = 'regForm_btn__QFiEE'; const C = function (e) {
       const t = e.value; const n = e.lbl; const r = e.id; const a = e.plhldr; const l = e.setRegStateF; return (0, c.jsxs)('div', {
@@ -430,14 +430,14 @@
         })],
       });
     }; const x = function (e) {
-      const t = e.setRegStateF; const n = e.regState; const r = e.formSubmit; const a = n.regName && n.currRegCode ? 'filled' : 'notFilled'; return (0, c.jsxs)('div', {
+      const t = e.setRegStateF; const n = e.regState; const r = e.formSubmit; const a = n.regName && n.regCodes ? 'filled' : 'notFilled'; return (0, c.jsxs)('div', {
         className: w,
         children: [(0, c.jsx)('h1', { children: 'Region Change Form' }), (0, c.jsxs)('form', {
           onSubmit: r,
           children: [(0, c.jsx)(C, {
             value: n.regName, lbl: 'Insert Region Name', id: 'regName', plhldr: 'Region name', setRegStateF: t,
           }), (0, c.jsx)(C, {
-            value: n.currRegCode, lbl: 'Insert Region Code(s)', id: 'currRegCode', plhldr: 'Current codes divided by ","', setRegStateF: t,
+            value: n.regCodes, lbl: 'Insert Region Code(s)', id: 'regCodes', plhldr: 'Current codes divided by ","', setRegStateF: t,
           }), (0, c.jsx)(C, {
             value: n.futRegCode, lbl: 'Insert Future Code(s) if known', id: 'futRegCode', plhldr: 'Future codes divided by ","', setRegStateF: t,
           }), (0, c.jsx)('input', {
@@ -453,16 +453,16 @@
           stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0', ...n.attr, ...a, ...i, className: r, style: { color: t.color || n.color, ...n.style, ...t.style }, height: u, width: u, xmlns: 'http://www.w3.org/2000/svg',
         }, o && e.createElement('title', null, o), t.children);
       }; return void 0 !== M ? e.createElement(M.Consumer, null, ((e) => n(e))) : n(O);
-    } function H(e) { return U({ tag: 'svg', attr: { viewBox: '0 0 1024 1024' }, child: [{ tag: 'path', attr: { d: 'M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z' } }] })(e); } function V(e) { return U({ tag: 'svg', attr: { viewBox: '0 0 1024 1024' }, child: [{ tag: 'path', attr: { d: 'M880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32zm-622.3-84c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9z' } }] })(e); } function B(e) { return U({ tag: 'svg', attr: { viewBox: '0 0 1024 1024' }, child: [{ tag: 'path', attr: { d: 'M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z' } }, { tag: 'path', attr: { d: 'M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0 1 30.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1 0 80 0 40 40 0 1 0-80 0z' } }] })(e); } function $(e) { return U({ tag: 'svg', attr: { viewBox: '0 0 1024 1024' }, child: [{ tag: 'path', attr: { d: 'M511.4 124C290.5 124.3 112 303 112 523.9c0 128 60.2 242 153.8 315.2l-37.5 48c-4.1 5.3-.3 13 6.3 12.9l167-.8c5.2 0 9-4.9 7.7-9.9L369.8 727a8 8 0 0 0-14.1-3L315 776.1c-10.2-8-20-16.7-29.3-26a318.64 318.64 0 0 1-68.6-101.7C200.4 609 192 567.1 192 523.9s8.4-85.1 25.1-124.5c16.1-38.1 39.2-72.3 68.6-101.7 29.4-29.4 63.6-52.5 101.7-68.6C426.9 212.4 468.8 204 512 204s85.1 8.4 124.5 25.1c38.1 16.1 72.3 39.2 101.7 68.6 29.4 29.4 52.5 63.6 68.6 101.7 16.7 39.4 25.1 81.3 25.1 124.5s-8.4 85.1-25.1 124.5a318.64 318.64 0 0 1-68.6 101.7c-7.5 7.5-15.3 14.5-23.4 21.2a7.93 7.93 0 0 0-1.2 11.1l39.4 50.5c2.8 3.5 7.9 4.1 11.4 1.3C854.5 760.8 912 649.1 912 523.9c0-221.1-179.4-400.2-400.6-399.9z' } }] })(e); } const W = function (e) { const t = e.el; const n = e.regDel; const r = e.regEdit; return (0, c.jsxs)('div', { className: R, id: t.id, children: [(0, c.jsxs)('div', { className: P, children: [(0, c.jsx)('h3', { children: t.regName }), (0, c.jsx)('hr', {}), (0, c.jsxs)('div', { children: ['Current codes:', (0, c.jsx)('div', { className: N, children: t.currRegCode.map(((e) => (0, c.jsx)('div', { className: E, children: e }, e))) })] }), (0, c.jsx)('hr', {}), (0, c.jsxs)('div', { children: ['Future codes:', (0, c.jsx)('div', { className: N, children: t.futRegCode.length ? t.futRegCode.map(((e) => (0, c.jsx)('div', { className: E, children: e }, e))) : '-' })] })] }), (0, c.jsxs)('div', { className: L, children: [(0, c.jsx)('button', { className: ''.concat(z, ' ').concat(T), onClick(e) { return n(e); }, children: (0, c.jsx)(H, {}) }), (0, c.jsx)('button', { className: ''.concat(z, ' ').concat(j), onClick(e) { return r(e); }, children: (0, c.jsx)(V, {}) })] })] }); }; const Q = function (e) { const t = e.regList; const n = e.regDel; const r = e.regEdit; return (0, c.jsx)('div', { className: _, children: t.length !== 0 ? t.map(((e) => (0, c.jsx)(W, { el: e, regDel: n, regEdit: r }, e.id))) : 'No regions to show' }); }; const q = function () {
+    } function H(e) { return U({ tag: 'svg', attr: { viewBox: '0 0 1024 1024' }, child: [{ tag: 'path', attr: { d: 'M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z' } }] })(e); } function V(e) { return U({ tag: 'svg', attr: { viewBox: '0 0 1024 1024' }, child: [{ tag: 'path', attr: { d: 'M880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32zm-622.3-84c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9z' } }] })(e); } function B(e) { return U({ tag: 'svg', attr: { viewBox: '0 0 1024 1024' }, child: [{ tag: 'path', attr: { d: 'M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z' } }, { tag: 'path', attr: { d: 'M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0 1 30.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1 0 80 0 40 40 0 1 0-80 0z' } }] })(e); } function $(e) { return U({ tag: 'svg', attr: { viewBox: '0 0 1024 1024' }, child: [{ tag: 'path', attr: { d: 'M511.4 124C290.5 124.3 112 303 112 523.9c0 128 60.2 242 153.8 315.2l-37.5 48c-4.1 5.3-.3 13 6.3 12.9l167-.8c5.2 0 9-4.9 7.7-9.9L369.8 727a8 8 0 0 0-14.1-3L315 776.1c-10.2-8-20-16.7-29.3-26a318.64 318.64 0 0 1-68.6-101.7C200.4 609 192 567.1 192 523.9s8.4-85.1 25.1-124.5c16.1-38.1 39.2-72.3 68.6-101.7 29.4-29.4 63.6-52.5 101.7-68.6C426.9 212.4 468.8 204 512 204s85.1 8.4 124.5 25.1c38.1 16.1 72.3 39.2 101.7 68.6 29.4 29.4 52.5 63.6 68.6 101.7 16.7 39.4 25.1 81.3 25.1 124.5s-8.4 85.1-25.1 124.5a318.64 318.64 0 0 1-68.6 101.7c-7.5 7.5-15.3 14.5-23.4 21.2a7.93 7.93 0 0 0-1.2 11.1l39.4 50.5c2.8 3.5 7.9 4.1 11.4 1.3C854.5 760.8 912 649.1 912 523.9c0-221.1-179.4-400.2-400.6-399.9z' } }] })(e); } const W = function (e) { const t = e.el; const n = e.regDel; const r = e.regEdit; return (0, c.jsxs)('div', { className: R, id: t.id, children: [(0, c.jsxs)('div', { className: P, children: [(0, c.jsx)('h3', { children: t.regName }), (0, c.jsx)('hr', {}), (0, c.jsxs)('div', { children: ['Current codes:', (0, c.jsx)('div', { className: N, children: t.regCodes.map(((e) => (0, c.jsx)('div', { className: E, children: e }, e))) })] }), (0, c.jsx)('hr', {}), (0, c.jsxs)('div', { children: ['Future codes:', (0, c.jsx)('div', { className: N, children: t.futRegCode.length ? t.futRegCode.map(((e) => (0, c.jsx)('div', { className: E, children: e }, e))) : '-' })] })] }), (0, c.jsxs)('div', { className: L, children: [(0, c.jsx)('button', { className: ''.concat(z, ' ').concat(T), onClick(e) { return n(e); }, children: (0, c.jsx)(H, {}) }), (0, c.jsx)('button', { className: ''.concat(z, ' ').concat(j), onClick(e) { return r(e); }, children: (0, c.jsx)(V, {}) })] })] }); }; const Q = function (e) { const t = e.regList; const n = e.regDel; const r = e.regEdit; return (0, c.jsx)('div', { className: _, children: t.length !== 0 ? t.map(((e) => (0, c.jsx)(W, { el: e, regDel: n, regEdit: r }, e.id))) : 'No regions to show' }); }; const q = function () {
       const t = l((0, e.useState)([]), 2); const n = t[0]; const r = t[1]; const a = l((0, e.useState)({
-        id: '', regName: '', currRegCode: '', futRegCode: '',
+        id: '', regName: '', regCodes: '', futRegCode: '',
       }), 2); const o = a[0]; const i = a[1]; const u = 'http://localhost:5001/regions'; (0, e.useEffect)((() => { const e = (function () { const e = m(p().mark((function e() { let t; return p().wrap(((e) => { for (;;) switch (e.prev = e.next) { case 0: return e.next = 2, s(); case 2: t = e.sent, r(t); case 4: case 'end': return e.stop(); } }), e); }))); return function () { return e.apply(this, arguments); }; }()); e(); }), []); var s = (function () { const e = m(p().mark((function e(t) { let n; return p().wrap(((e) => { for (;;) switch (e.prev = e.next) { case 0: if (void 0 !== t) { e.next = 5; break; } return e.next = 3, fetch(u).then(((e) => n = e.json())).catch((() => n = b)); case 3: e.next = 7; break; case 5: return e.next = 7, fetch(''.concat(u, '/').concat(t)).then(((e) => n = e.json())).catch((() => n = b)); case 7: return e.abrupt('return', n); case 8: case 'end': return e.stop(); } }), e); }))); return function (t) { return e.apply(this, arguments); }; }()); const d = function (e) { let t; switch (e.target.nodeName) { case 'BUTTON': t = Number(e.target.parentElement.parentElement.id); break; case 'svg': t = Number(e.target.parentElement.parentElement.parentElement.id); break; case 'path': t = Number(e.target.parentElement.parentElement.parentElement.parentElement.id); } return t; }; const h = (function () { const e = m(p().mark((function e(t) { return p().wrap(((e) => { for (;;) switch (e.prev = e.next) { case 0: return e.next = 2, fetch(u, { method: 'POST', headers: { 'Content-type': 'application/json' }, body: JSON.stringify(t) }); case 2: r([].concat(f(n), [t])); case 3: case 'end': return e.stop(); } }), e); }))); return function (t) { return e.apply(this, arguments); }; }()); const v = (function () { const e = m(p().mark((function e(t) { let a; let l; return p().wrap(((e) => { for (;;) switch (e.prev = e.next) { case 0: return a = d(t), e.next = 3, fetch(''.concat(u, '/').concat(a), { method: 'DELETE' }); case 3: l = f(n).filter(((e) => e.id !== a)), r(l); case 5: case 'end': return e.stop(); } }), e); }))); return function (t) { return e.apply(this, arguments); }; }()); const w = (function () {
         const e = m(p().mark((function e(t) {
           let n; let r; let a; return p().wrap(((e) => {
             for (;;) {
               switch (e.prev = e.next) {
                 case 0: return n = d(t), e.next = 3, s(n); case 3: r = e.sent, a = {
-                  id: r.id, regName: r.regName, currRegCode: r.currRegCode, futRegCode: r.futRegCode,
+                  id: r.id, regName: r.regName, regCodes: r.regCodes, futRegCode: r.futRegCode,
                 }, i(a); case 6: case 'end': return e.stop();
               }
             }
@@ -475,17 +475,17 @@
           setRegStateF(e) { const t = e.target.id; e.target.value === '' ? i(y(y({}, o), {}, g({}, t, ''))) : i(y(y({}, o), {}, g({}, t, e.target.value))); },
           regState: o,
           formSubmit(e) {
-            if (e.preventDefault(), o.regName && o.currRegCode) {
-              const t = o.currRegCode.toString().replace(/[,!?.\\();:]/g, ' ').split(' ').filter(((e) => e !== ' ' && e !== '')); const a = o.futRegCode ? o.futRegCode.toString().replace(/[,!?.\\();:]/g, ' ').split(' ').filter(((e) => e !== ' ' && e !== '')) : []; if (o.id) {
+            if (e.preventDefault(), o.regName && o.regCodes) {
+              const t = o.regCodes.toString().replace(/[,!?.\\();:]/g, ' ').split(' ').filter(((e) => e !== ' ' && e !== '')); const a = o.futRegCode ? o.futRegCode.toString().replace(/[,!?.\\();:]/g, ' ').split(' ').filter(((e) => e !== ' ' && e !== '')) : []; if (o.id) {
                 const l = f(n); const c = {
-                  id: o.id, regName: o.regName, currRegCode: t, futRegCode: a,
+                  id: o.id, regName: o.regName, regCodes: t, futRegCode: a,
                 }; fetch(''.concat(u, '/').concat(o.id), { method: 'PUT', body: JSON.stringify(c), headers: { 'Content-type': 'application/json' } }), l.splice(o.id - 1, 1, c), r(l);
               } else {
                 const s = {
-                  id: n.length + 1, regName: o.regName, currRegCode: t, futRegCode: a,
+                  id: n.length + 1, regName: o.regName, regCodes: t, futRegCode: a,
                 }; h(s);
               }i({
-                id: '', regName: '', currRegCode: '', futRegCode: '',
+                id: '', regName: '', regCodes: '', futRegCode: '',
               });
             } else alert('Please fill in at least first two fields');
           },
@@ -504,7 +504,7 @@
         })],
       });
     }; const te = 'gameheader_header__qi+hT'; const ne = 'gameheader_stats__fQrgZ'; const re = 'gameheader_element__8Ko-k'; const ae = 'gameheader_timer__0v1pp'; const le = 'gameheader_stat__EcCO8'; const oe = 'gameheader_title__dDqb4'; const ie = function (e) { e.mode; const t = e.correct; const n = e.lives; const r = e.hints; const a = e.timer; return (0, c.jsx)(c.Fragment, { children: (0, c.jsxs)('header', { className: te, children: [(0, c.jsxs)('div', { children: [(0, c.jsx)('h4', { className: ''.concat(re, ' ').concat(oe), children: 'Stats:' }), (0, c.jsxs)('div', { className: ne, children: [(0, c.jsxs)('div', { className: ''.concat(re, ' ').concat(le), children: ['Correct: ', t] }), (0, c.jsxs)('div', { className: ''.concat(re, ' ').concat(le), children: ['Lives: ', n] }), (0, c.jsxs)('div', { className: ''.concat(re, ' ').concat(le), children: ['Hints: ', r] })] })] }), (0, c.jsxs)('div', { children: [(0, c.jsx)('h4', { className: ''.concat(re, ' ').concat(ae), children: 'Timer:' }), (0, c.jsx)('div', { className: ''.concat(re, ' ').concat(ae), children: a })] })] }) }); }; const ue = { footer: 'gamefooter_footer__L8yXo', btn: 'gamefooter_btn__adq+f', info: 'gamefooter_info__-Br4T' }; const ce = function (e) { const t = e.mode; const n = e.setHints; const r = e.hints; const a = e.resetMode; const l = e.currentRegion; const o = e.showHintModal; return (0, c.jsxs)('section', { className: ue.footer, children: [(0, c.jsxs)('div', { className: ue.info, children: [(0, c.jsx)('p', { children: 'Game mode:' }), (0, c.jsx)('p', { children: t })] }), (0, c.jsxs)('div', { className: ue.info, children: [(0, c.jsx)('p', { children: 'Hint:' }), (0, c.jsx)('button', { className: ''.concat(ue.btn, ' ').concat(ue.hint), children: (0, c.jsx)(B, { size: 20, onClick() { r !== 0 && (t !== 'Training' ? (o(l), n(r - 1)) : o(l)); } }) })] }), (0, c.jsxs)('div', { className: ue.info, children: [(0, c.jsx)('p', { children: 'Reset:' }), (0, c.jsx)('button', { className: ''.concat(ue.btn, ' ').concat(ue.reset), children: (0, c.jsx)($, { size: 20, onClick: a }) })] })] }); }; const se = 'gameboard_wrapper__OSxHE'; const fe = 'gameboard_board__ZBCii'; const de = 'gameboard_box__vvnT0'; const pe = 'gameboard_question__QWRQQ'; const he = 'gameboard_next__KbmCt'; const me = function (t) {
-      const n = t.regions; const r = t.mode; const a = t.setCorrect; const o = t.setLives; const i = t.setHints; const u = t.correct; const s = t.lives; const d = t.hints; const p = t.hardStop; const h = t.resetMode; const m = t.showHintModal; let g = f(n); const v = l((0, e.useState)(''), 2); const y = v[0]; const b = v[1]; const w = l((0, e.useState)(g), 2); const k = w[0]; const S = w[1]; const C = l((0, e.useState)(''), 2); const x = C[0]; const _ = C[1]; const N = l((0, e.useState)(['', '', '', '']), 2); const E = N[0]; const R = N[1]; const P = l((0, e.useState)(!1), 2); const L = P[0]; const z = P[1]; const T = l((0, e.useState)(!1), 2); const j = T[0]; const O = T[1]; const M = l((0, e.useState)(!1), 2); const F = M[0]; const D = M[1]; const I = l((0, e.useState)(!1), 2); const U = I[0]; const A = I[1]; const H = l((0, e.useState)(!1), 2); const V = H[0]; const B = H[1]; function $() { return Math.floor(Math.random() * k.length); } function W(e) { for (var t = [1, 2, 3, 4], r = []; r.length < 4;) { const a = Math.ceil(4 * Math.random()); const l = t.indexOf(a); l !== -1 && (r.push(t[l]), t.splice(l, 1)); } const o = f(e.currRegCode); const i = Math.ceil(Math.random() * (o.length <= 4 ? o.length : 4)); let u = []; f(n).forEach(((e) => u.push(e.currRegCode))), u = u.reduce(((e, t) => e.concat(t))); for (var c = [], s = 0; s < i; s++) { const d = Math.floor(Math.random() * o.length); c.push(o[d]), o.splice(d, 1); } const p = []; if (c.length < 4) for (let h = 4 - c.length; p.length !== h;) { const m = Math.floor(Math.random() * u.length); c.includes(u[m]) || p.push(u[m]); } for (var g = [].concat(c, p), v = [], y = 0; y < r.length; y++)v.push([r[y], g[y]]); const b = v.sort(((e, t) => e[0] - t[0])).map(((e) => e[1])); R(b); }(0, e.useEffect)((() => { const e = $(); const t = g[e]; _(t.regName), b(t), g.splice(e, 1), S(f(g)), W(t), g = ''; }), []); const Q = function () { const e = []; let t = 0; let l = 0; L && e.push(E[0]), j && e.push(E[1]), F && e.push(E[2]), U && e.push(E[3]); for (let i = n.filter(((e) => e.regName === x))[0].currRegCode, c = 0; c < e.length; c++)i.includes(e[c]) ? t++ : l++; switch (r) { case 'Exam': a(u + t), o(s - l < 0 ? 0 : s - l); break; case 'Training': a(u + t); } }; (0, e.useEffect)((() => { (L || j || F || U) && B(!0) || L || j || F || U || B(!1); }), [L, j, F, U]); const q = function (e) { switch (e.currentTarget.id) { case 'one': z(!L); break; case 'two': O(!j); break; case 'three': D(!F); break; case 'four': A(!U); } }; const K = 'white'; const Y = 'rgb(216,216,216)'; const G = 'rgb(216,236,103)'; return (0, c.jsxs)('div', {
+      const n = t.regions; const r = t.mode; const a = t.setCorrect; const o = t.setLives; const i = t.setHints; const u = t.correct; const s = t.lives; const d = t.hints; const p = t.hardStop; const h = t.resetMode; const m = t.showHintModal; let g = f(n); const v = l((0, e.useState)(''), 2); const y = v[0]; const b = v[1]; const w = l((0, e.useState)(g), 2); const k = w[0]; const S = w[1]; const C = l((0, e.useState)(''), 2); const x = C[0]; const _ = C[1]; const N = l((0, e.useState)(['', '', '', '']), 2); const E = N[0]; const R = N[1]; const P = l((0, e.useState)(!1), 2); const L = P[0]; const z = P[1]; const T = l((0, e.useState)(!1), 2); const j = T[0]; const O = T[1]; const M = l((0, e.useState)(!1), 2); const F = M[0]; const D = M[1]; const I = l((0, e.useState)(!1), 2); const U = I[0]; const A = I[1]; const H = l((0, e.useState)(!1), 2); const V = H[0]; const B = H[1]; function $() { return Math.floor(Math.random() * k.length); } function W(e) { for (var t = [1, 2, 3, 4], r = []; r.length < 4;) { const a = Math.ceil(4 * Math.random()); const l = t.indexOf(a); l !== -1 && (r.push(t[l]), t.splice(l, 1)); } const o = f(e.regCodes); const i = Math.ceil(Math.random() * (o.length <= 4 ? o.length : 4)); let u = []; f(n).forEach(((e) => u.push(e.regCodes))), u = u.reduce(((e, t) => e.concat(t))); for (var c = [], s = 0; s < i; s++) { const d = Math.floor(Math.random() * o.length); c.push(o[d]), o.splice(d, 1); } const p = []; if (c.length < 4) for (let h = 4 - c.length; p.length !== h;) { const m = Math.floor(Math.random() * u.length); c.includes(u[m]) || p.push(u[m]); } for (var g = [].concat(c, p), v = [], y = 0; y < r.length; y++)v.push([r[y], g[y]]); const b = v.sort(((e, t) => e[0] - t[0])).map(((e) => e[1])); R(b); }(0, e.useEffect)((() => { const e = $(); const t = g[e]; _(t.regName), b(t), g.splice(e, 1), S(f(g)), W(t), g = ''; }), []); const Q = function () { const e = []; let t = 0; let l = 0; L && e.push(E[0]), j && e.push(E[1]), F && e.push(E[2]), U && e.push(E[3]); for (let i = n.filter(((e) => e.regName === x))[0].regCodes, c = 0; c < e.length; c++)i.includes(e[c]) ? t++ : l++; switch (r) { case 'Exam': a(u + t), o(s - l < 0 ? 0 : s - l); break; case 'Training': a(u + t); } }; (0, e.useEffect)((() => { (L || j || F || U) && B(!0) || L || j || F || U || B(!1); }), [L, j, F, U]); const q = function (e) { switch (e.currentTarget.id) { case 'one': z(!L); break; case 'two': O(!j); break; case 'three': D(!F); break; case 'four': A(!U); } }; const K = 'white'; const Y = 'rgb(216,216,216)'; const G = 'rgb(216,236,103)'; return (0, c.jsxs)('div', {
         className: se,
         children: [(0, c.jsxs)('div', {
           className: fe,
@@ -523,7 +523,7 @@
           mode: r, setHints: i, hints: d, resetMode: h, currentRegion: y, showHintModal: m,
         })],
       });
-    }; const ge = 'finalstats_wrapper__ABlSN'; const ve = function (e) { const t = e.correct; const n = e.lives; const r = e.hints; const a = e.timer; const l = e.examStartingTime; const o = e.mode; const i = e.resetMode; return (0, c.jsxs)('div', { className: ge, children: [(0, c.jsx)('h2', { children: 'Congratulations!' }), (0, c.jsx)('h3', { children: o === 'Exam' ? 'That is the end of the exam.' : 'You have tried all the regions!' }), (0, c.jsx)('h4', { children: "Your game's statistics are:" }), (0, c.jsxs)('p', { children: ['Total right answers: ', t] }), (0, c.jsxs)('p', { children: ['Total lives left: ', n, ' out of 10'] }), (0, c.jsxs)('p', { children: ['Hints used: ', o === 'Exam' ? 10 - r : r, ' out of 10'] }), (0, c.jsxs)('p', { children: ['Time played: ', o === 'Exam' ? (function (e, t) { const n = e.split(':').map(((e) => Number(e))); const r = t.split(':').map(((e) => Number(e))); const a = 60 * r[0] + r[1] - (60 * n[0] + n[1]); const l = Math.floor(a / 60) < 10 ? '0'.concat(Math.floor(a / 60)) : Math.floor(a / 60) < 10; const o = a - 60 * l < 10 ? '0'.concat(a - 60 * l) : a - 60 * l; return ''.concat(l, ':').concat(o); }(a, l)) : a] }), (0, c.jsx)('h2', { children: 'Ready for another round?' }), (0, c.jsxs)('h3', { children: ['Hit Reset button: ', (0, c.jsx)('button', { onClick: i, children: (0, c.jsx)($, {}) })] })] }); }; const ye = 'gameinterface_wrapper__kyb6G'; const be = 'hintmodal_regName__axpvz'; const we = 'hintmodal_curRegs__mAcWJ'; const ke = 'hintmodal_wrapper__mMnKs'; const Se = 'hintmodal_modal__gsath'; const Ce = 'hintmodal_codes__-KDT0'; const xe = 'hintmodal_code__JdpYi'; const _e = 'hintmodal_btnWrapper__rRADQ'; const Ne = 'hintmodal_btn__7HQ+y'; const Ee = function (e) { const t = e.currentRegion; const n = e.closeHintModal; return (0, c.jsx)('div', { className: ke, children: (0, c.jsxs)('div', { className: Se, children: [(0, c.jsx)('h4', { className: be, children: t.regName }), (0, c.jsx)('p', { className: we, children: 'Current region codes are:' }), (0, c.jsx)('div', { className: Ce, children: t.currRegCode.map(((e, t) => (0, c.jsx)('div', { className: xe, children: e }, t))) }), (0, c.jsx)('div', { className: _e, children: (0, c.jsx)('button', { onClick: n, className: Ne, children: 'Close hint' }) })] }) }); }; const Re = function (t) {
+    }; const ge = 'finalstats_wrapper__ABlSN'; const ve = function (e) { const t = e.correct; const n = e.lives; const r = e.hints; const a = e.timer; const l = e.examStartingTime; const o = e.mode; const i = e.resetMode; return (0, c.jsxs)('div', { className: ge, children: [(0, c.jsx)('h2', { children: 'Congratulations!' }), (0, c.jsx)('h3', { children: o === 'Exam' ? 'That is the end of the exam.' : 'You have tried all the regions!' }), (0, c.jsx)('h4', { children: "Your game's statistics are:" }), (0, c.jsxs)('p', { children: ['Total right answers: ', t] }), (0, c.jsxs)('p', { children: ['Total lives left: ', n, ' out of 10'] }), (0, c.jsxs)('p', { children: ['Hints used: ', o === 'Exam' ? 10 - r : r, ' out of 10'] }), (0, c.jsxs)('p', { children: ['Time played: ', o === 'Exam' ? (function (e, t) { const n = e.split(':').map(((e) => Number(e))); const r = t.split(':').map(((e) => Number(e))); const a = 60 * r[0] + r[1] - (60 * n[0] + n[1]); const l = Math.floor(a / 60) < 10 ? '0'.concat(Math.floor(a / 60)) : Math.floor(a / 60) < 10; const o = a - 60 * l < 10 ? '0'.concat(a - 60 * l) : a - 60 * l; return ''.concat(l, ':').concat(o); }(a, l)) : a] }), (0, c.jsx)('h2', { children: 'Ready for another round?' }), (0, c.jsxs)('h3', { children: ['Hit Reset button: ', (0, c.jsx)('button', { onClick: i, children: (0, c.jsx)($, {}) })] })] }); }; const ye = 'gameinterface_wrapper__kyb6G'; const be = 'hintmodal_regName__axpvz'; const we = 'hintmodal_curRegs__mAcWJ'; const ke = 'hintmodal_wrapper__mMnKs'; const Se = 'hintmodal_modal__gsath'; const Ce = 'hintmodal_codes__-KDT0'; const xe = 'hintmodal_code__JdpYi'; const _e = 'hintmodal_btnWrapper__rRADQ'; const Ne = 'hintmodal_btn__7HQ+y'; const Ee = function (e) { const t = e.currentRegion; const n = e.closeHintModal; return (0, c.jsx)('div', { className: ke, children: (0, c.jsxs)('div', { className: Se, children: [(0, c.jsx)('h4', { className: be, children: t.regName }), (0, c.jsx)('p', { className: we, children: 'Current region codes are:' }), (0, c.jsx)('div', { className: Ce, children: t.regCodes.map(((e, t) => (0, c.jsx)('div', { className: xe, children: e }, t))) }), (0, c.jsx)('div', { className: _e, children: (0, c.jsx)('button', { onClick: n, className: Ne, children: 'Close hint' }) })] }) }); }; const Re = function (t) {
       const n = t.regions; const r = t.mode; const a = t.resetMode; const o = l((0, e.useState)(''), 2); const i = o[0]; const u = o[1]; const s = l((0, e.useState)(''), 2); const f = s[0]; const d = s[1]; const p = l((0, e.useState)(''), 2); const h = p[0]; const m = p[1]; const g = l((0, e.useState)(''), 2); const v = g[0]; const y = g[1]; const b = l((0, e.useState)(0), 2); const w = b[0]; const k = b[1]; const S = l((0, e.useState)(!1), 2); const C = S[0]; const x = S[1]; const _ = l((0, e.useState)(''), 2); const N = _[0]; const E = _[1]; const R = r === 'Exam' ? '00:00' : '10:00'; const P = '03:00'; (0, e.useEffect)((() => { u(0), d(r === 'Exam' ? 10 : '\u221e'), m(r === 'Exam' ? 10 : '\u221e'); }), []), (0, e.useEffect)((() => { y(r === 'Exam' ? P : '00:00'); }), []), (0, e.useEffect)((() => { if (!(f <= 0) && w === 0) if (v !== R) { let e; let t = v.split(':').map(((e) => Number(e))); switch (r) { case 'Exam': e = t[1] === 0 ? [t[0] - 1, t[1] = 59] : [t[0], t[1] - 1]; break; case 'Training': e = t[1] < 59 ? [t[0], t[1] + 1] : [t[0] + 1, 0]; }t = e.map(((e) => (e < 10 ? ''.concat('0').concat(e.toString()) : e.toString()))), setTimeout((() => y(t.join(':'))), 1e3); } else k(w + 1); }), [v]); return (0, c.jsxs)('div', {
         className: ye,
         children: [(0, c.jsx)(ie, {

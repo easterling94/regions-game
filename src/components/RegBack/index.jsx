@@ -11,7 +11,7 @@ function RegBack() {
     {
       id: '',
       regName: '',
-      currRegCode: '',
+      regCodes: '',
     },
   );
 
@@ -61,46 +61,6 @@ function RegBack() {
 
   const regEdit = async (e) => {
 
-  };
-
-  const formSubmit = (e) => {
-    e.preventDefault();
-    if (!regState.regName || !regState.currRegCode) {
-      return;
-    }
-
-    const currRegList = regState.currRegCode.toString().replace(/[,!?.\\();:]/g, ' ').split(' ').filter((el) => (el !== ' ' && el !== ''));
-
-    if (regState.id) {
-      const currList = [...regList];
-      const newReg = {
-        id: regState.id,
-        regName: regState.regName,
-        currRegCode: currRegList,
-      };
-      fetch(`${url}/${regState.id}`, {
-        method: 'PUT',
-        body: JSON.stringify(newReg),
-        headers: {
-          'Content-type': 'application/json',
-        },
-      });
-      currList.splice(regState.id - 1, 1, newReg);
-      setRegList(currList);
-    } else {
-      const regListLength = regList.length + 1;
-      const newReg = {
-        id: regListLength,
-        regName: regState.regName,
-        currRegCode: currRegList,
-      };
-      regAdd(newReg);
-    }
-    setRegState({
-      id: '',
-      regName: '',
-      currRegCode: '',
-    });
   };
 
   return (

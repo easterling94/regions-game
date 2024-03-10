@@ -33,7 +33,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.ts$/,
+        test: /\.(ts|tsx)$/,
         use: 'ts-loader',
         include: [
           path.resolve(__dirname, 'src'),

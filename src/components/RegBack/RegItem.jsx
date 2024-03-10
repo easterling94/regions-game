@@ -10,7 +10,7 @@ function RegItem({ el }) {
         <div>
           Коды региона:
           <div className={regListStyles.codes}>
-            {el.currRegCode.map((el) => <div key={el} className={regListStyles.codeItem}>{el}</div>)}
+            {el.regCodes.map((el) => <div key={el} className={regListStyles.codeItem}>{el}</div>)}
           </div>
         </div>
         <hr />

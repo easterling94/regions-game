@@ -2,10 +2,6 @@ import { AppDispatch, RootState } from '../store';
 import { setTimer, setBoard } from '../slices/gameSlice';
 import { TBoard } from '../../utils/sharedTypes';
 
-export const changeTimerThunk = () => (dispatch: AppDispatch) => {
-
-}
-
 type Test = '1' | '2' | '3' | '4';
 
 export const changeAnswerThunk = (id: Test, value: string) => (dispatch: AppDispatch, getState: () => RootState) => {

@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { AppDispatch } from '../store';
+import { AppDispatch, RootState, useAppDispatch } from '../store';
 import { IS_LOCALHOST } from '../../utils/project_consts';
-import { TEnvironment, ENVIRONMENT } from '../../utils/sharedTypes';
+import { TEnvironment, ENVIRONMENT, TRegionRaw } from '../../utils/sharedTypes';
 import { setEnvironment } from '../slices/generalSlice';
 import api from '../../utils/api';
 import { DATA_IF_SERVER_FAILS } from '../../utils/db_static';
@@ -30,6 +30,26 @@ export const fetchRegionsData = createAsyncThunk(
     }
 
     if(!response) return DATA_IF_SERVER_FAILS.regions;
+  }
+);
+
+export const createRegionsData = createAsyncThunk(
+  'regions/createRegionsData', 
+  async (newReg: TRegionRaw, thunkApi) => {
+    const { general: {environment}, regions: {regions} } = thunkApi.getState() as RootState;
+    const newRegionPrepared = {...newReg, regCodes: newReg.regCodes.split(', ')};
+    if (environment === 'IS_DEV') {
+      console.log('дев с бэком');
+    } else if (environment === 'IS_DEV_MOCK') {
+      console.log('дев без бэка, с моком');
+      // заменить 100 на макс id из регионов если моки
+      return [...regions!, {...newRegionPrepared, id: 100}];
+    } else if (environment === 'IS_PROD') {
+      console.log('прод с бэком');
+    } else if (environment === 'IS_PROD_MOCK') {
+      console.log('прод без бэка, с моком');
+    }
+    console.log(environment);
   }
 );
 

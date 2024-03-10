@@ -1,5 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchRegionsData } from '../thunks/regionsThunks';
+import { 
+  fetchRegionsData,
+  createRegionsData
+} from '../thunks/regionsThunks';
 import { TRegion, LOAD_STATUSES } from '../../utils/sharedTypes';
 
 interface initialState {
@@ -27,6 +30,10 @@ export const regionsSlice = createSlice({
     })
     .addCase(fetchRegionsData.rejected, (state) => {
       state.status = LOAD_STATUSES.ERROR;
+    })
+    .addCase(createRegionsData.fulfilled, (state, action) => {
+      state.status = LOAD_STATUSES.SUCCESS;
+      state.regions = action.payload!;
     })
   },
 });

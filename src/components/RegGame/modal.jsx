@@ -17,7 +17,7 @@ const HintModal = ({ currentRegion }) => {
         <h4 className={styles.regName}>{currentRegion.regName}</h4>
         <p className={styles.curRegs}>Коды данного региона:</p>
         <div className={styles.codes}>
-          {currentRegion.currRegCode.map((el, i) => <div key={i} className={styles.code}>{el}</div>)}
+          {currentRegion.regCodes.map((el, i) => <div key={i} className={styles.code}>{el}</div>)}
         </div>
         <div className={styles.btnWrapper}>
           <button onClick={closeHint} className={styles.btn}>Закрыть</button>

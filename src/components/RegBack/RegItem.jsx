@@ -1,7 +1,13 @@
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai';
+import { useAppDispatch } from '../../services/store';
+import { deleteRegionsData } from '../../services/thunks/regionsThunks';
 import regListStyles from './regList.module.css';
 
 function RegItem({ el }) {
+  const dispatch = useAppDispatch();
+  const handleDelete = () => {
+    dispatch(deleteRegionsData(el));
+  };
   return (
     <div className={regListStyles.regContainer} id={el.id}>
       <div className={regListStyles.regInfo}>
@@ -17,7 +23,7 @@ function RegItem({ el }) {
 
       </div>
       <div className={regListStyles.btnGroup}>
-        <button className={`${regListStyles.btn} ${regListStyles.btnDelete}`}>
+        <button onClick={handleDelete} className={`${regListStyles.btn} ${regListStyles.btnDelete}`}>
           <AiFillDelete />
         </button>
         <button className={`${regListStyles.btn} ${regListStyles.btnEdite}`}><AiFillEdit /></button>

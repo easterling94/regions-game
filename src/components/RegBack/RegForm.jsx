@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { checkValue, checkForm } from '../../utils/formLogic';
 import { VALUES, COLORS } from './utils';
 import { useAppDispatch } from '../../services/store';
+import { setForm } from '../../services/slices/regionsSlice';
 import { createRegionsData } from '../../services/thunks/regionsThunks';
 import styles from './regForm.module.css';
 
@@ -19,7 +20,9 @@ function RegForm() {
         setRegName(value);
         break;
       case regCodesValues.name:
+        console.log('first');
         setRegCodes(value);
+        dispatch(setForm({ name: 'name', codes: value }));
         break;
       default:
         break;

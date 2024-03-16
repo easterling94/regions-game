@@ -1,13 +1,26 @@
-export type TRegion = {
-  id: number,
-  regName: string,
-  regCodes: Array<string>,
-};
+export enum REGION_PROPERTIES {
+  REGION_NAME = 'REGION_NAME',
+  REGION_CODES = 'REGION_CODES',
+}
+
+type test = keyof typeof REGION_PROPERTIES;
 
 export type TRegionRaw = {
-  regName: string,
-  regCodes: string,
+  [k in REGION_PROPERTIES]: string
 }
+
+export type TRegion = {
+  id: number,
+  REGION_NAME: string,
+  REGION_CODES: Array<string>,
+};
+
+// export type TRegionRaw = {
+//   regName: string,
+//   regCodes: string,
+// }
+
+export type TRegionRawPayload = { [k in keyof TRegionRaw]: {type: k; payload: TRegionRaw[k]}}[keyof TRegionRaw];
 
 export enum LOAD_STATUSES {
   IDLE = 'IDLE',

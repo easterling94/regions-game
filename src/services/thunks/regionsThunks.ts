@@ -37,7 +37,7 @@ export const createRegionsData = createAsyncThunk(
   'regions/createRegionsData', 
   async (newReg: TRegionRaw, thunkApi) => {
     const { general: {environment}, regions: {regions} } = thunkApi.getState() as RootState;
-    const newRegionPrepared = {...newReg, regCodes: newReg.regCodes.split(', ')};
+    const newRegionPrepared = {...newReg, REGION_CODES: newReg.REGION_CODES.split(', ')};
     if (environment === 'IS_DEV') {
       console.log('дев с бэком');
     } else if (environment === 'IS_DEV_MOCK') {

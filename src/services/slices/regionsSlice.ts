@@ -5,25 +5,22 @@ import {
   deleteRegionsData,
   editRegionsData
 } from '../thunks/regionsThunks';
-import { TRegion, LOAD_STATUSES } from '../../utils/sharedTypes';
+import { TRegion, LOAD_STATUSES, TRegionRaw, TRegionRawPayload } from '../../utils/sharedTypes';
 
 interface initialState {
   status: LOAD_STATUSES,
   regions: Array<TRegion> | null,
-  form: TForm
+  form: TRegionRaw
 }
 
-type TForm = {
-  name: string,
-  codes: string,
-};
+
 
 const initialState: initialState = {
   status: LOAD_STATUSES.IDLE,
   regions: null,
   form: {
-    name: '',
-    codes: '',
+    REGION_NAME: '',
+    REGION_CODES: '',
   },
 }
 
@@ -31,8 +28,9 @@ export const regionsSlice = createSlice({
   name: 'regions',
   initialState,
   reducers: {
-    setForm: (state, action: PayloadAction<TForm & {}>) => {
-      state.form = action.payload;
+    setForm: (state, action: PayloadAction<TRegionRawPayload>) => {
+      console.log(action.payload);
+      state.form[action.payload.type] = action.payload.payload;
     },
   },
   extraReducers: (builder) => {

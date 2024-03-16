@@ -1,28 +1,25 @@
 import { useState } from 'react';
 import { checkValue, checkForm } from '../../utils/formLogic';
 import { VALUES, COLORS } from './utils';
-import { useAppDispatch } from '../../services/store';
+import { useAppDispatch, useAppSelector } from '../../services/store';
 import { setForm } from '../../services/slices/regionsSlice';
 import { createRegionsData } from '../../services/thunks/regionsThunks';
 import styles from './regForm.module.css';
 
 function RegForm() {
   const dispatch = useAppDispatch();
-  const [regName, setRegName] = useState('');
-  const [regCodes, setRegCodes] = useState([]);
+  const { REGION_NAME, REGION_CODES } = useAppSelector((store) => store.regions.form);
   const { regNameValues, regCodesValues, btnValues } = VALUES;
-  const btnBackground = (regName && regCodes.length) ? 'filled' : 'notFilled';
+  const btnBackground = (REGION_NAME && REGION_CODES.length) ? 'filled' : 'notFilled';
 
   const handleInputChange = (e) => {
     const value = checkValue(e.target.value, e.target.name);
     switch (e.target.name) {
       case regNameValues.name:
-        setRegName(value);
+        dispatch(setForm(value));
         break;
       case regCodesValues.name:
-        console.log('first');
-        setRegCodes(value);
-        dispatch(setForm({ name: 'name', codes: value }));
+        dispatch(setForm(value));
         break;
       default:
         break;
@@ -31,8 +28,8 @@ function RegForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (checkForm(regName, regCodes)) {
-      dispatch(createRegionsData({ regName, regCodes }));
+    if (checkForm(REGION_NAME, REGION_CODES)) {
+      dispatch(createRegionsData({ REGION_NAME, REGION_CODES }));
     } else return;
   };
 
@@ -42,11 +39,11 @@ function RegForm() {
       <form onSubmit={handleSubmit}>
         <div className={styles.regInput}>
           <label>{regNameValues.lbl}</label>
-          <input value={regName} name={regNameValues.name} type={regNameValues.type} placeholder={regNameValues.plhldr} onChange={(e) => handleInputChange(e)} />
+          <input value={REGION_NAME} name={regNameValues.name} type={regNameValues.type} placeholder={regNameValues.plhldr} onChange={(e) => handleInputChange(e)} />
         </div>
         <div className={styles.regInput}>
           <label>{regCodesValues.lbl}</label>
-          <input value={regCodes} name={regCodesValues.name} type={regCodesValues.type} placeholder={regCodesValues.plhldr} onChange={(e) => handleInputChange(e)} />
+          <input value={REGION_CODES} name={regCodesValues.name} type={regCodesValues.type} placeholder={regCodesValues.plhldr} onChange={(e) => handleInputChange(e)} />
         </div>
         <input type={btnValues.type} value={btnValues.value} className={styles.btn} style={{ backgroundColor: COLORS[btnBackground] }} />
       </form>

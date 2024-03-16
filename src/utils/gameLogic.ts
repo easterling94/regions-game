@@ -7,8 +7,8 @@ export const prepareBoard = (regionsInitial: Array<TRegion>, regionsTrimmed: Arr
 
   const randomRegion = regTrimmed[Math.floor(Math.random() * regTrimmed.length)];
 
-  const regCodes = randomRegion.regCodes;
-  const restCodes = regInit.filter(el => el.id !== randomRegion.id).map(el => el.regCodes).flat();
+  const regCodes = randomRegion.REGION_CODES;
+  const restCodes = regInit.filter(el => el.id !== randomRegion.id).map(el => el.REGION_CODES).flat();
 
   const codesToAnswer = new Array(4);
 
@@ -33,7 +33,7 @@ export const prepareBoard = (regionsInitial: Array<TRegion>, regionsTrimmed: Arr
 };
 
 export const checkAnswers = (randomRegion: TRegion, answerArray: Array<string>, codesToAnswer: Array<string>): boolean => {
-  const correctArray = randomRegion.regCodes.filter(el => codesToAnswer.includes(el)).sort().join();
+  const correctArray = randomRegion.REGION_CODES.filter(el => codesToAnswer.includes(el)).sort().join();
   const chosenAnswers = answerArray.filter(el => el !== '').sort().join();
   const result: boolean = correctArray === chosenAnswers;
   return result;

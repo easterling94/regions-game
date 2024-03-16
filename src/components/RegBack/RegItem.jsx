@@ -11,12 +11,12 @@ function RegItem({ el }) {
   return (
     <div className={regListStyles.regContainer} id={el.id}>
       <div className={regListStyles.regInfo}>
-        <h3>{el.regName}</h3>
+        <h3>{el.REGION_NAME}</h3>
         <hr />
         <div>
           Коды региона:
           <div className={regListStyles.codes}>
-            {el.regCodes.map((el) => <div key={el} className={regListStyles.codeItem}>{el}</div>)}
+            {el.REGION_CODES.map((el) => <div key={el} className={regListStyles.codeItem}>{el}</div>)}
           </div>
         </div>
         <hr />

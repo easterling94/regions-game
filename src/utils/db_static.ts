@@ -2,93 +2,93 @@ export const DATA_IF_SERVER_FAILS = {
   regions: [
     {
       "id": 4,
-      "regName": "Республика Алтай",
-      "regCodes": [
+      "REGION_NAME": "Республика Алтай",
+      "REGION_CODES": [
         "04"
       ]
     },
     {
       "id": 5,
-      "regName": "Республика Дагестан",
-      "regCodes": [
+      "REGION_NAME": "Республика Дагестан",
+      "REGION_CODES": [
         "05"
       ]
     },
     {
       "id": 6,
-      "regName": "Республика Ингушетия",
-      "regCodes": [
+      "REGION_NAME": "Республика Ингушетия",
+      "REGION_CODES": [
         "06"
       ]
     },
     {
       "id": 7,
-      "regName": "Кабардино-Балкарская Республика",
-      "regCodes": [
+      "REGION_NAME": "Кабардино-Балкарская Республика",
+      "REGION_CODES": [
         "07"
       ]
     },
     {
       "id": 8,
-      "regName": "Республика Калмыкия",
-      "regCodes": [
+      "REGION_NAME": "Республика Калмыкия",
+      "REGION_CODES": [
         "08"
       ]
     },
     {
       "id": 9,
-      "regName": "Карачаево-Черкесская Республика",
-      "regCodes": [
+      "REGION_NAME": "Карачаево-Черкесская Республика",
+      "REGION_CODES": [
         "09"
       ]
     },
     {
       "id": 10,
-      "regName": "Республика Карелия",
-      "regCodes": [
+      "REGION_NAME": "Республика Карелия",
+      "REGION_CODES": [
         "10"
       ]
     },
     {
       "id": 11,
-      "regName": "Республика Коми",
-      "regCodes": [
+      "REGION_NAME": "Республика Коми",
+      "REGION_CODES": [
         "11"
       ]
     },
     {
       "id": 12,
-      "regName": "Республика Марий Эл",
-      "regCodes": [
+      "REGION_NAME": "Республика Марий Эл",
+      "REGION_CODES": [
         "12"
       ]
     },
     {
       "id": 13,
-      "regName": "Республика Мордовия",
-      "regCodes": [
+      "REGION_NAME": "Республика Мордовия",
+      "REGION_CODES": [
         "13",
         "113"
       ]
     },
     {
       "id": 14,
-      "regName": "Республика Саха (Якутия)",
-      "regCodes": [
+      "REGION_NAME": "Республика Саха (Якутия)",
+      "REGION_CODES": [
         "14"
       ]
     },
     {
       "id": 15,
-      "regName": "Республика Северная Осетия — Алания",
-      "regCodes": [
+      "REGION_NAME": "Республика Северная Осетия — Алания",
+      "REGION_CODES": [
         "15"
       ]
     },
     {
       "id": 16,
-      "regName": "Республика Татарстан (Татарстан)",
-      "regCodes": [
+      "REGION_NAME": "Республика Татарстан (Татарстан)",
+      "REGION_CODES": [
         "16",
         "116",
         "716"
@@ -96,44 +96,44 @@ export const DATA_IF_SERVER_FAILS = {
     },
     {
       "id": 17,
-      "regName": "Республика Тыва",
-      "regCodes": [
+      "REGION_NAME": "Республика Тыва",
+      "REGION_CODES": [
         "17"
       ]
     },
     {
       "id": 18,
-      "regName": "Удмуртская Республика",
-      "regCodes": [
+      "REGION_NAME": "Удмуртская Республика",
+      "REGION_CODES": [
         "18"
       ]
     },
     {
       "id": 19,
-      "regName": "Республика Хакасия",
-      "regCodes": [
+      "REGION_NAME": "Республика Хакасия",
+      "REGION_CODES": [
         "19"
       ]
     },
     {
       "id": 20,
-      "regName": "Чувашская Республика - Чувашия",
-      "regCodes": [
+      "REGION_NAME": "Чувашская Республика - Чувашия",
+      "REGION_CODES": [
         "21",
         "121"
       ]
     },
     {
       "id": 21,
-      "regName": "Алтайский край",
-      "regCodes": [
+      "REGION_NAME": "Алтайский край",
+      "REGION_CODES": [
         "22"
       ]
     },
     {
       "id": 22,
-      "regName": "Краснодарский край",
-      "regCodes": [
+      "REGION_NAME": "Краснодарский край",
+      "REGION_CODES": [
         "23",
         "93",
         "123",
@@ -142,198 +142,198 @@ export const DATA_IF_SERVER_FAILS = {
     },
     {
       "id": 23,
-      "regName": "Красноярский край",
-      "regCodes": [
+      "REGION_NAME": "Красноярский край",
+      "REGION_CODES": [
         "24",
         "124"
       ]
     },
     {
       "id": 24,
-      "regName": "Приморский край",
-      "regCodes": [
+      "REGION_NAME": "Приморский край",
+      "REGION_CODES": [
         "25",
         "125"
       ]
     },
     {
       "id": 25,
-      "regName": "Ставропольский край",
-      "regCodes": [
+      "REGION_NAME": "Ставропольский край",
+      "REGION_CODES": [
         "26",
         "126"
       ]
     },
     {
       "id": 26,
-      "regName": "Хабаровский край",
-      "regCodes": [
+      "REGION_NAME": "Хабаровский край",
+      "REGION_CODES": [
         "27"
       ]
     },
     {
       "id": 27,
-      "regName": "Амурская область",
-      "regCodes": [
+      "REGION_NAME": "Амурская область",
+      "REGION_CODES": [
         "28"
       ]
     },
     {
       "id": 28,
-      "regName": "Архангельская область",
-      "regCodes": [
+      "REGION_NAME": "Архангельская область",
+      "REGION_CODES": [
         "29"
       ]
     },
     {
       "id": 29,
-      "regName": "Астраханская область",
-      "regCodes": [
+      "REGION_NAME": "Астраханская область",
+      "REGION_CODES": [
         "30"
       ]
     },
     {
       "id": 30,
-      "regName": "Белгородская область",
-      "regCodes": [
+      "REGION_NAME": "Белгородская область",
+      "REGION_CODES": [
         "31"
       ]
     },
     {
       "id": 31,
-      "regName": "Брянская область",
-      "regCodes": [
+      "REGION_NAME": "Брянская область",
+      "REGION_CODES": [
         "32"
       ]
     },
     {
       "id": 32,
-      "regName": "Владимирская область",
-      "regCodes": [
+      "REGION_NAME": "Владимирская область",
+      "REGION_CODES": [
         "33"
       ]
     },
     {
       "id": 33,
-      "regName": "Волгоградская область",
-      "regCodes": [
+      "REGION_NAME": "Волгоградская область",
+      "REGION_CODES": [
         "34",
         "134"
       ]
     },
     {
       "id": 34,
-      "regName": "Вологодская область",
-      "regCodes": [
+      "REGION_NAME": "Вологодская область",
+      "REGION_CODES": [
         "35"
       ]
     },
     {
       "id": 35,
-      "regName": "Воронежская область",
-      "regCodes": [
+      "REGION_NAME": "Воронежская область",
+      "REGION_CODES": [
         "36",
         "136"
       ]
     },
     {
       "id": 36,
-      "regName": "Ивановская область",
-      "regCodes": [
+      "REGION_NAME": "Ивановская область",
+      "REGION_CODES": [
         "37"
       ]
     },
     {
       "id": 37,
-      "regName": "Иркутская область",
-      "regCodes": [
+      "REGION_NAME": "Иркутская область",
+      "REGION_CODES": [
         "38",
         "138"
       ]
     },
     {
       "id": 38,
-      "regName": "Калининградская область",
-      "regCodes": [
+      "REGION_NAME": "Калининградская область",
+      "REGION_CODES": [
         "39"
       ]
     },
     {
       "id": 39,
-      "regName": "Калужская область",
-      "regCodes": [
+      "REGION_NAME": "Калужская область",
+      "REGION_CODES": [
         "40"
       ]
     },
     {
       "id": 40,
-      "regName": "Камчатский край",
-      "regCodes": [
+      "REGION_NAME": "Камчатский край",
+      "REGION_CODES": [
         "41"
       ]
     },
     {
       "id": 41,
-      "regName": "Кемеровская область",
-      "regCodes": [
+      "REGION_NAME": "Кемеровская область",
+      "REGION_CODES": [
         "42",
         "142"
       ]
     },
     {
       "id": 42,
-      "regName": "Кировская область",
-      "regCodes": [
+      "REGION_NAME": "Кировская область",
+      "REGION_CODES": [
         "43"
       ]
     },
     {
       "id": 43,
-      "regName": "Костромская область",
-      "regCodes": [
+      "REGION_NAME": "Костромская область",
+      "REGION_CODES": [
         "44"
       ]
     },
     {
       "id": 44,
-      "regName": "Курганская область",
-      "regCodes": [
+      "REGION_NAME": "Курганская область",
+      "REGION_CODES": [
         "45"
       ]
     },
     {
       "id": 45,
-      "regName": "Курская область",
-      "regCodes": [
+      "REGION_NAME": "Курская область",
+      "REGION_CODES": [
         "46"
       ]
     },
     {
       "id": 46,
-      "regName": "Ленинградская область",
-      "regCodes": [
+      "REGION_NAME": "Ленинградская область",
+      "REGION_CODES": [
         "47",
         "147"
       ]
     },
     {
       "id": 47,
-      "regName": "Липецкая область",
-      "regCodes": [
+      "REGION_NAME": "Липецкая область",
+      "REGION_CODES": [
         "48"
       ]
     },
     {
       "id": 48,
-      "regName": "Магаданская область",
-      "regCodes": [
+      "REGION_NAME": "Магаданская область",
+      "REGION_CODES": [
         "49"
       ]
     },
     {
       "id": 49,
-      "regName": "Московская область",
-      "regCodes": [
+      "REGION_NAME": "Московская область",
+      "REGION_CODES": [
         "50",
         "90",
         "150",
@@ -344,82 +344,82 @@ export const DATA_IF_SERVER_FAILS = {
     },
     {
       "id": 50,
-      "regName": "Мурманская область",
-      "regCodes": [
+      "REGION_NAME": "Мурманская область",
+      "REGION_CODES": [
         "51"
       ]
     },
     {
       "id": 51,
-      "regName": "Нижегородская область",
-      "regCodes": [
+      "REGION_NAME": "Нижегородская область",
+      "REGION_CODES": [
         "52",
         "152"
       ]
     },
     {
       "id": 52,
-      "regName": "Новгородская область",
-      "regCodes": [
+      "REGION_NAME": "Новгородская область",
+      "REGION_CODES": [
         "53"
       ]
     },
     {
       "id": 53,
-      "regName": "Новосибирская область",
-      "regCodes": [
+      "REGION_NAME": "Новосибирская область",
+      "REGION_CODES": [
         "54",
         "154"
       ]
     },
     {
       "id": 54,
-      "regName": "Омская область",
-      "regCodes": [
+      "REGION_NAME": "Омская область",
+      "REGION_CODES": [
         "55"
       ]
     },
     {
       "id": 55,
-      "regName": "Оренбургская область",
-      "regCodes": [
+      "REGION_NAME": "Оренбургская область",
+      "REGION_CODES": [
         "56",
         "156"
       ]
     },
     {
       "id": 56,
-      "regName": "Орловская область",
-      "regCodes": [
+      "REGION_NAME": "Орловская область",
+      "REGION_CODES": [
         "57"
       ]
     },
     {
       "id": 57,
-      "regName": "Пензенская область",
-      "regCodes": [
+      "REGION_NAME": "Пензенская область",
+      "REGION_CODES": [
         "58"
       ]
     },
     {
       "id": 58,
-      "regName": "Пермский край",
-      "regCodes": [
+      "REGION_NAME": "Пермский край",
+      "REGION_CODES": [
         "59",
         "159"
       ]
     },
     {
       "id": 59,
-      "regName": "Псковская область",
-      "regCodes": [
+      "REGION_NAME": "Псковская область",
+      "REGION_CODES": [
         "60"
       ]
     },
     {
       "id": 60,
-      "regName": "Ростовская область",
-      "regCodes": [
+      "REGION_NAME": "Ростовская область",
+      "REGION_CODES": [
         "61",
         "161",
         "761"
@@ -427,15 +427,15 @@ export const DATA_IF_SERVER_FAILS = {
     },
     {
       "id": 61,
-      "regName": "Рязанская область",
-      "regCodes": [
+      "REGION_NAME": "Рязанская область",
+      "REGION_CODES": [
         "62"
       ]
     },
     {
       "id": 62,
-      "regName": "Самарская область",
-      "regCodes": [
+      "REGION_NAME": "Самарская область",
+      "REGION_CODES": [
         "63",
         "163",
         "763"
@@ -443,23 +443,23 @@ export const DATA_IF_SERVER_FAILS = {
     },
     {
       "id": 63,
-      "regName": "Саратовская область",
-      "regCodes": [
+      "REGION_NAME": "Саратовская область",
+      "REGION_CODES": [
         "64",
         "164"
       ]
     },
     {
       "id": 64,
-      "regName": "Сахалинская область",
-      "regCodes": [
+      "REGION_NAME": "Сахалинская область",
+      "REGION_CODES": [
         "65"
       ]
     },
     {
       "id": 65,
-      "regName": "Свердловская область",
-      "regCodes": [
+      "REGION_NAME": "Свердловская область",
+      "REGION_CODES": [
         "196",
         "66",
         "96"
@@ -467,58 +467,58 @@ export const DATA_IF_SERVER_FAILS = {
     },
     {
       "id": 66,
-      "regName": "Смоленская область",
-      "regCodes": [
+      "REGION_NAME": "Смоленская область",
+      "REGION_CODES": [
         "67"
       ]
     },
     {
       "id": 67,
-      "regName": "Тамбовская область",
-      "regCodes": [
+      "REGION_NAME": "Тамбовская область",
+      "REGION_CODES": [
         "68"
       ]
     },
     {
       "id": 68,
-      "regName": "Тверская область",
-      "regCodes": [
+      "REGION_NAME": "Тверская область",
+      "REGION_CODES": [
         "69"
       ]
     },
     {
       "id": 69,
-      "regName": "Томская область",
-      "regCodes": [
+      "REGION_NAME": "Томская область",
+      "REGION_CODES": [
         "70"
       ]
     },
     {
       "id": 70,
-      "regName": "Тульская область",
-      "regCodes": [
+      "REGION_NAME": "Тульская область",
+      "REGION_CODES": [
         "71"
       ]
     },
     {
       "id": 71,
-      "regName": "Тюменская область",
-      "regCodes": [
+      "REGION_NAME": "Тюменская область",
+      "REGION_CODES": [
         "72"
       ]
     },
     {
       "id": 72,
-      "regName": "Ульяновская область",
-      "regCodes": [
+      "REGION_NAME": "Ульяновская область",
+      "REGION_CODES": [
         "73",
         "173"
       ]
     },
     {
       "id": 73,
-      "regName": "Челябинская область",
-      "regCodes": [
+      "REGION_NAME": "Челябинская область",
+      "REGION_CODES": [
         "74",
         "174",
         "774"
@@ -526,22 +526,22 @@ export const DATA_IF_SERVER_FAILS = {
     },
     {
       "id": 74,
-      "regName": "Забайкальский край",
-      "regCodes": [
+      "REGION_NAME": "Забайкальский край",
+      "REGION_CODES": [
         "75"
       ]
     },
     {
       "id": 75,
-      "regName": "Ярославская область",
-      "regCodes": [
+      "REGION_NAME": "Ярославская область",
+      "REGION_CODES": [
         "76"
       ]
     },
     {
       "id": 76,
-      "regName": "г. Москва",
-      "regCodes": [
+      "REGION_NAME": "г. Москва",
+      "REGION_CODES": [
         "77",
         "97",
         "99",
@@ -555,8 +555,8 @@ export const DATA_IF_SERVER_FAILS = {
     },
     {
       "id": 77,
-      "regName": "г. Санкт-Петербург",
-      "regCodes": [
+      "REGION_NAME": "г. Санкт-Петербург",
+      "REGION_CODES": [
         "78",
         "98",
         "178",
@@ -565,58 +565,58 @@ export const DATA_IF_SERVER_FAILS = {
     },
     {
       "id": 78,
-      "regName": "Еврейская автономная область",
-      "regCodes": [
+      "REGION_NAME": "Еврейская автономная область",
+      "REGION_CODES": [
         "79"
       ]
     },
     {
       "id": 79,
-      "regName": "Республика Крым",
-      "regCodes": [
+      "REGION_NAME": "Республика Крым",
+      "REGION_CODES": [
         "82"
       ]
     },
     {
       "id": 80,
-      "regName": "Ненецкий автономный округ",
-      "regCodes": [
+      "REGION_NAME": "Ненецкий автономный округ",
+      "REGION_CODES": [
         "83"
       ]
     },
     {
       "id": 81,
-      "regName": "Ханты-Мансийский автономный округ - Югра",
-      "regCodes": [
+      "REGION_NAME": "Ханты-Мансийский автономный округ - Югра",
+      "REGION_CODES": [
         "86",
         "186"
       ]
     },
     {
       "id": 82,
-      "regName": "Чукотский автономный округ",
-      "regCodes": [
+      "REGION_NAME": "Чукотский автономный округ",
+      "REGION_CODES": [
         "87"
       ]
     },
     {
       "id": 83,
-      "regName": "Ямало-Ненецкий автономный округ",
-      "regCodes": [
+      "REGION_NAME": "Ямало-Ненецкий автономный округ",
+      "REGION_CODES": [
         "89"
       ]
     },
     {
       "id": 84,
-      "regName": "г. Севастополь",
-      "regCodes": [
+      "REGION_NAME": "г. Севастополь",
+      "REGION_CODES": [
         "92"
       ]
     },
     {
       "id": 85,
-      "regName": "Чеченская Республика",
-      "regCodes": [
+      "REGION_NAME": "Чеченская Республика",
+      "REGION_CODES": [
         "95"
       ]
     }

@@ -29,8 +29,10 @@ export const regionsSlice = createSlice({
   initialState,
   reducers: {
     setForm: (state, action: PayloadAction<TRegionRawPayload>) => {
-      console.log(action.payload);
       state.form[action.payload.type] = action.payload.payload;
+    },
+    clearForm: (state) => {
+      state.form = initialState.form;
     },
   },
   extraReducers: (builder) => {
@@ -60,5 +62,5 @@ export const regionsSlice = createSlice({
   },
 });
 
-export const { setForm } = regionsSlice.actions;
+export const { setForm, clearForm } = regionsSlice.actions;
 export default regionsSlice.reducer;

@@ -52,7 +52,7 @@ function GameBoard() {
         <div className={`${styles.box} ${styles.question}`}>
           Выберете все подходящие номера для:
           <br />
-          {randomRegion.regName}
+          {randomRegion.REGION_NAME}
         </div>
         <Answer id="1" value={codesToAnswer[0]} />
         <Answer id="2" value={codesToAnswer[1]} />

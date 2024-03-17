@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { checkValue, checkForm } from '../../utils/formLogic';
 import { VALUES, COLORS } from './utils';
 import { useAppDispatch, useAppSelector } from '../../services/store';

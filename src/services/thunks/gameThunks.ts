@@ -1,5 +1,5 @@
 import { AppDispatch, RootState } from '../store';
-import { setTimer, setBoard } from '../slices/gameSlice';
+import { setBoard } from '../slices/gameSlice';
 import { TBoard } from '../../utils/sharedTypes';
 
 type Test = '1' | '2' | '3' | '4';

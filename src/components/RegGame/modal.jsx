@@ -14,10 +14,10 @@ const HintModal = ({ currentRegion }) => {
   return ReactDOM.createPortal(
     <div className={styles.wrapper}>
       <div className={styles.modal}>
-        <h4 className={styles.regName}>{currentRegion.regName}</h4>
+        <h4 className={styles.regName}>{currentRegion.REGION_NAME}</h4>
         <p className={styles.curRegs}>Коды данного региона:</p>
         <div className={styles.codes}>
-          {currentRegion.regCodes.map((el, i) => <div key={i} className={styles.code}>{el}</div>)}
+          {currentRegion.REGION_CODES.map((el, i) => <div key={i} className={styles.code}>{el}</div>)}
         </div>
         <div className={styles.btnWrapper}>
           <button onClick={closeHint} className={styles.btn}>Закрыть</button>

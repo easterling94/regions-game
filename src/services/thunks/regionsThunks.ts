@@ -34,6 +34,25 @@ export const fetchRegionsData = createAsyncThunk(
   }
 );
 
+export const handleDataForm =<T extends TRegion & TRegionRaw> (newReg: T) => (dispatch: AppDispatch) => {
+  if (newReg.id) {
+    console.log(newReg);
+    const newRegionPrepared = {...newReg, REGION_CODES: newReg.REGION_CODES.split(', ')}
+    dispatch(editRegionsData(newRegionPrepared));
+    return;
+  } else {
+    dispatch(createRegionsData(newReg));
+    return;
+  }
+};
+
+export const editRegionsDataForm = (editReg: TRegion) => (dispatch: AppDispatch, getState: () => RootState) => {
+  const { form } = getState().regions;
+  dispatch(setForm({type: 'id', payload: editReg.id}));
+  dispatch(setForm({type: 'REGION_NAME', payload: editReg.REGION_NAME}));
+  dispatch(setForm({type: 'REGION_CODES', payload: editReg.REGION_CODES.join(', ')}));
+}
+
 export const createRegionsData = createAsyncThunk(
   'regions/createRegionsData', 
   async (newReg: TRegionRaw, thunkApi) => {
@@ -83,12 +102,14 @@ export const deleteRegionsData = createAsyncThunk(
 export const editRegionsData = createAsyncThunk(
   'regions/editRegionsData', 
   async (editReg: TRegion, thunkApi) => {
-    const { general: {environment}, regions: {regions, form} } = thunkApi.getState() as RootState;
+    const dispatch = thunkApi.dispatch;
+    dispatch(clearForm());
+    const { general: {environment}, regions: {regions} } = thunkApi.getState() as RootState;
     if (environment === ENVIRONMENT.IS_DEV) {
       console.log('дев с бэком');
       return;
     } else if (environment === ENVIRONMENT.IS_DEV_MOCK) {
-      const newRegList = [...regions!].filter(el => el.id !==editReg.id);
+      const newRegList = [...regions!].map(el => el.id === editReg.id ? editReg : el).sort((reg1, reg2) => reg1.id! - reg2.id!);
       console.log('дев без бэка, с моком');
       return newRegList;
     } else if (environment === ENVIRONMENT.IS_PROD) {

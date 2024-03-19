@@ -1,6 +1,6 @@
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai';
 import { useAppDispatch } from '../../services/store';
-import { deleteRegionsData, editRegionsData } from '../../services/thunks/regionsThunks';
+import { deleteRegionsData, editRegionsDataForm } from '../../services/thunks/regionsThunks';
 import regListStyles from './regList.module.css';
 
 function RegItem({ el }) {
@@ -9,7 +9,7 @@ function RegItem({ el }) {
     dispatch(deleteRegionsData(el));
   };
   const handleEdit = () => {
-    dispatch(editRegionsData(el));
+    dispatch(editRegionsDataForm(el));
   };
   return (
     <div className={regListStyles.regContainer} id={el.id}>

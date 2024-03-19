@@ -2,12 +2,13 @@ import { checkValue, checkForm } from '../../utils/formLogic';
 import { VALUES, COLORS } from './utils';
 import { useAppDispatch, useAppSelector } from '../../services/store';
 import { setForm } from '../../services/slices/regionsSlice';
-import { createRegionsData } from '../../services/thunks/regionsThunks';
+import { handleDataForm } from '../../services/thunks/regionsThunks';
 import styles from './regForm.module.css';
 
 function RegForm() {
   const dispatch = useAppDispatch();
   const { REGION_NAME, REGION_CODES } = useAppSelector((store) => store.regions.form);
+  const { form } = useAppSelector((store) => store.regions);
   const { regNameValues, regCodesValues, btnValues } = VALUES;
   const btnBackground = (REGION_NAME && REGION_CODES.length) ? 'filled' : 'notFilled';
 
@@ -28,7 +29,7 @@ function RegForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (checkForm(REGION_NAME, REGION_CODES)) {
-      dispatch(createRegionsData({ REGION_NAME, REGION_CODES }));
+      dispatch(handleDataForm(form));
     } else return;
   };
 

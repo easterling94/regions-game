@@ -1,9 +1,11 @@
-import { BackPage } from './back';
+import { AdminPage } from './admin';
 import { GamePage } from './game';
 import { HomePage } from './home';
+import { ErrorPage } from './error';
 
 export {
-  BackPage,
+  AdminPage,
   GamePage,
   HomePage,
+  ErrorPage,
 };

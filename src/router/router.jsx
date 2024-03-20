@@ -1,6 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import {
-  BackPage, GamePage, HomePage,
+  AdminPage,
+  GamePage,
+  HomePage,
+  ErrorPage,
 } from '../pages/index';
 import { Loader } from '../components/Loader/loader';
 
@@ -14,7 +17,11 @@ export const router = createBrowserRouter([
     element: <Loader><GamePage /></Loader>,
   },
   {
-    path: '/back',
-    element: <Loader><BackPage /></Loader>,
+    path: '/admin',
+    element: <Loader><AdminPage /></Loader>,
   },
+  {
+    path: '*',
+    element: <ErrorPage />
+  }
 ]);

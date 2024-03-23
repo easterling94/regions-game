@@ -1,10 +1,13 @@
 import RegBack from '../components/RegBack/index';
-import { Wrapper } from '../components/Wrapper/wrapper';
+import { Back } from '../components/Wrapper/back';
+import { Environment } from '../components/Wrapper/environment';
 
 export function AdminPage() {
   return (
-    <Wrapper>
+    <>
       <RegBack />
-    </Wrapper>
+      <Back />
+      <Environment />
+    </>
   );
 }

@@ -1,10 +1,11 @@
-import { Wrapper } from '../components/Wrapper/wrapper';
 import GameInterface from '../components/RegGame/interface';
+import { Back } from '../components/Wrapper/back';
 
 export function GamePage() {
   return (
-    <Wrapper>
+    <>
       <GameInterface />
-    </Wrapper>
+      <Back />
+    </>
   );
 }

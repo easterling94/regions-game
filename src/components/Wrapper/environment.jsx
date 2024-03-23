@@ -1,11 +1,10 @@
 import ReactDOM from 'react-dom';
-import styles from './wrapper.module.scss';
+import { Button } from './button';
+import { BUTTON_TYPES } from './config';
 
 const backBtn = document.getElementById('environment');
 
-export const Environment = ({ showEnvironment, environment }) => ReactDOM.createPortal(
-  <button className={`${styles.btn} ${styles.environment}`} onClick={showEnvironment}>
-    <p>{environment}</p>
-  </button>,
+export const Environment = () => ReactDOM.createPortal(
+  <Button type={BUTTON_TYPES.environment} />,
   backBtn
 );
